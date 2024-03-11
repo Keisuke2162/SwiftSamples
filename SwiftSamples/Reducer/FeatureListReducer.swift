@@ -12,6 +12,7 @@ import Foundation
 struct FeatureListReducer {
     @Reducer(state: .equatable)
     enum Path {
+        case imageRenderer(ImageRendererReducer)
     }
 
     @ObservableState
