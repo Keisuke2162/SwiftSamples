@@ -5,6 +5,8 @@
 //  Created by Kei on 2024/03/12.
 //
 
+/// https://developer.apple.com/documentation/swiftui/imagerenderer
+
 import ComposableArchitecture
 import SwiftUI
 
@@ -12,20 +14,23 @@ struct ImageRendererView: View {
     @Bindable var store: StoreOf<ImageRendererReducer>
 
     var body: some View {
+        let sushiView = sushiView()
         VStack {
             Spacer()
-                .frame(height: 300)
-            sushiImage()
+            sushiView
             Button(action: {
-                
+                let renderer = ImageRenderer(content: sushiView)
+                renderer.proposedSize = ProposedViewSize(width: 500, height: 300)
+                store.send(.tapSaveImageButton(renderer.uiImage))
             }, label: {
                 Image(systemName: "camera")
             })
             .frame(width: 40, height: 40)
+            Spacer()
         }
     }
     
-    private func sushiImage() -> some View {
+    private func sushiView() -> some View {
         ZStack {
             GeometryReader(content: { geometry in
                 Image("img-background-night")
@@ -46,6 +51,7 @@ struct ImageRendererView: View {
                     .offset(y: store.imageCenter == nil ? 0 : -16)
             })
         }
+        .frame(height: 300)
     }
 }
 

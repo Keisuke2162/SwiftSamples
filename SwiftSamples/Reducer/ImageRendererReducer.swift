@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import Foundation
+import SwiftUI
 
 @Reducer
 struct ImageRendererReducer {
@@ -17,7 +18,7 @@ struct ImageRendererReducer {
 
     enum Action {
         case tapped(CGPoint)
-        case tapSaveImageButton
+        case tapSaveImageButton(UIImage?)
     }
 
     var body: some Reducer<State, Action> {
@@ -26,7 +27,10 @@ struct ImageRendererReducer {
             case let .tapped(point):
                 state.imageCenter = point
                 return .none
-            case .tapSaveImageButton:
+            case let .tapSaveImageButton(image):
+                if let saveImage = image {
+                    UIImageWriteToSavedPhotosAlbum(saveImage, nil, nil, nil)
+                }
                 return .none
             }
         }
