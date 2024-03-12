@@ -13,6 +13,7 @@ struct FeatureListReducer {
     @Reducer(state: .equatable)
     enum Path {
         case imageRenderer(ImageRendererReducer)
+        case liveActivity(LiveActivityReducer)
     }
 
     @ObservableState
