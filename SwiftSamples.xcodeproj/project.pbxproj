@@ -206,11 +206,11 @@
 		670992232BA09F8D004F11F6 /* SampleLiveActivity */ = {
 			isa = PBXGroup;
 			children = (
+				670992362BA0A013004F11F6 /* DeliveyAttributes.swift */,
 				670992242BA09F8D004F11F6 /* SampleLiveActivityBundle.swift */,
 				670992262BA09F8D004F11F6 /* SampleLiveActivityLiveActivity.swift */,
 				670992282BA09F8D004F11F6 /* SampleLiveActivity.swift */,
 				6709922A2BA09F8D004F11F6 /* AppIntent.swift */,
-				670992362BA0A013004F11F6 /* DeliveyAttributes.swift */,
 				6709922C2BA09F8F004F11F6 /* Assets.xcassets */,
 				6709922E2BA09F8F004F11F6 /* Info.plist */,
 			);
