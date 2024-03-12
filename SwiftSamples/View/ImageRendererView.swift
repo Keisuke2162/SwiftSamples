@@ -20,8 +20,10 @@ struct ImageRendererView: View {
             sushiView
             Button(action: {
                 let renderer = ImageRenderer(content: sushiView)
-                renderer.proposedSize = ProposedViewSize(width: 500, height: 300)
-                store.send(.tapSaveImageButton(renderer.uiImage))
+                if let size = store.state.backgroundSize {
+                    renderer.proposedSize = ProposedViewSize(size)
+                    store.send(.tapSaveImageButton(renderer.uiImage))
+                }
             }, label: {
                 Image(systemName: "camera")
             })
@@ -41,6 +43,9 @@ struct ImageRendererView: View {
                             store.send(.tapped(gesture.location), animation: .easeOut)
                         }
                     )
+                    .onAppear {
+                        store.send(.getBackgroundSize(geometry.size))
+                    }
                 Image("img-sushi")
                     .resizable()
                     .frame(width: 32, height: 32)
