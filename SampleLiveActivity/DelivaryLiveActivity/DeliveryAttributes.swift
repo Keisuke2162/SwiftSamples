@@ -8,7 +8,7 @@
 import Foundation
 import ActivityKit
 
-struct DeliveyAttributes: ActivityAttributes, Equatable {
+struct DeliveryAttributes: ActivityAttributes, Equatable {
     // 動的なプロパティはContentStateで定義
     public struct ContentState: Codable, Hashable, Equatable {
         var arrivalTime: Date
@@ -16,7 +16,7 @@ struct DeliveyAttributes: ActivityAttributes, Equatable {
         var order: String
     }
     // 静的なプロパティ
+    var id = UUID()
     var deliverer: String
     var deliveryDestination: String
-    var id = UUID()
 }

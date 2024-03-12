@@ -1,6 +1,6 @@
 //
-//  SampleLiveActivity.swift
-//  SampleLiveActivity
+//  DefaultLiveActivity.swift
+//  DefaultLiveActivity
 //
 //  Created by Kei on 2024/03/12.
 //
@@ -37,7 +37,7 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationAppIntent
 }
 
-struct SampleLiveActivityEntryView : View {
+struct DefaultLiveActivityEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
@@ -51,12 +51,12 @@ struct SampleLiveActivityEntryView : View {
     }
 }
 
-struct SampleLiveActivity: Widget {
-    let kind: String = "SampleLiveActivity"
+struct DefaultLiveActivityWidget: Widget {
+    let kind: String = "DefaultLiveActivityWidget"
 
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
-            SampleLiveActivityEntryView(entry: entry)
+            DefaultLiveActivityEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
     }
@@ -77,7 +77,7 @@ extension ConfigurationAppIntent {
 }
 
 #Preview(as: .systemSmall) {
-    SampleLiveActivity()
+    DefaultLiveActivityWidget()
 } timeline: {
     SimpleEntry(date: .now, configuration: .smiley)
     SimpleEntry(date: .now, configuration: .starEyes)

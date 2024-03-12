@@ -20,12 +20,12 @@ extension Activity: Equatable {
 struct LiveActivityReducer {
     @ObservableState
     struct State: Equatable {
-        var activity: Activity<DeliveyAttributes>?
+        var activity: Activity<DeliveryAttributes>?
         var isOrderd: Bool = false
     }
 
     enum Action {
-        case tapStartLiveActivity(DeliveyAttributes)
+        case tapStartLiveActivity(DeliveryAttributes)
         case tapUpdateLiveActivity
         case tapEndLiveActivity
     }
@@ -34,11 +34,11 @@ struct LiveActivityReducer {
         Reduce { state, action in
             switch action {
             case let .tapStartLiveActivity(attributes):
-                let contentState = DeliveyAttributes.ContentState(arrivalTime: Calendar.current.date(byAdding: .minute, value: 8, to: Date()) ?? Date(), 
+                let contentState = DeliveryAttributes.ContentState(arrivalTime: Calendar.current.date(byAdding: .minute, value: 8, to: Date()) ?? Date(), 
                                                                   currentLocation: "Totsuka",
                                                                   order: "AAA")
                 do {
-                    state.activity = try Activity<DeliveyAttributes>.request(attributes: attributes, content: .init(state: contentState, staleDate: nil))
+                    state.activity = try Activity<DeliveryAttributes>.request(attributes: attributes, content: .init(state: contentState, staleDate: nil))
                     state.isOrderd = true
                 } catch (let error) {
                     print(error.localizedDescription)
@@ -46,7 +46,7 @@ struct LiveActivityReducer {
                 return .none
             case .tapUpdateLiveActivity:
                 guard let activity = state.activity else { return .none }
-                let updateState = DeliveyAttributes.ContentState(arrivalTime: Calendar.current.date(byAdding: .minute, value: 8, to: Date()) ?? Date(),
+                let updateState = DeliveryAttributes.ContentState(arrivalTime: Calendar.current.date(byAdding: .minute, value: 8, to: Date()) ?? Date(),
                                                                  currentLocation: "Kashiwa",
                                                                  order: "BBB")
                 return .run { _ in
@@ -54,7 +54,7 @@ struct LiveActivityReducer {
                 }
             case .tapEndLiveActivity:
                 guard let activity = state.activity else { return .none }
-                let updateState = DeliveyAttributes.ContentState(arrivalTime: Date(),
+                let updateState = DeliveryAttributes.ContentState(arrivalTime: Date(),
                                                                  currentLocation: "???",
                                                                  order: "CCC")
                 state.isOrderd = false

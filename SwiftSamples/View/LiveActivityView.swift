@@ -14,7 +14,7 @@ struct LiveActivityView: View {
     var body: some View {
         VStack {
             Button(action: {
-                let attributes = DeliveyAttributes(deliverer: "Kei", deliveryDestination: "Kawasaki")
+                let attributes = DeliveryAttributes(deliverer: "Kei", deliveryDestination: "Kawasaki")
                 store.send(.tapStartLiveActivity(attributes))
             }, label: {
                 Text("Start Activity")
