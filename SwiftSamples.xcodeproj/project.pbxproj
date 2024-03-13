@@ -31,6 +31,7 @@
 		670992442BA0DAFE004F11F6 /* DelivaryLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992412BA0DA75004F11F6 /* DelivaryLiveActivity.swift */; };
 		670992452BA0DB07004F11F6 /* SampleLiveActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709923D2BA0CB34004F11F6 /* SampleLiveActivityAttributes.swift */; };
 		670992472BA0DC59004F11F6 /* SampleLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992462BA0DC59004F11F6 /* SampleLiveActivity.swift */; };
+		67668F9D2BA2289700595591 /* SampleLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992462BA0DC59004F11F6 /* SampleLiveActivity.swift */; };
 		678E3DD62B9F872100BFE91F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD52B9F872100BFE91F /* ComposableArchitecture */; };
 		678E3DD92B9F878800BFE91F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD82B9F878800BFE91F /* Kingfisher */; };
 		678E3DDD2B9F9FCE00BFE91F /* FeatureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DDC2B9F9FCE00BFE91F /* FeatureListView.swift */; };
@@ -483,6 +484,7 @@
 			files = (
 				670992382BA0A0D8004F11F6 /* DeliveryAttributes.swift in Sources */,
 				670992252BA09F8D004F11F6 /* SampleLiveActivityBundle.swift in Sources */,
+				67668F9D2BA2289700595591 /* SampleLiveActivity.swift in Sources */,
 				670992452BA0DB07004F11F6 /* SampleLiveActivityAttributes.swift in Sources */,
 				670992442BA0DAFE004F11F6 /* DelivaryLiveActivity.swift in Sources */,
 				6709922B2BA09F8D004F11F6 /* AppIntent.swift in Sources */,
@@ -776,6 +778,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
@@ -791,6 +794,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kei.SwiftSamples.SampleLiveActivity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -803,6 +807,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
@@ -818,6 +823,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kei.SwiftSamples.SampleLiveActivity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

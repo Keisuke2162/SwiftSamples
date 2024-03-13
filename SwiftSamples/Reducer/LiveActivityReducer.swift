@@ -16,23 +16,40 @@ extension Activity: Equatable {
     }
 }
 
+enum LiveActivityItem: String, CaseIterable, Equatable, Identifiable {
+    var id: Self { self }
+    case item1 = "🐳"
+    case item2 = "🐬"
+    case item3 = "🐋"
+    case item4 = "🐟"
+    case item5 = "🐠"
+}
+
 @Reducer
 struct LiveActivityReducer {
     @ObservableState
     struct State: Equatable {
         var activity: Activity<DeliveryAttributes>?
         var isOrderd: Bool = false
+        var centerSelectedItem: LiveActivityItem = .item1
+        var bottomSelectedItem: LiveActivityItem = .item1
+        var leadingSelectedItem: LiveActivityItem = .item1
+        var trailingSelectedItem: LiveActivityItem = .item1
     }
 
-    enum Action {
+    enum Action: BindableAction, Sendable {
+        case binding(BindingAction<State>)
         case tapStartLiveActivity(DeliveryAttributes)
         case tapUpdateLiveActivity
         case tapEndLiveActivity
     }
 
     var body: some Reducer<State, Action> {
+        BindingReducer()
         Reduce { state, action in
             switch action {
+            case .binding:
+                return .none
             case let .tapStartLiveActivity(attributes):
                 let contentState = DeliveryAttributes.ContentState(arrivalTime: Calendar.current.date(byAdding: .minute, value: 8, to: Date()) ?? Date(), 
                                                                   currentLocation: "Totsuka",

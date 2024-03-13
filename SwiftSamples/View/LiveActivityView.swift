@@ -13,6 +13,41 @@ struct LiveActivityView: View {
 
     var body: some View {
         VStack {
+            VStack(alignment: .trailing) {
+                HStack {
+                    Text("DynamicIslandExpandedRegion(.center)")
+                        .font(.caption2)
+                        .frame(maxWidth: .infinity)
+                    Spacer()
+                    ItemPickerView(selectedItem: $store.state.centerSelectedItem)
+
+                }
+                .padding(4)
+                HStack {
+                    Text("DynamicIslandExpandedRegion(.bottom)")
+                        .font(.caption2)
+                        .frame(maxWidth: .infinity)
+                    Spacer()
+                    ItemPickerView(selectedItem: $store.state.bottomSelectedItem)
+                }
+                .padding(4)
+                HStack {
+                    Text("compactLeading")
+                        .font(.caption2)
+                        .frame(maxWidth: .infinity)
+                    Spacer()
+                    ItemPickerView(selectedItem: $store.state.leadingSelectedItem)
+                }
+                .padding(4)
+                HStack {
+                    Text("compactTrailing")
+                        .font(.caption2)
+                        .frame(maxWidth: .infinity)
+                    Spacer()
+                    ItemPickerView(selectedItem: $store.state.trailingSelectedItem)
+                }
+                .padding(4)
+            }
             Button(action: {
                 let attributes = DeliveryAttributes(deliverer: "Kei", deliveryDestination: "Kawasaki")
                 store.send(.tapStartLiveActivity(attributes))
@@ -34,6 +69,19 @@ struct LiveActivityView: View {
                 Text("End Activity")
             })
             .padding(20)
+        }
+    }
+
+    struct ItemPickerView: View {
+        @Binding var selectedItem: LiveActivityItem
+
+        var body: some View {
+            Picker("Item", selection: self.$selectedItem) {
+                ForEach(LiveActivityItem.allCases) { item in
+                    Text(item.rawValue)
+                        .tag(item)
+                }
+            }
         }
     }
 }

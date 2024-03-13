@@ -8,7 +8,7 @@
 import Foundation
 import ActivityKit
 
-struct DeliveryAttributes: ActivityAttributes, Equatable {
+struct DeliveryAttributes: ActivityAttributes, Equatable, Sendable {
     // 動的なプロパティはContentStateで定義
     public struct ContentState: Codable, Hashable, Equatable {
         var arrivalTime: Date
