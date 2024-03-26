@@ -39,18 +39,9 @@ struct LiveActivityView: View {
                     ItemPickerView(selectedItem: $store.state.leadingSelectedItem)
                 }
                 .padding(4)
-                HStack {
-                    Text("compactTrailing")
-                        .font(.caption2)
-                        .frame(maxWidth: .infinity)
-                    Spacer()
-                    ItemPickerView(selectedItem: $store.state.trailingSelectedItem)
-                }
-                .padding(4)
             }
             Button(action: {
-                let attributes = DeliveryAttributes(deliverer: "Kei", deliveryDestination: "Kawasaki")
-                store.send(.tapStartLiveActivity(attributes))
+                store.send(.tapStartLiveActivity)
             }, label: {
                 Text("Start Activity")
             })
