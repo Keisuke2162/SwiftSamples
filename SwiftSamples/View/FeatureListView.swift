@@ -21,6 +21,10 @@ struct FeatureListView: View {
                         "ImageRenderer",
                         state: FeatureListReducer.Path.State.imageRenderer(ImageRendererReducer.State())
                     )
+                    NavigationLink(
+                        "LiveActivity",
+                        state: FeatureListReducer.Path.State.liveActivity(LiveActivityReducer.State())
+                    )
                 }
             }
             .navigationTitle("Feature")
@@ -28,6 +32,8 @@ struct FeatureListView: View {
             switch store.case {
             case let .imageRenderer(store):
                 ImageRendererView(store: store)
+            case let .liveActivity(store):
+                LiveActivityView(store: store)
             }
         }
     }
