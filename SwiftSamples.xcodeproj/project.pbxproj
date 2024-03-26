@@ -16,6 +16,10 @@
 		67037A912B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67037A902B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift */; };
 		678E3DD62B9F872100BFE91F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD52B9F872100BFE91F /* ComposableArchitecture */; };
 		678E3DD92B9F878800BFE91F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD82B9F878800BFE91F /* Kingfisher */; };
+		678E3DDD2B9F9FCE00BFE91F /* FeatureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DDC2B9F9FCE00BFE91F /* FeatureListView.swift */; };
+		678E3DDF2B9FA27000BFE91F /* FeatureListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DDE2B9FA27000BFE91F /* FeatureListReducer.swift */; };
+		678E3DE12B9FA4EB00BFE91F /* ImageRendererView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DE02B9FA4EB00BFE91F /* ImageRendererView.swift */; };
+		678E3DE32B9FA4F300BFE91F /* ImageRendererReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DE22B9FA4F300BFE91F /* ImageRendererReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		67037A8A2B9F7E56007C183D /* SwiftSamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67037A8E2B9F7E56007C183D /* SwiftSamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSamplesUITests.swift; sourceTree = "<group>"; };
 		67037A902B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSamplesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		678E3DDC2B9F9FCE00BFE91F /* FeatureListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureListView.swift; sourceTree = "<group>"; };
+		678E3DDE2B9FA27000BFE91F /* FeatureListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureListReducer.swift; sourceTree = "<group>"; };
+		678E3DE02B9FA4EB00BFE91F /* ImageRendererView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRendererView.swift; sourceTree = "<group>"; };
+		678E3DE22B9FA4F300BFE91F /* ImageRendererReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRendererReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,8 @@
 		67037A722B9F7E55007C183D /* SwiftSamples */ = {
 			isa = PBXGroup;
 			children = (
+				678E3DDB2B9F9F2900BFE91F /* Reducer */,
+				678E3DDA2B9F9F2200BFE91F /* View */,
 				67037A732B9F7E55007C183D /* SwiftSamplesApp.swift */,
 				67037A752B9F7E55007C183D /* ContentView.swift */,
 				67037A772B9F7E56007C183D /* Assets.xcassets */,
@@ -129,6 +139,24 @@
 				67037A902B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift */,
 			);
 			path = SwiftSamplesUITests;
+			sourceTree = "<group>";
+		};
+		678E3DDA2B9F9F2200BFE91F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				678E3DDC2B9F9FCE00BFE91F /* FeatureListView.swift */,
+				678E3DE02B9FA4EB00BFE91F /* ImageRendererView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		678E3DDB2B9F9F2900BFE91F /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				678E3DDE2B9FA27000BFE91F /* FeatureListReducer.swift */,
+				678E3DE22B9FA4F300BFE91F /* ImageRendererReducer.swift */,
+			);
+			path = Reducer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678E3DDD2B9F9FCE00BFE91F /* FeatureListView.swift in Sources */,
+				678E3DDF2B9FA27000BFE91F /* FeatureListReducer.swift in Sources */,
+				678E3DE12B9FA4EB00BFE91F /* ImageRendererView.swift in Sources */,
+				678E3DE32B9FA4F300BFE91F /* ImageRendererReducer.swift in Sources */,
 				67037A762B9F7E55007C183D /* ContentView.swift in Sources */,
 				67037A742B9F7E55007C183D /* SwiftSamplesApp.swift in Sources */,
 			);
@@ -437,6 +469,7 @@
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Save Image!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,6 +499,7 @@
 				DEVELOPMENT_TEAM = D2B3JPR4TJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Save Image!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

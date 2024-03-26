@@ -11,7 +11,9 @@ import SwiftUI
 struct SwiftSamplesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FeatureListView(store: .init(initialState: FeatureListReducer.State(), reducer: {
+                FeatureListReducer()
+            }))
         }
     }
 }
