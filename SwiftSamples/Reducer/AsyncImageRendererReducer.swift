@@ -27,8 +27,6 @@ struct AsyncImageRendererReducer {
 
     @Dependency(CatAPIClient.self) var catClient
 
-    
-
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {

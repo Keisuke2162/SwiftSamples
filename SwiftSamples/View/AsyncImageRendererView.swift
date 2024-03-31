@@ -68,9 +68,3 @@ struct AsyncImageRendererView: View {
         AsyncImageRendererReducer()
     }))
 }
-
-//#Preview {
-////    LiveActivityView(store: .init(initialState: LiveActivityReducer.State(), reducer: {
-////        LiveActivityReducer()
-////    }))
-//}

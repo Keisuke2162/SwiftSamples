@@ -23,9 +23,6 @@ struct FeatureListReducer {
     }
 
     enum Action {
-//        case goBackToScreen(id: StackElementID)
-//        case goToABCButtonTapped
-//        case popToRoot
         case path(StackAction<Path.State, Path.Action>)
     }
 
