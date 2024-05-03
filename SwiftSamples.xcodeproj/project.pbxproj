@@ -269,6 +269,42 @@
 			path = SampleLiveActivity;
 			sourceTree = "<group>";
 		};
+		670C243F2BE5650900833377 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				678E3DDE2B9FA27000BFE91F /* FeatureListReducer.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		670C24402BE5651300833377 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				678E3DDC2B9F9FCE00BFE91F /* FeatureListView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		670C24412BE5652900833377 /* iOS16+ */ = {
+			isa = PBXGroup;
+			children = (
+				678E3DE22B9FA4F300BFE91F /* ImageRendererReducer.swift */,
+				6709923B2BA0BC0D004F11F6 /* LiveActivityReducer.swift */,
+				67668FA22BB3014C00595591 /* AsyncImageRendererReducer.swift */,
+			);
+			path = "iOS16+";
+			sourceTree = "<group>";
+		};
+		670C24422BE5653B00833377 /* iOS16+ */ = {
+			isa = PBXGroup;
+			children = (
+				678E3DE02B9FA4EB00BFE91F /* ImageRendererView.swift */,
+				670992392BA0BC02004F11F6 /* LiveActivityView.swift */,
+				67668FA02BB3013600595591 /* AsyncImageRendererView.swift */,
+			);
+			path = "iOS16+";
+			sourceTree = "<group>";
+		};
 		67668FA42BB301D300595591 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,10 +325,8 @@
 		678E3DDA2B9F9F2200BFE91F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				678E3DDC2B9F9FCE00BFE91F /* FeatureListView.swift */,
-				678E3DE02B9FA4EB00BFE91F /* ImageRendererView.swift */,
-				670992392BA0BC02004F11F6 /* LiveActivityView.swift */,
-				67668FA02BB3013600595591 /* AsyncImageRendererView.swift */,
+				670C24402BE5651300833377 /* Home */,
+				670C24422BE5653B00833377 /* iOS16+ */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -300,10 +334,8 @@
 		678E3DDB2B9F9F2900BFE91F /* Reducer */ = {
 			isa = PBXGroup;
 			children = (
-				678E3DDE2B9FA27000BFE91F /* FeatureListReducer.swift */,
-				678E3DE22B9FA4F300BFE91F /* ImageRendererReducer.swift */,
-				6709923B2BA0BC0D004F11F6 /* LiveActivityReducer.swift */,
-				67668FA22BB3014C00595591 /* AsyncImageRendererReducer.swift */,
+				670C243F2BE5650900833377 /* Home */,
+				670C24412BE5652900833377 /* iOS16+ */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
