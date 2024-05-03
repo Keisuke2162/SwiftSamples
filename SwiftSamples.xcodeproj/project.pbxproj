@@ -305,6 +305,20 @@
 			path = "iOS16+";
 			sourceTree = "<group>";
 		};
+		670C24432BE565A500833377 /* UISamples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UISamples;
+			sourceTree = "<group>";
+		};
+		670C24442BE565B900833377 /* UISamples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UISamples;
+			sourceTree = "<group>";
+		};
 		67668FA42BB301D300595591 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +339,7 @@
 		678E3DDA2B9F9F2200BFE91F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				670C24442BE565B900833377 /* UISamples */,
 				670C24402BE5651300833377 /* Home */,
 				670C24422BE5653B00833377 /* iOS16+ */,
 			);
@@ -334,6 +349,7 @@
 		678E3DDB2B9F9F2900BFE91F /* Reducer */ = {
 			isa = PBXGroup;
 			children = (
+				670C24432BE565A500833377 /* UISamples */,
 				670C243F2BE5650900833377 /* Home */,
 				670C24412BE5652900833377 /* iOS16+ */,
 			);
