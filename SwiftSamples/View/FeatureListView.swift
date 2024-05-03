@@ -29,6 +29,10 @@ struct FeatureListView: View {
                         "LiveActivity",
                         state: FeatureListReducer.Path.State.liveActivity(LiveActivityReducer.State())
                     )
+                    NavigationLink(
+                        "NavigationSplitView with TCA",
+                        state: FeatureListReducer.Path.State.navigationSplitViewSample(NavigationSplitSampleReducer.State())
+                    )
                 }
             }
             .navigationTitle("Feature")
@@ -40,6 +44,8 @@ struct FeatureListView: View {
                 AsyncImageRendererView(store: store)
             case let .liveActivity(store):
                 LiveActivityView(store: store)
+            case let .navigationSplitViewSample(store):
+                NavigationSplitSampleView(store: store)
             }
         }
     }

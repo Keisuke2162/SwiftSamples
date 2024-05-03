@@ -15,6 +15,7 @@ struct FeatureListReducer {
         case imageRenderer(ImageRendererReducer)
         case asyncImageRenderer(AsyncImageRendererReducer)
         case liveActivity(LiveActivityReducer)
+        case navigationSplitViewSample(NavigationSplitSampleReducer)
     }
 
     @ObservableState
