@@ -184,7 +184,6 @@
 			children = (
 				67668FA72BB3037500595591 /* Entity */,
 				67668FA42BB301D300595591 /* API */,
-				678E3DDB2B9F9F2900BFE91F /* Reducer */,
 				678E3DDA2B9F9F2200BFE91F /* View */,
 				67037A732B9F7E55007C183D /* SwiftSamplesApp.swift */,
 				67037A752B9F7E55007C183D /* ContentView.swift */,
@@ -269,6 +268,59 @@
 			path = SampleLiveActivity;
 			sourceTree = "<group>";
 		};
+		670C24402BE5651300833377 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				678E3DDC2B9F9FCE00BFE91F /* FeatureListView.swift */,
+				678E3DDE2B9FA27000BFE91F /* FeatureListReducer.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		670C24422BE5653B00833377 /* iOS16+ */ = {
+			isa = PBXGroup;
+			children = (
+				670C24452BE5FC4600833377 /* ImageRenderer */,
+				670C24472BE5FC5300833377 /* LiveActivity */,
+				670C24482BE5FC6100833377 /* AsyncImageRenderer */,
+			);
+			path = "iOS16+";
+			sourceTree = "<group>";
+		};
+		670C24442BE565B900833377 /* UISamples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UISamples;
+			sourceTree = "<group>";
+		};
+		670C24452BE5FC4600833377 /* ImageRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				678E3DE02B9FA4EB00BFE91F /* ImageRendererView.swift */,
+				678E3DE22B9FA4F300BFE91F /* ImageRendererReducer.swift */,
+			);
+			path = ImageRenderer;
+			sourceTree = "<group>";
+		};
+		670C24472BE5FC5300833377 /* LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				670992392BA0BC02004F11F6 /* LiveActivityView.swift */,
+				6709923B2BA0BC0D004F11F6 /* LiveActivityReducer.swift */,
+			);
+			path = LiveActivity;
+			sourceTree = "<group>";
+		};
+		670C24482BE5FC6100833377 /* AsyncImageRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				67668FA02BB3013600595591 /* AsyncImageRendererView.swift */,
+				67668FA22BB3014C00595591 /* AsyncImageRendererReducer.swift */,
+			);
+			path = AsyncImageRenderer;
+			sourceTree = "<group>";
+		};
 		67668FA42BB301D300595591 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,23 +341,11 @@
 		678E3DDA2B9F9F2200BFE91F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				678E3DDC2B9F9FCE00BFE91F /* FeatureListView.swift */,
-				678E3DE02B9FA4EB00BFE91F /* ImageRendererView.swift */,
-				670992392BA0BC02004F11F6 /* LiveActivityView.swift */,
-				67668FA02BB3013600595591 /* AsyncImageRendererView.swift */,
+				670C24442BE565B900833377 /* UISamples */,
+				670C24402BE5651300833377 /* Home */,
+				670C24422BE5653B00833377 /* iOS16+ */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		678E3DDB2B9F9F2900BFE91F /* Reducer */ = {
-			isa = PBXGroup;
-			children = (
-				678E3DDE2B9FA27000BFE91F /* FeatureListReducer.swift */,
-				678E3DE22B9FA4F300BFE91F /* ImageRendererReducer.swift */,
-				6709923B2BA0BC0D004F11F6 /* LiveActivityReducer.swift */,
-				67668FA22BB3014C00595591 /* AsyncImageRendererReducer.swift */,
-			);
-			path = Reducer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -922,8 +962,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.9.2;
+				kind = exactVersion;
+				version = 1.10.2;
 			};
 		};
 		678E3DD72B9F878800BFE91F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
