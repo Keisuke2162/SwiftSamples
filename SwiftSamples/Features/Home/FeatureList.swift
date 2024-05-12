@@ -6,7 +6,38 @@
 //
 
 import ComposableArchitecture
+import Foundation
 import SwiftUI
+
+@Reducer
+struct FeatureListReducer {
+    @Reducer(state: .equatable)
+    enum Path {
+        case imageRenderer(ImageRendererReducer)
+        case asyncImageRenderer(AsyncImageRendererReducer)
+        case liveActivity(LiveActivityReducer)
+    }
+
+    @ObservableState
+    struct State: Equatable {
+        var path = StackState<Path.State>()
+    }
+
+    enum Action {
+        case path(StackAction<Path.State, Path.Action>)
+    }
+
+
+    var body: some Reducer<State, Action> {
+        Reduce { state, action in
+            switch action {
+            case .path(_):
+                return .none
+            }
+        }
+        .forEach(\.path, action: \.path)
+    }
+}
 
 struct FeatureListView: View {
     @Bindable var store: StoreOf<FeatureListReducer>
