@@ -1,5 +1,5 @@
 //
-//  CatAPIClient.swift
+//  CatClient.swift
 //  SwiftSamples
 //
 //  Created by Kei on 2024/03/26.
