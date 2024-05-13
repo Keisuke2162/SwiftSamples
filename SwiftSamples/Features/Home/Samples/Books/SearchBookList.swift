@@ -68,7 +68,7 @@ public struct SearchBookList {
         case .failure:
           return .none
         }
-      case .bookRows:
+      case .bookRows:   // RowのDelegate
         return .none
       case .binding(\.query):
         return .run { send in
@@ -91,30 +91,27 @@ public struct SearchBookList {
 
 public struct SearchBookListView: View {
   @Bindable var store: StoreOf<SearchBookList>
-  
+
   public init(store: StoreOf<SearchBookList>) {
     self.store = store
   }
 
   public var body: some View {
-    NavigationStack {
-      Group {
-        if store.isLoading {
-          ProgressView()
-        } else {
-          List {
-            ForEach(store.scope(state: \.bookRows, action: \.bookRows), content: SearchBookListRowView.init(store:))
-          }
+    Group {
+      if store.isLoading {
+        ProgressView()
+      } else {
+        List {
+          ForEach(store.scope(state: \.bookRows, action: \.bookRows), content: SearchBookListRowView.init(store:))
         }
       }
-      .onAppear {
-        store.send(.onAppear)
-      }
-      .navigationTitle("Seach Books")
-      .searchable(text: $store.query, placement: .navigationBarDrawer, prompt: "Input Book")
     }
-      
+    .onAppear {
+      store.send(.onAppear)
     }
+    .navigationTitle("Seach Books")
+    .searchable(text: $store.query, placement: .navigationBarDrawer, prompt: "Input Book")
+  }
 }
 
 #Preview {

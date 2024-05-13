@@ -19,7 +19,8 @@ extension GoogleBooksAPIClient: DependencyKey {
   public static let liveValue: Self = {
     return Self(
       searchBooks: { query in
-        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=\(query)")!
+          //country=JP&maxResults=1&orderBy=relevance
+        let url = URL(string: "https://www.googleapis.com/books/v1/volumes?country=JP&orderBy=relevance&q=\(query)")!
         var request = URLRequest(url: url)
         let (data, _) = try await URLSession.shared.data(for: request)
         let books = try jsonDecoder.decode(BooksResult.self, from: data).items

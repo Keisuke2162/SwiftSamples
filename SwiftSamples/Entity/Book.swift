@@ -18,18 +18,26 @@ public struct Book: Identifiable, Codable, Equatable {
 
   public let id: String
   public let volumeInfo: VolumeInfo
-  public let industryIdentifiers: [IndustryIdentifiers]
   public var isbn13Identifier: String? {
-    industryIdentifiers.first(where: { $0.type == .isbn13 })?.identifier
+    volumeInfo.industryIdentifiers?.first(where: { $0.type == .isbn13 })?.identifier
+  }
+  public var isbn10Identifier: String? {
+    volumeInfo.industryIdentifiers?.first(where: { $0.type == .isbn10 })?.identifier
   }
   public var thumbnailImageURL: URL? {
-    guard let identifier = isbn13Identifier else { return nil }
-    return .init(string: "https://ndlsearch.ndl.go.jp/thumbnail/\(identifier).jpg")
+    if let isbn13ID = isbn13Identifier {
+      return .init(string: "https://ndlsearch.ndl.go.jp/thumbnail/\(isbn13ID).jpg")
+    } else if let isbn10ID = isbn10Identifier {
+      return .init(string: "https://ndlsearch.ndl.go.jp/thumbnail/\(isbn10ID).jpg")
+    } else {
+      return nil
+    }
   }
 
   public struct VolumeInfo: Codable {
     let title: String
-    let description: String
+    let description: String?
+    let industryIdentifiers: [IndustryIdentifiers]?
   }
 
   public struct IndustryIdentifiers: Codable {
@@ -39,13 +47,13 @@ public struct Book: Identifiable, Codable, Equatable {
 
   public init(id: String, title: String, description: String, isbn13ID: String) {
     self.id = id
-    self.volumeInfo = .init(title: title, description: description)
-    self.industryIdentifiers = [.init(type: .isbn13, identifier: isbn13ID)]
+    self.volumeInfo = .init(title: title, description: description, industryIdentifiers: [.init(type: .isbn13, identifier: isbn13ID)])
   }
 
   public enum ISBNType: String, Codable {
     case isbn13 = "ISBN_13"
     case isbn10 = "ISBN_10"
+    case other = "OTHER"
   }
 }
 

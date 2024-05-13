@@ -49,19 +49,20 @@ struct SearchBookListRowView: View {
     Button {
       store.send(.rowTapped)
     } label: {
-      AsyncImage(url: store.book.thumbnailImageURL) { image in
-        HStack(alignment: .center, spacing: 8) {
+      HStack(alignment: .center, spacing: 16) {
+        AsyncImage(url: store.book.thumbnailImageURL) { image in
           image
             .resizable()
             .scaledToFit()
             .frame(width: 96, height: 96, alignment: .leading)
-          Text(store.book.volumeInfo.title)
-            .font(.title3.bold())
+        } placeholder: {
+          Text("No Image")
+            .frame(width: 96, height: 96, alignment: .leading)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-      } placeholder: {
-        ProgressView()
+        Text(store.book.volumeInfo.title)
+          .font(.title3.bold())
       }
+      .frame(maxWidth: .infinity, alignment: .leading)
     }
     .buttonStyle(.plain)
   }
