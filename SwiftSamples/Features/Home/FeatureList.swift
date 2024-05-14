@@ -66,22 +66,15 @@ struct FeatureListView: View {
             state: FeatureListReducer.Path.State.liveActivity(LiveActivityReducer.State())
           )
         }
-        Section("Sample Screen") {
+        Section("Samples") {
           NavigationLink(
             "SearchBookApp",
             state: FeatureListReducer.Path.State.searchBooks(SearchBookList.State()))
         }
-        Section("Image List View") {
-          NavigationLink {
-            ImageList()
-          } label: {
-            Text("List")
-          }
-          NavigationLink {
-            ImageGrid()
-          } label: {
-            Text("Grid")
-          }
+        Section("List Views") {
+          NavigationLink { ImageList() } label: { Text("List") }
+          NavigationLink { ImageGrid() } label: { Text("Grid") }
+          NavigationLink { ImagePaging() } label: { Text("Paging") }
         }
       }
       .navigationTitle("Feature")
