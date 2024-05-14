@@ -71,6 +71,18 @@ struct FeatureListView: View {
             "SearchBookApp",
             state: FeatureListReducer.Path.State.searchBooks(SearchBookList.State()))
         }
+        Section("Image List View") {
+          NavigationLink {
+            ImageList()
+          } label: {
+            Text("List")
+          }
+          NavigationLink {
+            ImageGrid()
+          } label: {
+            Text("Grid")
+          }
+        }
       }
       .navigationTitle("Feature")
     } destination: { store in
