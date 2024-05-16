@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PhotoItem: Identifiable, Hashable {
+struct PhotoItem: Identifiable, Hashable, Equatable {
   let id: String = UUID().uuidString
   let title: String
   let image: UIImage?

@@ -38,6 +38,7 @@
 		67404E362BF3FD44004AA9EB /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67404E352BF3FD44004AA9EB /* ImageItem.swift */; };
 		67404E382BF413DC004AA9EB /* ImageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67404E372BF413DC004AA9EB /* ImageGrid.swift */; };
 		67404E3A2BF41804004AA9EB /* ImagePaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67404E392BF41804004AA9EB /* ImagePaging.swift */; };
+		67404E3E2BF6A0EC004AA9EB /* ImagePaging2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67404E3D2BF6A0EC004AA9EB /* ImagePaging2.swift */; };
 		67668F9D2BA2289700595591 /* SampleLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992462BA0DC59004F11F6 /* SampleLiveActivity.swift */; };
 		67668FA12BB3013600595591 /* AsyncImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FA02BB3013600595591 /* AsyncImageRenderer.swift */; };
 		67668FA62BB3036800595591 /* CatClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FA52BB3036800595591 /* CatClient.swift */; };
@@ -120,6 +121,7 @@
 		67404E352BF3FD44004AA9EB /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		67404E372BF413DC004AA9EB /* ImageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGrid.swift; sourceTree = "<group>"; };
 		67404E392BF41804004AA9EB /* ImagePaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaging.swift; sourceTree = "<group>"; };
+		67404E3D2BF6A0EC004AA9EB /* ImagePaging2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaging2.swift; sourceTree = "<group>"; };
 		67668FA02BB3013600595591 /* AsyncImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageRenderer.swift; sourceTree = "<group>"; };
 		67668FA52BB3036800595591 /* CatClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatClient.swift; sourceTree = "<group>"; };
 		67668FA82BB3037F00595591 /* CatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatItem.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				67404E332BF3FD34004AA9EB /* ImageList.swift */,
 				67404E372BF413DC004AA9EB /* ImageGrid.swift */,
 				67404E392BF41804004AA9EB /* ImagePaging.swift */,
+				67404E3D2BF6A0EC004AA9EB /* ImagePaging2.swift */,
 			);
 			path = UISamples;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				678E3DDD2B9F9FCE00BFE91F /* FeatureList.swift in Sources */,
 				67668FAB2BB3055B00595591 /* APIError.swift in Sources */,
 				6709923A2BA0BC02004F11F6 /* LiveActivity.swift in Sources */,
+				67404E3E2BF6A0EC004AA9EB /* ImagePaging2.swift in Sources */,
 				6709923E2BA0CB34004F11F6 /* SampleLiveActivityAttributes.swift in Sources */,
 				678E3DE12B9FA4EB00BFE91F /* ImageRenderer.swift in Sources */,
 				67668FA12BB3013600595591 /* AsyncImageRenderer.swift in Sources */,

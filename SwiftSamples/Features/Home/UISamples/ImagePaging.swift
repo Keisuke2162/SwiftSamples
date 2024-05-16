@@ -7,21 +7,23 @@
 
 import SwiftUI
 
-struct ImagePaging: View {
+struct ImagePaging: View {  
     var body: some View {
-      TabView {
-        ForEach(PhotoItem.mock()) { item in
-          if let image = item.image {
-            Image(uiImage: image)
-              .resizable()
-              .scaledToFit()
-              .clipShape(.buttonBorder)
-              .padding()
+      VStack {
+        TabView {
+          ForEach(PhotoItem.mock()) { item in
+            if let image = item.image {
+              Image(uiImage: image)
+                .resizable()
+                .scaledToFit()
+                .clipShape(.buttonBorder)
+                .padding()
+            }
           }
         }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+        .background(Color.brown)
       }
-      .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-      .background(Color.brown)
       .navigationTitle("Paging")
     }
 }
