@@ -41,6 +41,7 @@ extension FeatureListReducer {
       case asyncImageRenderer(AsyncImageRendererReducer)
       case liveActivity(LiveActivityReducer)
       case searchBooks(SearchBookList)
+      case reviewForm(ReviewForm)
   }
 }
 
@@ -75,6 +76,10 @@ struct FeatureListView: View {
           NavigationLink { ImageList() } label: { Text("List") }
           NavigationLink { ImageGrid() } label: { Text("Grid") }
           NavigationLink { ImagePaging() } label: { Text("Paging") }
+          NavigationLink(
+            "Review Form",
+            state: FeatureListReducer.Path.State.reviewForm(ReviewForm.State())
+          )
         }
       }
       .navigationTitle("Feature")
@@ -88,6 +93,8 @@ struct FeatureListView: View {
         LiveActivityView(store: store)
       case let .searchBooks(store):
         SearchBookListView(store: store)
+      case let .reviewForm(store):
+        ReviewFormView(store: store)
       }
     }
   }
