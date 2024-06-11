@@ -52,6 +52,7 @@
 		678E3DD92B9F878800BFE91F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD82B9F878800BFE91F /* Kingfisher */; };
 		678E3DDD2B9F9FCE00BFE91F /* FeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */; };
 		678E3DE12B9FA4EB00BFE91F /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DE02B9FA4EB00BFE91F /* ImageRenderer.swift */; };
+		67D47A322C18D62C000604B8 /* NavigationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D47A312C18D62C000604B8 /* NavigationTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		67668FAA2BB3055B00595591 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureList.swift; sourceTree = "<group>"; };
 		678E3DE02B9FA4EB00BFE91F /* ImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
+		67D47A312C18D62C000604B8 /* NavigationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +291,7 @@
 		670C24402BE5651300833377 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				67D47A302C18D5F3000604B8 /* iOS18+ */,
 				67404E462BF88D69004AA9EB /* ComposableArchitecture */,
 				678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */,
 				670C24422BE5653B00833377 /* iOS16+ */,
@@ -381,6 +384,14 @@
 				670C24402BE5651300833377 /* Home */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		67D47A302C18D5F3000604B8 /* iOS18+ */ = {
+			isa = PBXGroup;
+			children = (
+				67D47A312C18D62C000604B8 /* NavigationTransition.swift */,
+			);
+			path = "iOS18+";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,6 +574,7 @@
 				67404E3E2BF6A0EC004AA9EB /* ImagePaging2.swift in Sources */,
 				6709923E2BA0CB34004F11F6 /* SampleLiveActivityAttributes.swift in Sources */,
 				678E3DE12B9FA4EB00BFE91F /* ImageRenderer.swift in Sources */,
+				67D47A322C18D62C000604B8 /* NavigationTransition.swift in Sources */,
 				67668FA12BB3013600595591 /* AsyncImageRenderer.swift in Sources */,
 				67404E342BF3FD34004AA9EB /* ImageList.swift in Sources */,
 				67404E362BF3FD44004AA9EB /* ImageItem.swift in Sources */,

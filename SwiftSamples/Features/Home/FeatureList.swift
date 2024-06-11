@@ -67,6 +67,15 @@ struct FeatureListView: View {
             state: FeatureListReducer.Path.State.liveActivity(LiveActivityReducer.State())
           )
         }
+        Section("iOS17+") {
+        }
+        Section("iOS18+") {
+          NavigationLink {
+            NavigationTransitionContentView()
+          } label: {
+            Text("navigationTransition")
+          }
+        }
         Section("Samples") {
           NavigationLink(
             "SearchBookApp",
