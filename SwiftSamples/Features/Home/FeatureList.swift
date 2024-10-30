@@ -51,8 +51,6 @@ struct FeatureListView: View {
   var body: some View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
       Form {
-        Section("iOS15+") {
-        }
         Section("iOS16+") {
           NavigationLink(
             "ImageRenderer",
@@ -67,8 +65,6 @@ struct FeatureListView: View {
             state: FeatureListReducer.Path.State.liveActivity(LiveActivityReducer.State())
           )
         }
-        Section("iOS17+") {
-        }
         Section("iOS18+") {
           NavigationLink {
             NavigationTransitionContentView()
@@ -76,12 +72,12 @@ struct FeatureListView: View {
             Text("navigationTransition")
           }
         }
-        Section("Samples") {
+        Section("TCA Samples") {
           NavigationLink(
-            "SearchBookApp",
+            "書籍検索機能",
             state: FeatureListReducer.Path.State.searchBooks(SearchBookList.State()))
         }
-        Section("List Views") {
+        Section("SwiftUI Samples") {
           NavigationLink { ImageList() } label: { Text("List") }
           NavigationLink { ImageGrid() } label: { Text("Grid") }
           NavigationLink { ImagePaging() } label: { Text("Paging") }
@@ -91,7 +87,7 @@ struct FeatureListView: View {
           )
         }
       }
-      .navigationTitle("Feature")
+      .navigationTitle("Samples")
     } destination: { store in
       switch store.case {
       case let .imageRenderer(store):

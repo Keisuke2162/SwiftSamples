@@ -12,28 +12,49 @@ struct NavigationTransitionContentView: View {
     @Namespace private var namespace
     var body: some View {
         NavigationStack {
-            NavigationLink {
-              if #available(iOS 18.0, *) {
-                NavigationTransitionDetailView()
-                  .navigationTransition(.zoom(sourceID: "hoge", in: namespace))
-              } else {
-                NavigationTransitionDetailView()
+          ZStack {
+            Color.gray.ignoresSafeArea()
+            VStack() {
+              Spacer()
+              Image("pixel_bird")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 240)
+              NavigationLink {
+                if #available(iOS 18.0, *) {
+                  NavigationTransitionDetailView()
+                    .navigationTransition(.zoom(sourceID: "hoge", in: namespace))
+                } else {
+                  NavigationTransitionDetailView()
+                }
+              } label: {
+                if #available(iOS 18.0, *) {
+                  Text("Navigation")
+                    .matchedTransitionSource(id: "hoge", in: namespace)
+                } else {
+                  Text("Navigation")
+                }
               }
-            } label: {
-              if #available(iOS 18.0, *) {
-                Text("Hello")
-                  .matchedTransitionSource(id: "hoge", in: namespace)
-              } else {
-                Text("Hello")
-              }
+              .foregroundStyle(.white)
+              Spacer()
             }
+          }
         }
     }
 }
 
 struct NavigationTransitionDetailView: View {
   var body: some View {
-    Text("Hello")
+    ZStack {
+      Color.cyan.ignoresSafeArea()
+      VStack {
+        Image("pixel_bird")
+          .resizable()
+          .aspectRatio(contentMode: .fit)
+          .frame(height: 240)
+        Spacer()
+      }
+    }
   }
 }
 
