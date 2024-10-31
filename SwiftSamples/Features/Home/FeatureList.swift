@@ -15,12 +15,12 @@ struct FeatureListReducer {
   struct State: Equatable {
     var path = StackState<Path.State>()
   }
-
+  
   enum Action: BindableAction {
     case path(StackAction<Path.State, Path.Action>)
     case binding(BindingAction<State>)
   }
-
+  
   var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
@@ -37,17 +37,17 @@ struct FeatureListReducer {
 extension FeatureListReducer {
   @Reducer(state: .equatable)
   enum Path {
-      case imageRenderer(ImageRendererReducer)
-      case asyncImageRenderer(AsyncImageRendererReducer)
-      case liveActivity(LiveActivityReducer)
-      case searchBooks(SearchBookList)
-      case reviewForm(ReviewForm)
+    case imageRenderer(ImageRendererReducer)
+    case asyncImageRenderer(AsyncImageRendererReducer)
+    case liveActivity(LiveActivityReducer)
+    case searchBooks(SearchBookList)
+    case reviewForm(ReviewForm)
   }
 }
 
 struct FeatureListView: View {
   @Bindable var store: StoreOf<FeatureListReducer>
-
+  
   var body: some View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
       Form {

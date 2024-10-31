@@ -11,35 +11,33 @@ import SwiftUI
 struct NavigationTransitionContentView: View {
     @Namespace private var namespace
     var body: some View {
-        NavigationStack {
-          ZStack {
-            Color.gray.ignoresSafeArea()
-            VStack() {
-              Spacer()
-              Image("pixel_bird")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 240)
-              NavigationLink {
-                if #available(iOS 18.0, *) {
-                  NavigationTransitionDetailView()
-                    .navigationTransition(.zoom(sourceID: "hoge", in: namespace))
-                } else {
-                  NavigationTransitionDetailView()
-                }
-              } label: {
-                if #available(iOS 18.0, *) {
-                  Text("Navigation")
-                    .matchedTransitionSource(id: "hoge", in: namespace)
-                } else {
-                  Text("Navigation")
-                }
-              }
-              .foregroundStyle(.white)
-              Spacer()
+      ZStack {
+        Color.gray.ignoresSafeArea()
+        VStack() {
+          Spacer()
+          Image("pixel_bird")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(height: 240)
+          NavigationLink {
+            if #available(iOS 18.0, *) {
+              NavigationTransitionDetailView()
+                .navigationTransition(.zoom(sourceID: "hoge", in: namespace))
+            } else {
+              NavigationTransitionDetailView()
+            }
+          } label: {
+            if #available(iOS 18.0, *) {
+              Text("Navigation")
+                .matchedTransitionSource(id: "hoge", in: namespace)
+            } else {
+              Text("Navigation")
             }
           }
+          .foregroundStyle(.white)
+          Spacer()
         }
+      }
     }
 }
 
