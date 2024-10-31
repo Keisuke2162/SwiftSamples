@@ -15,12 +15,12 @@ struct FeatureListReducer {
   struct State: Equatable {
     var path = StackState<Path.State>()
   }
-
+  
   enum Action: BindableAction {
     case path(StackAction<Path.State, Path.Action>)
     case binding(BindingAction<State>)
   }
-
+  
   var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
@@ -37,22 +37,20 @@ struct FeatureListReducer {
 extension FeatureListReducer {
   @Reducer(state: .equatable)
   enum Path {
-      case imageRenderer(ImageRendererReducer)
-      case asyncImageRenderer(AsyncImageRendererReducer)
-      case liveActivity(LiveActivityReducer)
-      case searchBooks(SearchBookList)
-      case reviewForm(ReviewForm)
+    case imageRenderer(ImageRendererReducer)
+    case asyncImageRenderer(AsyncImageRendererReducer)
+    case liveActivity(LiveActivityReducer)
+    case searchBooks(SearchBookList)
+    case reviewForm(ReviewForm)
   }
 }
 
 struct FeatureListView: View {
   @Bindable var store: StoreOf<FeatureListReducer>
-
+  
   var body: some View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
       Form {
-        Section("iOS15+") {
-        }
         Section("iOS16+") {
           NavigationLink(
             "ImageRenderer",
@@ -67,12 +65,19 @@ struct FeatureListView: View {
             state: FeatureListReducer.Path.State.liveActivity(LiveActivityReducer.State())
           )
         }
-        Section("Samples") {
+        Section("iOS18+") {
+          NavigationLink {
+            NavigationTransitionContentView()
+          } label: {
+            Text("navigationTransition")
+          }
+        }
+        Section("TCA Samples") {
           NavigationLink(
-            "SearchBookApp",
+            "書籍検索機能",
             state: FeatureListReducer.Path.State.searchBooks(SearchBookList.State()))
         }
-        Section("List Views") {
+        Section("SwiftUI Samples") {
           NavigationLink { ImageList() } label: { Text("List") }
           NavigationLink { ImageGrid() } label: { Text("Grid") }
           NavigationLink { ImagePaging() } label: { Text("Paging") }
@@ -82,7 +87,7 @@ struct FeatureListView: View {
           )
         }
       }
-      .navigationTitle("Feature")
+      .navigationTitle("Samples")
     } destination: { store in
       switch store.case {
       case let .imageRenderer(store):
