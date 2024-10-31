@@ -284,19 +284,6 @@
 			path = SampleLiveActivity;
 			sourceTree = "<group>";
 		};
-		670C24402BE5651300833377 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				67D47A302C18D5F3000604B8 /* iOS18+ */,
-				67404E462BF88D69004AA9EB /* ComposableArchitecture */,
-				678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */,
-				670C24422BE5653B00833377 /* iOS16+ */,
-				670C24442BE565B900833377 /* Samples */,
-				67404E322BF2C0DE004AA9EB /* SwiftUISamples */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		670C24422BE5653B00833377 /* iOS16+ */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,7 +354,12 @@
 		678E3DDA2B9F9F2200BFE91F /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				670C24402BE5651300833377 /* Home */,
+				67D47A302C18D5F3000604B8 /* iOS18+ */,
+				67404E462BF88D69004AA9EB /* ComposableArchitecture */,
+				678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */,
+				670C24422BE5653B00833377 /* iOS16+ */,
+				670C24442BE565B900833377 /* Samples */,
+				67404E322BF2C0DE004AA9EB /* SwiftUISamples */,
 			);
 			path = Features;
 			sourceTree = "<group>";
