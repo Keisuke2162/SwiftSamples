@@ -47,6 +47,7 @@ extension FeatureListReducer {
 
 struct FeatureListView: View {
   @Bindable var store: StoreOf<FeatureListReducer>
+  @State private var scrums = DailyScrum.sampleData
   
   var body: some View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
@@ -97,6 +98,7 @@ struct FeatureListView: View {
           } label: {
             Text("HologramCard")
           }
+          NavigationLink { ScrumsView(scrums: $scrums) } label: { Text("Scrum") }
         }
       }
       .navigationTitle("Samples")
