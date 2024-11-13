@@ -47,7 +47,12 @@ extension FeatureListReducer {
 
 struct FeatureListView: View {
   @Bindable var store: StoreOf<FeatureListReducer>
-  @State private var scrums = DailyScrum.sampleData
+  
+  
+  // @State private var scrums = DailyScrum.sampleData
+  // ScrumStoreのSourceOfTruth
+  @StateObject private var scrumStore = ScrumStore()
+  @State private var scrumErrorWrapper: ErrorWrapper?
   
   var body: some View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
@@ -99,6 +104,18 @@ struct FeatureListView: View {
             Text("HologramCard")
           }
           NavigationLink { ScrumsView(scrums: $scrums) } label: { Text("Scrum") }
+          NavigationLink { ScrumsView(scrums: $scrumStore.scrums) {
+            // saveAction
+            Task {
+              do {
+                // この書き方なscrumsを引数にとる意味なくね？
+                try await scrumStore.save(scrums: scrumStore.scrums)
+              } catch {
+                scrumErrorWrapper = ErrorWrapper(error: error,
+                                                 guidance: "Try again later.")
+              }
+            }
+          } } label: { Text("Scrum") }
         }
       }
       .navigationTitle("Samples")
@@ -116,6 +133,22 @@ struct FeatureListView: View {
         ReviewFormView(store: store)
       }
     }
+    .task {
+      // ScrumStoreのLoadを実行
+      do {
+        try await scrumStore.load()
+      } catch {
+        // 取得エラー時はエラー画面表示
+        scrumErrorWrapper = ErrorWrapper(error: error,
+                                         guidance: "Scrumdinger will load sample data and continue.")
+      }
+    }
+    .sheet(item: $scrumErrorWrapper, onDismiss: {
+      // エラーになった時は仮でサンプルデータを表示する
+      scrumStore.scrums = DailyScrum.sampleData
+    }, content: { wrapper in
+      ErrorView(errorWrapper: wrapper)
+    })
   }
 }
 

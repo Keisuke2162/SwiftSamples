@@ -10,6 +10,9 @@ import SwiftUI
 struct ScrumsView: View {
   @Binding var scrums: [DailyScrum]
   @State private var isPresentingNewScrumView = false
+  // アプリのアクティブ状態を監視
+  @Environment(\.scenePhase) private var scenePhase
+  let saveAction: ()->Void
   
   var body: some View {
     List($scrums) { $scrum in
@@ -32,9 +35,19 @@ struct ScrumsView: View {
     .sheet(isPresented: $isPresentingNewScrumView) {
       NewScrumSheet(scrums: $scrums, isPresentingNewScrumView: $isPresentingNewScrumView)
     }
+    // MEMO: scenePhaseのonChangeが機能してない（inActiveにいつ移行してるか不明）なのでonDisappearで代用
+    .onDisappear {
+      saveAction()
+    }
+//    .onChange(of: scenePhase, initial: true, { oldValue, newValue in
+//      print("テスト \(oldValue), \(newValue)")
+//      if newValue == .inactive {
+//        saveAction()
+//      }
+//    })
   }
 }
 
 #Preview {
-  ScrumsView(scrums: .constant(DailyScrum.sampleData))
+  ScrumsView(scrums: .constant(DailyScrum.sampleData), saveAction: {})
 }

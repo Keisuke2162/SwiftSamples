@@ -112,6 +112,9 @@
 		677542102CD9422600F8BE7C /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6775420F2CD9422600F8BE7C /* ding.wav */; };
 		677542122CD9482200F8BE7C /* NewScrumSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677542112CD9482200F8BE7C /* NewScrumSheet.swift */; };
 		677542142CD94EF300F8BE7C /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677542132CD94EEC00F8BE7C /* History.swift */; };
+		677542182CDC3A6400F8BE7C /* ScrumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677542172CDC3A6300F8BE7C /* ScrumStore.swift */; };
+		6775421A2CDF0CC600F8BE7C /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677542192CDF0CC300F8BE7C /* ErrorWrapper.swift */; };
+		6775421C2CDF0D3F00F8BE7C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6775421B2CDF0D3C00F8BE7C /* ErrorView.swift */; };
 		678E3DD62B9F872100BFE91F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD52B9F872100BFE91F /* ComposableArchitecture */; };
 		678E3DD92B9F878800BFE91F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD82B9F878800BFE91F /* Kingfisher */; };
 		678E3DDD2B9F9FCE00BFE91F /* FeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */; };
@@ -291,6 +294,9 @@
 		6775420F2CD9422600F8BE7C /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
 		677542112CD9482200F8BE7C /* NewScrumSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewScrumSheet.swift; sourceTree = "<group>"; };
 		677542132CD94EEC00F8BE7C /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		677542172CDC3A6300F8BE7C /* ScrumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumStore.swift; sourceTree = "<group>"; };
+		677542192CDF0CC300F8BE7C /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		6775421B2CDF0D3C00F8BE7C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureList.swift; sourceTree = "<group>"; };
 		678E3DE02B9FA4EB00BFE91F /* ImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
 		67B77CE42CEE555000721C8B /* SNSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSHomeView.swift; sourceTree = "<group>"; };
@@ -778,6 +784,8 @@
 		677542032CD8027D00F8BE7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				677542192CDF0CC300F8BE7C /* ErrorWrapper.swift */,
+				677542172CDC3A6300F8BE7C /* ScrumStore.swift */,
 				677542132CD94EEC00F8BE7C /* History.swift */,
 				6775420F2CD9422600F8BE7C /* ding.wav */,
 				677541EE2CD5893A00F8BE7C /* DailyScrum.swift */,
@@ -803,6 +811,7 @@
 		6775420B2CD8095D00F8BE7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6775421B2CDF0D3C00F8BE7C /* ErrorView.swift */,
 				677542112CD9482200F8BE7C /* NewScrumSheet.swift */,
 				677541FB2CD6D39300F8BE7C /* ScrumDetailEditView.swift */,
 				677541F72CD6C06000F8BE7C /* ScrumsView.swift */,
@@ -1139,6 +1148,7 @@
 				670827FC2CEA1BEE008EA7AD /* Color+Extension.swift in Sources */,
 				677541EB2CD5824100F8BE7C /* MeetingView.swift in Sources */,
 				677541F12CD58A1900F8BE7C /* CardView.swift in Sources */,
+				6775421C2CDF0D3F00F8BE7C /* ErrorView.swift in Sources */,
 				67668FA12BB3013600595591 /* AsyncImageRenderer.swift in Sources */,
 				67404E342BF3FD34004AA9EB /* ImageList.swift in Sources */,
 				6708284A2CED0BD5008EA7AD /* SNSRegisterView.swift in Sources */,
@@ -1161,6 +1171,7 @@
 				67B77D262CF28CF600721C8B /* SNSTimelineView.swift in Sources */,
 				677DB4412CF2EF9600532143 /* SNSTimelineItemCell.swift in Sources */,
 				67404E382BF413DC004AA9EB /* ImageGrid.swift in Sources */,
+				6775421A2CDF0CC600F8BE7C /* ErrorWrapper.swift in Sources */,
 				67404E282BF10A80004AA9EB /* GoogleBooksClient.swift in Sources */,
 				67B77D202CF2727900721C8B /* SNSUser.swift in Sources */,
 				670992472BA0DC59004F11F6 /* SampleLiveActivity.swift in Sources */,
@@ -1171,6 +1182,7 @@
 				672645B72CF324F4001C0E51 /* HologramCardView.swift in Sources */,
 				6775420E2CD809A200F8BE7C /* MeetingFooterView.swift in Sources */,
 				67668FA92BB3037F00595591 /* CatItem.swift in Sources */,
+				677542182CDC3A6400F8BE7C /* ScrumStore.swift in Sources */,
 				677541F82CD6C06100F8BE7C /* ScrumsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
