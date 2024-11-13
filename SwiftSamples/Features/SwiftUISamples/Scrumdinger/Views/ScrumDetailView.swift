@@ -80,6 +80,9 @@ struct ScrumDetailView: View {
           }
       }
     }
+    .onAppear {
+      print("テスト1")
+    }
   }
 }
 

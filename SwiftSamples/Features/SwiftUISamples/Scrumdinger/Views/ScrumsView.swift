@@ -4,7 +4,7 @@ struct ScrumsView: View {
   @Binding var scrums: [DailyScrum]
   @State private var isPresentingNewScrumView = false
   // アプリのアクティブ状態を監視
-  @Environment(\.scenePhase) private var scenePhase
+  // @Environment(\.scenePhase) private var scenePhase
   let saveAction: ()->Void
   
   var body: some View {
