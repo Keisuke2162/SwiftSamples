@@ -1,10 +1,3 @@
-//
-//  MeetingHeaderView.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/11/04.
-//
-
 import SwiftUI
 
 struct MeetingHeaderView: View {

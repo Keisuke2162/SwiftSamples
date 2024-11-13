@@ -1,13 +1,6 @@
-//
-//  ScrumStore.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/11/07.
-//
-
 import SwiftUI
 
-// scrumsは@Publishedなのでメインスレッドで動作することが必要。＠MainActorにしておく
+// scrumsは@Published(UIの再描画が走る)なのでメインスレッドで動作することが必要。＠MainActorにしておく
 
 @MainActor
 class ScrumStore: ObservableObject {

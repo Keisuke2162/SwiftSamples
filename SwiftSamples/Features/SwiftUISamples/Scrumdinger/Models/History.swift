@@ -1,10 +1,3 @@
-//
-//  History.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/11/05.
-//
-
 import Foundation
 
 struct History: Identifiable, Codable {

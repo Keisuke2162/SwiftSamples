@@ -1,10 +1,3 @@
-//
-//  ErrorView.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/11/09.
-//
-
 import SwiftUI
 
 struct ErrorView: View {

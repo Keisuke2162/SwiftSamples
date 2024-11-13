@@ -1,10 +1,3 @@
-//
-//  DailyScrum.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/11/02.
-//
-
 import Foundation
 
 struct DailyScrum: Identifiable, Codable {

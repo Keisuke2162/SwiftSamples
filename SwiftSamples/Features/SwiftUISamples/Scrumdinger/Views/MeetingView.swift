@@ -1,10 +1,3 @@
-//
-//  MeetingView.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/11/02.
-//
-
 import SwiftUI
 import AVFoundation
 
@@ -25,8 +18,7 @@ struct MeetingView: View {
           secondsRemaining: scrumTimer.secondsRemaining,
           theme: scrum.theme
         )
-        Circle()
-          .strokeBorder(lineWidth: 24)
+        MeetingTimerView(speakers: scrumTimer.speakers, theme: scrum.theme)
         MeetingFooterView(speakers: scrumTimer.speakers) {
           // skipAction
           scrumTimer.skipSpeaker()

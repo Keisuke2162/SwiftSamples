@@ -1,10 +1,3 @@
-//
-//  Theme.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/11/02.
-//
-
 import SwiftUI
 
 enum Theme: String, CaseIterable, Identifiable, Codable {

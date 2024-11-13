@@ -1,10 +1,3 @@
-//
-//  ErrorWrapper.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/11/09.
-//
-
 import Foundation
 
 struct ErrorWrapper: Identifiable {

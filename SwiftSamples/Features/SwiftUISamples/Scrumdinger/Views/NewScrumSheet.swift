@@ -1,10 +1,3 @@
-//
-//  NewScrumSheet.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/11/05.
-//
-
 import SwiftUI
 
 //ScrumDetailViewの.sheetとやってることはほぼ一緒。.sheetの中身を切り出しただけ

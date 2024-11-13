@@ -1,10 +1,3 @@
-//
-//  LiveActivityView.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/03/13.
-//
-
 import ActivityKit
 import ComposableArchitecture
 import Foundation

@@ -1,10 +1,3 @@
-//
-//  ThemePickerView.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/11/03.
-//
-
 import SwiftUI
 
 struct ThemePickerView: View {
