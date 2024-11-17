@@ -1,31 +1,5 @@
 import SwiftUI
 
-enum Pickers: CaseIterable {
-  case auto
-  case wheel
-  case inline
-  case menu
-  case segment
-  case palette
-
-  var pickerStyle: any PickerStyle {
-    switch self {
-    case .auto:
-        .automatic
-    case .wheel:
-        .wheel
-    case .inline:
-        .inline
-    case .menu:
-        .menu
-    case .segment:
-        .segmented
-    case .palette:
-        .palette
-    }
-  }
-}
-
 struct PickersView: View {
   @State private var currentLeagueType: LeagueType = .japan
   
@@ -47,7 +21,7 @@ struct PickersView: View {
         .pickerStyle(.automatic)
         .padding()
       }
-      
+
       // WheelPickerStyle
       VStack {
         HStack {
