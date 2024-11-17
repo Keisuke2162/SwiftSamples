@@ -1,7 +1,3 @@
-
-
-
-
 import SwiftUI
 
 @MainActor
@@ -31,13 +27,13 @@ public class FixturesViewModel: ObservableObject {
     }
     isLoading = false
   }
-
+  
   func showPreviousDate() {
     if selectedDateIndex > 0 {
       selectedDateIndex -= 1
     }
   }
-
+  
   func showNextDate() {
     if selectedDateIndex < dateKeys.count - 1 {
       selectedDateIndex += 1
@@ -51,7 +47,7 @@ public struct FixturesView: View {
   public init(leagueType: LeagueType, isUseJSON: Bool) {
     _viewModel = StateObject(wrappedValue: FixturesViewModel(leagueType: leagueType, isUseJSON: isUseJSON))
   }
-
+  
   public var body: some View {
     VStack(spacing: .zero) {
       if viewModel.fixtures.isEmpty {
