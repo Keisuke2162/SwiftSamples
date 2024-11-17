@@ -18,7 +18,7 @@ struct FootballTopView: View {
       .padding()
       
       NavigationLink { StandingView(leagueType: currentLeagueType, isUseJSON: featureFlag.isUseJsonFootballData) } label: { Text("Standings") }
-      NavigationLink { EmptyView() } label: { Text("Features") }
+      NavigationLink { FixturesView(leagueType: currentLeagueType, isUseJSON: featureFlag.isUseJsonFootballData) } label: { Text("Fixtures") }
       NavigationLink { EmptyView() } label: { Text("PlayerStats") }
     }
   }

@@ -49,6 +49,10 @@
 		6708282C2CEA2DA8008EA7AD /* PickersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708282B2CEA2DA5008EA7AD /* PickersView.swift */; };
 		6708282E2CEA35AD008EA7AD /* StandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708282D2CEA35A8008EA7AD /* StandingView.swift */; };
 		670828362CEA3608008EA7AD /* StandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828352CEA3605008EA7AD /* StandingCell.swift */; };
+		670828382CEA3C92008EA7AD /* FixturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828372CEA3C8E008EA7AD /* FixturesView.swift */; };
+		6708283A2CEA3C9A008EA7AD /* FixturesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828392CEA3C96008EA7AD /* FixturesCell.swift */; };
+		6708283C2CEA3CA2008EA7AD /* FixtureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708283B2CEA3C9E008EA7AD /* FixtureDetailView.swift */; };
+		6708283E2CEA3CBC008EA7AD /* FixtureStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708283D2CEA3CAE008EA7AD /* FixtureStatsView.swift */; };
 		670992202BA09F8D004F11F6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6709921F2BA09F8D004F11F6 /* WidgetKit.framework */; };
 		670992222BA09F8D004F11F6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670992212BA09F8D004F11F6 /* SwiftUI.framework */; };
 		670992252BA09F8D004F11F6 /* SampleLiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992242BA09F8D004F11F6 /* SampleLiveActivityBundle.swift */; };
@@ -172,6 +176,10 @@
 		6708282B2CEA2DA5008EA7AD /* PickersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersView.swift; sourceTree = "<group>"; };
 		6708282D2CEA35A8008EA7AD /* StandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingView.swift; sourceTree = "<group>"; };
 		670828352CEA3605008EA7AD /* StandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingCell.swift; sourceTree = "<group>"; };
+		670828372CEA3C8E008EA7AD /* FixturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesView.swift; sourceTree = "<group>"; };
+		670828392CEA3C96008EA7AD /* FixturesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesCell.swift; sourceTree = "<group>"; };
+		6708283B2CEA3C9E008EA7AD /* FixtureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetailView.swift; sourceTree = "<group>"; };
+		6708283D2CEA3CAE008EA7AD /* FixtureStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureStatsView.swift; sourceTree = "<group>"; };
 		6709921D2BA09F8D004F11F6 /* SampleLiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SampleLiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6709921F2BA09F8D004F11F6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		670992212BA09F8D004F11F6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -449,6 +457,10 @@
 		670828302CEA35ED008EA7AD /* Fixture */ = {
 			isa = PBXGroup;
 			children = (
+				6708283D2CEA3CAE008EA7AD /* FixtureStatsView.swift */,
+				6708283B2CEA3C9E008EA7AD /* FixtureDetailView.swift */,
+				670828392CEA3C96008EA7AD /* FixturesCell.swift */,
+				670828372CEA3C8E008EA7AD /* FixturesView.swift */,
 			);
 			path = Fixture;
 			sourceTree = "<group>";
@@ -813,12 +825,15 @@
 				6708282A2CEA289D008EA7AD /* FootballTopView.swift in Sources */,
 				67404E2C2BF10C9E004AA9EB /* Book.swift in Sources */,
 				670827EB2CEA1B6A008EA7AD /* FixtureDetail.swift in Sources */,
+				6708283C2CEA3CA2008EA7AD /* FixtureDetailView.swift in Sources */,
 				67404E3A2BF41804004AA9EB /* ImagePaging.swift in Sources */,
 				67404E302BF11783004AA9EB /* SearchBookListRow.swift in Sources */,
+				6708283E2CEA3CBC008EA7AD /* FixtureStatsView.swift in Sources */,
 				670827F52CEA1BAD008EA7AD /* Standings.swift in Sources */,
 				670827E22CEA18D2008EA7AD /* FootballAPIClient.swift in Sources */,
 				67668FA62BB3036800595591 /* CatClient.swift in Sources */,
 				670828362CEA3608008EA7AD /* StandingCell.swift in Sources */,
+				670828382CEA3C92008EA7AD /* FixturesView.swift in Sources */,
 				670828282CEA1F69008EA7AD /* FootballAPIKey.swift in Sources */,
 				670827F72CEA1BB9008EA7AD /* Team.swift in Sources */,
 				678E3DDD2B9F9FCE00BFE91F /* FeatureList.swift in Sources */,
@@ -830,6 +845,7 @@
 				670827E02CE9F74D008EA7AD /* FeatureFlag.swift in Sources */,
 				678E3DE12B9FA4EB00BFE91F /* ImageRenderer.swift in Sources */,
 				67D47A322C18D62C000604B8 /* NavigationTransition.swift in Sources */,
+				6708283A2CEA3C9A008EA7AD /* FixturesCell.swift in Sources */,
 				670827FC2CEA1BEE008EA7AD /* Color+Extension.swift in Sources */,
 				67668FA12BB3013600595591 /* AsyncImageRenderer.swift in Sources */,
 				67404E342BF3FD34004AA9EB /* ImageList.swift in Sources */,
