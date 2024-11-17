@@ -2,7 +2,7 @@ import Foundation
 
 public enum ClubTheme: Int {
   case other = 0
-
+  
   // MARK: Premier
   case arsenal = 42
   case aston_villa = 66
