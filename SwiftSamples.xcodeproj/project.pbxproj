@@ -47,6 +47,8 @@
 		670828282CEA1F69008EA7AD /* FootballAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828272CEA1F63008EA7AD /* FootballAPIKey.swift */; };
 		6708282A2CEA289D008EA7AD /* FootballTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828292CEA2894008EA7AD /* FootballTopView.swift */; };
 		6708282C2CEA2DA8008EA7AD /* PickersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708282B2CEA2DA5008EA7AD /* PickersView.swift */; };
+		6708282E2CEA35AD008EA7AD /* StandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708282D2CEA35A8008EA7AD /* StandingView.swift */; };
+		670828362CEA3608008EA7AD /* StandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828352CEA3605008EA7AD /* StandingCell.swift */; };
 		670992202BA09F8D004F11F6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6709921F2BA09F8D004F11F6 /* WidgetKit.framework */; };
 		670992222BA09F8D004F11F6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670992212BA09F8D004F11F6 /* SwiftUI.framework */; };
 		670992252BA09F8D004F11F6 /* SampleLiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992242BA09F8D004F11F6 /* SampleLiveActivityBundle.swift */; };
@@ -168,6 +170,8 @@
 		670828272CEA1F63008EA7AD /* FootballAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAPIKey.swift; sourceTree = "<group>"; };
 		670828292CEA2894008EA7AD /* FootballTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballTopView.swift; sourceTree = "<group>"; };
 		6708282B2CEA2DA5008EA7AD /* PickersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersView.swift; sourceTree = "<group>"; };
+		6708282D2CEA35A8008EA7AD /* StandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingView.swift; sourceTree = "<group>"; };
+		670828352CEA3605008EA7AD /* StandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingCell.swift; sourceTree = "<group>"; };
 		6709921D2BA09F8D004F11F6 /* SampleLiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SampleLiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6709921F2BA09F8D004F11F6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		670992212BA09F8D004F11F6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -349,6 +353,9 @@
 		670827E52CEA18E0008EA7AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				670828312CEA35F3008EA7AD /* PlayerStats */,
+				670828302CEA35ED008EA7AD /* Fixture */,
+				6708282F2CEA35DC008EA7AD /* Stading */,
 				670828292CEA2894008EA7AD /* FootballTopView.swift */,
 			);
 			path = View;
@@ -357,6 +364,9 @@
 		670827E62CEA18E6008EA7AD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				670828322CEA35F8008EA7AD /* PlayerStats */,
+				670828332CEA35F8008EA7AD /* Fixture */,
+				670828342CEA35F8008EA7AD /* Stading */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -425,6 +435,50 @@
 				670828132CEA1EF5008EA7AD /* football_api_standings_2023_140.json */,
 			);
 			path = Spain;
+			sourceTree = "<group>";
+		};
+		6708282F2CEA35DC008EA7AD /* Stading */ = {
+			isa = PBXGroup;
+			children = (
+				670828352CEA3605008EA7AD /* StandingCell.swift */,
+				6708282D2CEA35A8008EA7AD /* StandingView.swift */,
+			);
+			path = Stading;
+			sourceTree = "<group>";
+		};
+		670828302CEA35ED008EA7AD /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fixture;
+			sourceTree = "<group>";
+		};
+		670828312CEA35F3008EA7AD /* PlayerStats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlayerStats;
+			sourceTree = "<group>";
+		};
+		670828322CEA35F8008EA7AD /* PlayerStats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlayerStats;
+			sourceTree = "<group>";
+		};
+		670828332CEA35F8008EA7AD /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fixture;
+			sourceTree = "<group>";
+		};
+		670828342CEA35F8008EA7AD /* Stading */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stading;
 			sourceTree = "<group>";
 		};
 		6709921E2BA09F8D004F11F6 /* Frameworks */ = {
@@ -764,6 +818,7 @@
 				670827F52CEA1BAD008EA7AD /* Standings.swift in Sources */,
 				670827E22CEA18D2008EA7AD /* FootballAPIClient.swift in Sources */,
 				67668FA62BB3036800595591 /* CatClient.swift in Sources */,
+				670828362CEA3608008EA7AD /* StandingCell.swift in Sources */,
 				670828282CEA1F69008EA7AD /* FootballAPIKey.swift in Sources */,
 				670827F72CEA1BB9008EA7AD /* Team.swift in Sources */,
 				678E3DDD2B9F9FCE00BFE91F /* FeatureList.swift in Sources */,
@@ -785,6 +840,7 @@
 				67404E2A2BF10AF6004AA9EB /* SearchBookList.swift in Sources */,
 				67037A762B9F7E55007C183D /* ContentView.swift in Sources */,
 				67404E482BF88DA1004AA9EB /* SwiftUI-and-StateManagement.swift in Sources */,
+				6708282E2CEA35AD008EA7AD /* StandingView.swift in Sources */,
 				67037A742B9F7E55007C183D /* SwiftSamplesApp.swift in Sources */,
 				67404E382BF413DC004AA9EB /* ImageGrid.swift in Sources */,
 				67404E282BF10A80004AA9EB /* GoogleBooksClient.swift in Sources */,

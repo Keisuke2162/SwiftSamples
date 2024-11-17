@@ -17,7 +17,7 @@ struct FootballTopView: View {
       .pickerStyle(.menu)
       .padding()
       
-      NavigationLink { EmptyView() } label: { Text("Standings") }
+      NavigationLink { StandingView(leagueType: currentLeagueType, isUseJSON: featureFlag.isUseJsonFootballData) } label: { Text("Standings") }
       NavigationLink { EmptyView() } label: { Text("Features") }
       NavigationLink { EmptyView() } label: { Text("PlayerStats") }
     }
