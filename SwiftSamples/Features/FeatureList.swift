@@ -86,6 +86,7 @@ struct FeatureListView: View {
             state: FeatureListReducer.Path.State.reviewForm(ReviewForm.State())
           )
           NavigationLink { PickersView() } label: { Text("PickerView") }
+          NavigationLink { FootballTopView() } label: { Text("Football API") }
         }
       }
       .navigationTitle("Samples")

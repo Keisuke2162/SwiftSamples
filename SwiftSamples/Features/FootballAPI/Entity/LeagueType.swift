@@ -21,6 +21,19 @@ extension LeagueType {
       "98"
     }
   }
+
+  public var iconText: String {
+    switch self {
+    case .england:
+      "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+    case .italy:
+      "🇮🇹"
+    case .spain:
+      "🇪🇸"
+    case .japan:
+      "🇯🇵"
+    }
+  }
   
   public var name: String {
     switch self {

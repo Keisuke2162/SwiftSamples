@@ -1,17 +1,25 @@
 import SwiftUI
 
 struct FootballTopView: View {
+  @EnvironmentObject var featureFlag: FeatureFlag
   @State private var currentLeagueType: LeagueType = .japan
 
   var body: some View {
     Form {
-      Picker("Select League", selection: $currentLeagueType) {
+      Toggle(isOn: $featureFlag.isUseJsonFootballData) {
+        Text("Use Local JSON Data")
+      }
+      Picker("\(currentLeagueType.iconText) Select League", selection: $currentLeagueType) {
         ForEach(LeagueType.allCases) { league in
           Text(league.name).tag(league)
         }
       }
-      .pickerStyle(PalettePickerStyle())
+      .pickerStyle(.menu)
       .padding()
+      
+      NavigationLink { EmptyView() } label: { Text("Standings") }
+      NavigationLink { EmptyView() } label: { Text("Features") }
+      NavigationLink { EmptyView() } label: { Text("PlayerStats") }
     }
   }
 }
