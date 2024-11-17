@@ -85,6 +85,7 @@ struct FeatureListView: View {
             "Review Form",
             state: FeatureListReducer.Path.State.reviewForm(ReviewForm.State())
           )
+          NavigationLink { PickersView() } label: { Text("PickerView") }
         }
       }
       .navigationTitle("Samples")
