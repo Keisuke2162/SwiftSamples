@@ -14,6 +14,7 @@
 		67037A852B9F7E56007C183D /* SwiftSamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67037A842B9F7E56007C183D /* SwiftSamplesTests.swift */; };
 		67037A8F2B9F7E56007C183D /* SwiftSamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67037A8E2B9F7E56007C183D /* SwiftSamplesUITests.swift */; };
 		67037A912B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67037A902B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift */; };
+		670827E02CE9F74D008EA7AD /* FeatureFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827DF2CE9F749008EA7AD /* FeatureFlag.swift */; };
 		670992202BA09F8D004F11F6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6709921F2BA09F8D004F11F6 /* WidgetKit.framework */; };
 		670992222BA09F8D004F11F6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670992212BA09F8D004F11F6 /* SwiftUI.framework */; };
 		670992252BA09F8D004F11F6 /* SampleLiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992242BA09F8D004F11F6 /* SampleLiveActivityBundle.swift */; };
@@ -102,6 +103,7 @@
 		67037A8A2B9F7E56007C183D /* SwiftSamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67037A8E2B9F7E56007C183D /* SwiftSamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSamplesUITests.swift; sourceTree = "<group>"; };
 		67037A902B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSamplesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		670827DF2CE9F749008EA7AD /* FeatureFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlag.swift; sourceTree = "<group>"; };
 		6709921D2BA09F8D004F11F6 /* SampleLiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SampleLiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6709921F2BA09F8D004F11F6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		670992212BA09F8D004F11F6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -198,6 +200,7 @@
 		67037A722B9F7E55007C183D /* SwiftSamples */ = {
 			isa = PBXGroup;
 			children = (
+				670827DE2CE9F682008EA7AD /* Utilities */,
 				67037A732B9F7E55007C183D /* SwiftSamplesApp.swift */,
 				67037A752B9F7E55007C183D /* ContentView.swift */,
 				67668FA72BB3037500595591 /* Entity */,
@@ -232,6 +235,21 @@
 				67037A902B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift */,
 			);
 			path = SwiftSamplesUITests;
+			sourceTree = "<group>";
+		};
+		670827DD2CE9F65F008EA7AD /* FootballAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FootballAPI;
+			sourceTree = "<group>";
+		};
+		670827DE2CE9F682008EA7AD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				670827DF2CE9F749008EA7AD /* FeatureFlag.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		6709921E2BA09F8D004F11F6 /* Frameworks */ = {
@@ -354,6 +372,7 @@
 		678E3DDA2B9F9F2200BFE91F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				670827DD2CE9F65F008EA7AD /* FootballAPI */,
 				67D47A302C18D5F3000604B8 /* iOS18+ */,
 				67404E462BF88D69004AA9EB /* ComposableArchitecture */,
 				678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */,
@@ -551,6 +570,7 @@
 				6709923A2BA0BC02004F11F6 /* LiveActivity.swift in Sources */,
 				67404E3E2BF6A0EC004AA9EB /* ImagePaging2.swift in Sources */,
 				6709923E2BA0CB34004F11F6 /* SampleLiveActivityAttributes.swift in Sources */,
+				670827E02CE9F74D008EA7AD /* FeatureFlag.swift in Sources */,
 				678E3DE12B9FA4EB00BFE91F /* ImageRenderer.swift in Sources */,
 				67D47A322C18D62C000604B8 /* NavigationTransition.swift in Sources */,
 				67668FA12BB3013600595591 /* AsyncImageRenderer.swift in Sources */,
