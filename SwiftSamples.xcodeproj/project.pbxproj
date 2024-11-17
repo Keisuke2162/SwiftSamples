@@ -53,6 +53,9 @@
 		6708283A2CEA3C9A008EA7AD /* FixturesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828392CEA3C96008EA7AD /* FixturesCell.swift */; };
 		6708283C2CEA3CA2008EA7AD /* FixtureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708283B2CEA3C9E008EA7AD /* FixtureDetailView.swift */; };
 		6708283E2CEA3CBC008EA7AD /* FixtureStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708283D2CEA3CAE008EA7AD /* FixtureStatsView.swift */; };
+		670828402CEA4FB6008EA7AD /* PlayerStatsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708283F2CEA4FAD008EA7AD /* PlayerStatsContainerView.swift */; };
+		670828422CEA4FBC008EA7AD /* PlayerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828412CEA4FB9008EA7AD /* PlayerStatsView.swift */; };
+		670828442CEA4FC9008EA7AD /* PlayerStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828432CEA4FC1008EA7AD /* PlayerStatCell.swift */; };
 		670992202BA09F8D004F11F6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6709921F2BA09F8D004F11F6 /* WidgetKit.framework */; };
 		670992222BA09F8D004F11F6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670992212BA09F8D004F11F6 /* SwiftUI.framework */; };
 		670992252BA09F8D004F11F6 /* SampleLiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992242BA09F8D004F11F6 /* SampleLiveActivityBundle.swift */; };
@@ -180,6 +183,9 @@
 		670828392CEA3C96008EA7AD /* FixturesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesCell.swift; sourceTree = "<group>"; };
 		6708283B2CEA3C9E008EA7AD /* FixtureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetailView.swift; sourceTree = "<group>"; };
 		6708283D2CEA3CAE008EA7AD /* FixtureStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureStatsView.swift; sourceTree = "<group>"; };
+		6708283F2CEA4FAD008EA7AD /* PlayerStatsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsContainerView.swift; sourceTree = "<group>"; };
+		670828412CEA4FB9008EA7AD /* PlayerStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsView.swift; sourceTree = "<group>"; };
+		670828432CEA4FC1008EA7AD /* PlayerStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatCell.swift; sourceTree = "<group>"; };
 		6709921D2BA09F8D004F11F6 /* SampleLiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SampleLiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6709921F2BA09F8D004F11F6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		670992212BA09F8D004F11F6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -468,6 +474,9 @@
 		670828312CEA35F3008EA7AD /* PlayerStats */ = {
 			isa = PBXGroup;
 			children = (
+				670828432CEA4FC1008EA7AD /* PlayerStatCell.swift */,
+				670828412CEA4FB9008EA7AD /* PlayerStatsView.swift */,
+				6708283F2CEA4FAD008EA7AD /* PlayerStatsContainerView.swift */,
 			);
 			path = PlayerStats;
 			sourceTree = "<group>";
@@ -820,12 +829,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670828402CEA4FB6008EA7AD /* PlayerStatsContainerView.swift in Sources */,
 				670827F92CEA1BC5008EA7AD /* ClubTheme.swift in Sources */,
 				67404E402BF7AA95004AA9EB /* ReviewForm.swift in Sources */,
 				6708282A2CEA289D008EA7AD /* FootballTopView.swift in Sources */,
 				67404E2C2BF10C9E004AA9EB /* Book.swift in Sources */,
 				670827EB2CEA1B6A008EA7AD /* FixtureDetail.swift in Sources */,
 				6708283C2CEA3CA2008EA7AD /* FixtureDetailView.swift in Sources */,
+				670828422CEA4FBC008EA7AD /* PlayerStatsView.swift in Sources */,
+				670828442CEA4FC9008EA7AD /* PlayerStatCell.swift in Sources */,
 				67404E3A2BF41804004AA9EB /* ImagePaging.swift in Sources */,
 				67404E302BF11783004AA9EB /* SearchBookListRow.swift in Sources */,
 				6708283E2CEA3CBC008EA7AD /* FixtureStatsView.swift in Sources */,
