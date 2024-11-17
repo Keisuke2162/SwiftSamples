@@ -2,7 +2,7 @@ import SwiftUI
 
 // TODO: ViewModelディレクトリに移動
 @MainActor
-class StandingViewModel: ObservableObject {
+public class StandingViewModel: ObservableObject {
   @Published var standings: [Standing] = []
   @Published var isLoading = false
   let leagueType: LeagueType
@@ -27,9 +27,9 @@ class StandingViewModel: ObservableObject {
 
 public struct StandingView: View {
   @StateObject private var viewModel: StandingViewModel
-  
-  public init(leagueType: LeagueType, isUseJSON: Bool) {
-    _viewModel = StateObject(wrappedValue: StandingViewModel(leagueType: leagueType, isUseJSON: isUseJSON))
+
+  public init(viewModel: StandingViewModel) {
+    _viewModel = StateObject(wrappedValue: viewModel)
   }
   
   public var body: some View {

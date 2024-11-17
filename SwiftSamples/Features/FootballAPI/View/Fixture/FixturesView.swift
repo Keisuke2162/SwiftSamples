@@ -44,8 +44,8 @@ public class FixturesViewModel: ObservableObject {
 public struct FixturesView: View {
   @StateObject private var viewModel: FixturesViewModel
   
-  public init(leagueType: LeagueType, isUseJSON: Bool) {
-    _viewModel = StateObject(wrappedValue: FixturesViewModel(leagueType: leagueType, isUseJSON: isUseJSON))
+  public init(viewModel: FixturesViewModel) {
+    _viewModel = StateObject(wrappedValue: viewModel)
   }
   
   public var body: some View {

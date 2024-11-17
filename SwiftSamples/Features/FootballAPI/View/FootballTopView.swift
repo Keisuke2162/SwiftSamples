@@ -17,8 +17,8 @@ struct FootballTopView: View {
       .pickerStyle(.menu)
       .padding()
       
-      NavigationLink { StandingView(leagueType: currentLeagueType, isUseJSON: featureFlag.isUseJsonFootballData) } label: { Text("Standings") }
-      NavigationLink { FixturesView(leagueType: currentLeagueType, isUseJSON: featureFlag.isUseJsonFootballData) } label: { Text("Fixtures") }
+      NavigationLink { StandingView(viewModel: StandingViewModel(leagueType: currentLeagueType, isUseJSON: featureFlag.isUseJsonFootballData)) } label: { Text("Standings") }
+      NavigationLink { FixturesView(viewModel: FixturesViewModel(leagueType: currentLeagueType, isUseJSON: featureFlag.isUseJsonFootballData)) } label: { Text("Fixtures") }
       NavigationLink { EmptyView() } label: { Text("PlayerStats") }
     }
   }
