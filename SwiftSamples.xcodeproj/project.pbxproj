@@ -44,6 +44,7 @@
 		670828242CEA1EF5008EA7AD /* foorball_api_topassists_2024_98.json in Resources */ = {isa = PBXBuildFile; fileRef = 6708280A2CEA1EF5008EA7AD /* foorball_api_topassists_2024_98.json */; };
 		670828252CEA1EF5008EA7AD /* football_api_statistics_2024_98_287.json in Resources */ = {isa = PBXBuildFile; fileRef = 6708280E2CEA1EF5008EA7AD /* football_api_statistics_2024_98_287.json */; };
 		670828262CEA1EF5008EA7AD /* foorball_api_topscorer_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828122CEA1EF5008EA7AD /* foorball_api_topscorer_2023_140.json */; };
+		670828282CEA1F69008EA7AD /* FootballAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828272CEA1F63008EA7AD /* FootballAPIKey.swift */; };
 		670992202BA09F8D004F11F6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6709921F2BA09F8D004F11F6 /* WidgetKit.framework */; };
 		670992222BA09F8D004F11F6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670992212BA09F8D004F11F6 /* SwiftUI.framework */; };
 		670992252BA09F8D004F11F6 /* SampleLiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992242BA09F8D004F11F6 /* SampleLiveActivityBundle.swift */; };
@@ -162,6 +163,7 @@
 		670828112CEA1EF5008EA7AD /* foorball_api_topassists_2023_140.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_topassists_2023_140.json; sourceTree = "<group>"; };
 		670828122CEA1EF5008EA7AD /* foorball_api_topscorer_2023_140.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_140.json; sourceTree = "<group>"; };
 		670828132CEA1EF5008EA7AD /* football_api_standings_2023_140.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = football_api_standings_2023_140.json; sourceTree = "<group>"; };
+		670828272CEA1F63008EA7AD /* FootballAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAPIKey.swift; sourceTree = "<group>"; };
 		6709921D2BA09F8D004F11F6 /* SampleLiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SampleLiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6709921F2BA09F8D004F11F6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		670992212BA09F8D004F11F6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -319,6 +321,7 @@
 		670827E32CEA18D6008EA7AD /* API */ = {
 			isa = PBXGroup;
 			children = (
+				670828272CEA1F63008EA7AD /* FootballAPIKey.swift */,
 				670827E12CEA18CE008EA7AD /* FootballAPIClient.swift */,
 			);
 			path = API;
@@ -754,6 +757,7 @@
 				670827F52CEA1BAD008EA7AD /* Standings.swift in Sources */,
 				670827E22CEA18D2008EA7AD /* FootballAPIClient.swift in Sources */,
 				67668FA62BB3036800595591 /* CatClient.swift in Sources */,
+				670828282CEA1F69008EA7AD /* FootballAPIKey.swift in Sources */,
 				670827F72CEA1BB9008EA7AD /* Team.swift in Sources */,
 				678E3DDD2B9F9FCE00BFE91F /* FeatureList.swift in Sources */,
 				67668FAB2BB3055B00595591 /* APIError.swift in Sources */,
