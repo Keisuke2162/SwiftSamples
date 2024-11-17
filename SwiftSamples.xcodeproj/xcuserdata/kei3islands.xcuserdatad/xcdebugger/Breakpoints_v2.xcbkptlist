@@ -3,4 +3,98 @@
    uuid = "56C481F9-47E9-4E69-A092-DEFC90FF392E"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1A88973-8C94-4F98-BFFE-6126B9AD57F3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftSamples/Features/FootballAPI/API/FootballAPIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "fetchFixtureDetail(teamID:fixtureID:isHome:useLocalJson:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F1A88973-8C94-4F98-BFFE-6126B9AD57F3 - 707d749c4bbd4e5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SwiftSamples.FootballAPIClient.fetchFixtureDetail(teamID: Swift.Int, fixtureID: Swift.Int, isHome: Swift.Bool, useLocalJson: Swift.Bool) async throws -&gt; SwiftSamples.FixtureDetail"
+                  moduleName = "SwiftSamples.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kei3islands/Develop/SwiftSamples/SwiftSamples/Features/FootballAPI/API/FootballAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120">
+               </Location>
+               <Location
+                  uuid = "F1A88973-8C94-4F98-BFFE-6126B9AD57F3 - b786a698e1568258"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SwiftSamples.FootballAPIClient.fetchFixtureDetail(teamID: Swift.Int, fixtureID: Swift.Int, isHome: Swift.Bool, useLocalJson: Swift.Bool) async throws -&gt; SwiftSamples.FixtureDetail"
+                  moduleName = "SwiftSamples.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kei3islands/Develop/SwiftSamples/SwiftSamples/Features/FootballAPI/API/FootballAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9EED28FE-AA76-4F02-9ADC-3351D267E077"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftSamples/Features/FootballAPI/API/FootballAPIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "fetchFixtureDetail(teamID:fixtureID:isHome:useLocalJson:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9EED28FE-AA76-4F02-9ADC-3351D267E077 - 707d749c4bbd4ed6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SwiftSamples.FootballAPIClient.fetchFixtureDetail(teamID: Swift.Int, fixtureID: Swift.Int, isHome: Swift.Bool, useLocalJson: Swift.Bool) async throws -&gt; SwiftSamples.FixtureDetail"
+                  moduleName = "SwiftSamples.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kei3islands/Develop/SwiftSamples/SwiftSamples/Features/FootballAPI/API/FootballAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124">
+               </Location>
+               <Location
+                  uuid = "9EED28FE-AA76-4F02-9ADC-3351D267E077 - b786a698e15682d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SwiftSamples.FootballAPIClient.fetchFixtureDetail(teamID: Swift.Int, fixtureID: Swift.Int, isHome: Swift.Bool, useLocalJson: Swift.Bool) async throws -&gt; SwiftSamples.FixtureDetail"
+                  moduleName = "SwiftSamples.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kei3islands/Develop/SwiftSamples/SwiftSamples/Features/FootballAPI/API/FootballAPIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

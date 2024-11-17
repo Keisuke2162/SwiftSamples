@@ -82,7 +82,9 @@ public struct FixturesView: View {
           VStack(spacing: 16) {
             Spacer().frame(height: 16)
             ForEach(viewModel.groupedItem[viewModel.dateKeys[viewModel.selectedDateIndex]] ?? []) { item in
-              NavigationLink { EmptyView() } label: { FixturesCell(fixture: item) }
+              NavigationLink {
+                FixtureDetailView(viewModel: FixtureDetailViewModel(leagueType: viewModel.leagueType, fixture: item, isUseJSON: viewModel.isUseJSON))
+              } label: { FixturesCell(fixture: item) }
                 .padding(.horizontal, 24)
             }
             Spacer().frame(height: 120)
