@@ -23,7 +23,10 @@ public struct StandingCell: View {
           .scaledToFit()
           .frame(width: 40, height: 40)
       } placeholder: {
-        Image(systemName: "circle")
+        Image(systemName: "")
+          .resizable()
+          .scaledToFit()
+          .frame(width: 40, height: 40)
       }
 
       Text(standingItem.team.name)

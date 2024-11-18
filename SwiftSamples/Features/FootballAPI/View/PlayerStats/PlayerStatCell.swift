@@ -44,7 +44,7 @@ public struct PlayerStatCell: View {
           .frame(width: viewModel.imageWidth, height: viewModel.imageWidth)
           .padding(.vertical, 8)
       } placeholder: {
-        Image(systemName: "circle")
+        Image(systemName: "")
           .resizable()
           .scaledToFit()
           .frame(width: viewModel.imageWidth, height: viewModel.imageWidth)

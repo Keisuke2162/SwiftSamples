@@ -18,7 +18,7 @@ public struct FixturesCell: View {
             .padding(.leading, 32)
             .padding(.vertical, 16)
         } placeholder: {
-          Image(systemName: "circle")
+          Image(systemName: "")
             .resizable()
             .frame(width: 56, height: 56)
             .aspectRatio(contentMode: .fill)
@@ -53,7 +53,7 @@ public struct FixturesCell: View {
             .padding(.trailing, 32)
             .padding(.vertical, 16)
         } placeholder: {
-          Image(systemName: "circle")
+          Image(systemName: "")
             .resizable()
             .frame(width: 56, height: 56)
             .aspectRatio(contentMode: .fill)
