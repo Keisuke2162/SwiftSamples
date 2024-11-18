@@ -1,19 +1,14 @@
-//
-//  SwiftSamplesApp.swift
-//  SwiftSamples
-//
-//  Created by Kei on 2024/03/12.
-//
-
 import SwiftUI
 
 @main
 struct SwiftSamplesApp: App {
-    var body: some Scene {
-        WindowGroup {
-            FeatureListView(store: .init(initialState: FeatureListReducer.State(), reducer: {
-                FeatureListReducer()
-            }))
-        }
+  @StateObject private var featureFlag = FeatureFlag()
+  var body: some Scene {
+    WindowGroup {
+      FeatureListView(store: .init(initialState: FeatureListReducer.State(), reducer: {
+        FeatureListReducer()
+      }))
+      .environmentObject(featureFlag)
     }
+  }
 }

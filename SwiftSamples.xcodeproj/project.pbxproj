@@ -14,6 +14,48 @@
 		67037A852B9F7E56007C183D /* SwiftSamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67037A842B9F7E56007C183D /* SwiftSamplesTests.swift */; };
 		67037A8F2B9F7E56007C183D /* SwiftSamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67037A8E2B9F7E56007C183D /* SwiftSamplesUITests.swift */; };
 		67037A912B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67037A902B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift */; };
+		670827E02CE9F74D008EA7AD /* FeatureFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827DF2CE9F749008EA7AD /* FeatureFlag.swift */; };
+		670827E22CEA18D2008EA7AD /* FootballAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827E12CEA18CE008EA7AD /* FootballAPIClient.swift */; };
+		670827E92CEA1B61008EA7AD /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827E82CEA1B60008EA7AD /* Fixture.swift */; };
+		670827EB2CEA1B6A008EA7AD /* FixtureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827EA2CEA1B69008EA7AD /* FixtureDetail.swift */; };
+		670827EE2CEA1B79008EA7AD /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827ED2CEA1B78008EA7AD /* League.swift */; };
+		670827F02CEA1B93008EA7AD /* LeagueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827EF2CEA1B92008EA7AD /* LeagueType.swift */; };
+		670827F32CEA1BA2008EA7AD /* PlayerStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827F22CEA1BA2008EA7AD /* PlayerStat.swift */; };
+		670827F52CEA1BAD008EA7AD /* Standings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827F42CEA1BAC008EA7AD /* Standings.swift */; };
+		670827F72CEA1BB9008EA7AD /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827F62CEA1BB8008EA7AD /* Team.swift */; };
+		670827F92CEA1BC5008EA7AD /* ClubTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827F82CEA1BC1008EA7AD /* ClubTheme.swift */; };
+		670827FC2CEA1BEE008EA7AD /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827FB2CEA1BED008EA7AD /* Color+Extension.swift */; };
+		670827FE2CEA1BF8008EA7AD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670827FD2CEA1BF7008EA7AD /* String+Extension.swift */; };
+		670828152CEA1EF5008EA7AD /* foorball_api_fixtures_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828102CEA1EF5008EA7AD /* foorball_api_fixtures_2023_140.json */; };
+		670828162CEA1EF5008EA7AD /* foorball_api_topassists_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828112CEA1EF5008EA7AD /* foorball_api_topassists_2023_140.json */; };
+		670828172CEA1EF5008EA7AD /* foorball_api_fixtures_2023_135.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828042CEA1EF5008EA7AD /* foorball_api_fixtures_2023_135.json */; };
+		670828182CEA1EF5008EA7AD /* football_api_standings_2023_135.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828072CEA1EF5008EA7AD /* football_api_standings_2023_135.json */; };
+		670828192CEA1EF5008EA7AD /* football_api_statistics_2024_98_282.json in Resources */ = {isa = PBXBuildFile; fileRef = 6708280D2CEA1EF5008EA7AD /* football_api_statistics_2024_98_282.json */; };
+		6708281A2CEA1EF5008EA7AD /* football_api_standings_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828132CEA1EF5008EA7AD /* football_api_standings_2023_140.json */; };
+		6708281B2CEA1EF5008EA7AD /* football_api_standings_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828022CEA1EF5008EA7AD /* football_api_standings_2023_39.json */; };
+		6708281C2CEA1EF5008EA7AD /* foorball_api_fixtures_2024_98.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828092CEA1EF5008EA7AD /* foorball_api_fixtures_2024_98.json */; };
+		6708281D2CEA1EF5008EA7AD /* football_api_standings_2024_98.json in Resources */ = {isa = PBXBuildFile; fileRef = 6708280C2CEA1EF5008EA7AD /* football_api_standings_2024_98.json */; };
+		6708281E2CEA1EF5008EA7AD /* foorball_api_fixtures_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 670827FF2CEA1EF5008EA7AD /* foorball_api_fixtures_2023_39.json */; };
+		6708281F2CEA1EF5008EA7AD /* foorball_api_topscorer_2023_135.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828062CEA1EF5008EA7AD /* foorball_api_topscorer_2023_135.json */; };
+		670828202CEA1EF5008EA7AD /* foorball_api_topassists_2023_135.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828052CEA1EF5008EA7AD /* foorball_api_topassists_2023_135.json */; };
+		670828212CEA1EF5008EA7AD /* foorball_api_topassists_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828002CEA1EF5008EA7AD /* foorball_api_topassists_2023_39.json */; };
+		670828222CEA1EF5008EA7AD /* foorball_api_topscorer_2024_98.json in Resources */ = {isa = PBXBuildFile; fileRef = 6708280B2CEA1EF5008EA7AD /* foorball_api_topscorer_2024_98.json */; };
+		670828232CEA1EF5008EA7AD /* foorball_api_topscorer_2023_39.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828012CEA1EF5008EA7AD /* foorball_api_topscorer_2023_39.json */; };
+		670828242CEA1EF5008EA7AD /* foorball_api_topassists_2024_98.json in Resources */ = {isa = PBXBuildFile; fileRef = 6708280A2CEA1EF5008EA7AD /* foorball_api_topassists_2024_98.json */; };
+		670828252CEA1EF5008EA7AD /* football_api_statistics_2024_98_287.json in Resources */ = {isa = PBXBuildFile; fileRef = 6708280E2CEA1EF5008EA7AD /* football_api_statistics_2024_98_287.json */; };
+		670828262CEA1EF5008EA7AD /* foorball_api_topscorer_2023_140.json in Resources */ = {isa = PBXBuildFile; fileRef = 670828122CEA1EF5008EA7AD /* foorball_api_topscorer_2023_140.json */; };
+		670828282CEA1F69008EA7AD /* FootballAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828272CEA1F63008EA7AD /* FootballAPIKey.swift */; };
+		6708282A2CEA289D008EA7AD /* FootballTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828292CEA2894008EA7AD /* FootballTopView.swift */; };
+		6708282C2CEA2DA8008EA7AD /* PickersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708282B2CEA2DA5008EA7AD /* PickersView.swift */; };
+		6708282E2CEA35AD008EA7AD /* StandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708282D2CEA35A8008EA7AD /* StandingView.swift */; };
+		670828362CEA3608008EA7AD /* StandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828352CEA3605008EA7AD /* StandingCell.swift */; };
+		670828382CEA3C92008EA7AD /* FixturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828372CEA3C8E008EA7AD /* FixturesView.swift */; };
+		6708283A2CEA3C9A008EA7AD /* FixturesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828392CEA3C96008EA7AD /* FixturesCell.swift */; };
+		6708283C2CEA3CA2008EA7AD /* FixtureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708283B2CEA3C9E008EA7AD /* FixtureDetailView.swift */; };
+		6708283E2CEA3CBC008EA7AD /* FixtureStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708283D2CEA3CAE008EA7AD /* FixtureStatsView.swift */; };
+		670828402CEA4FB6008EA7AD /* PlayerStatsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708283F2CEA4FAD008EA7AD /* PlayerStatsContainerView.swift */; };
+		670828422CEA4FBC008EA7AD /* PlayerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828412CEA4FB9008EA7AD /* PlayerStatsView.swift */; };
+		670828442CEA4FC9008EA7AD /* PlayerStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670828432CEA4FC1008EA7AD /* PlayerStatCell.swift */; };
 		670992202BA09F8D004F11F6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6709921F2BA09F8D004F11F6 /* WidgetKit.framework */; };
 		670992222BA09F8D004F11F6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670992212BA09F8D004F11F6 /* SwiftUI.framework */; };
 		670992252BA09F8D004F11F6 /* SampleLiveActivityBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992242BA09F8D004F11F6 /* SampleLiveActivityBundle.swift */; };
@@ -102,6 +144,48 @@
 		67037A8A2B9F7E56007C183D /* SwiftSamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67037A8E2B9F7E56007C183D /* SwiftSamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSamplesUITests.swift; sourceTree = "<group>"; };
 		67037A902B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSamplesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		670827DF2CE9F749008EA7AD /* FeatureFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlag.swift; sourceTree = "<group>"; };
+		670827E12CEA18CE008EA7AD /* FootballAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAPIClient.swift; sourceTree = "<group>"; };
+		670827E82CEA1B60008EA7AD /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
+		670827EA2CEA1B69008EA7AD /* FixtureDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetail.swift; sourceTree = "<group>"; };
+		670827ED2CEA1B78008EA7AD /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		670827EF2CEA1B92008EA7AD /* LeagueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueType.swift; sourceTree = "<group>"; };
+		670827F22CEA1BA2008EA7AD /* PlayerStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStat.swift; sourceTree = "<group>"; };
+		670827F42CEA1BAC008EA7AD /* Standings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Standings.swift; sourceTree = "<group>"; };
+		670827F62CEA1BB8008EA7AD /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		670827F82CEA1BC1008EA7AD /* ClubTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubTheme.swift; sourceTree = "<group>"; };
+		670827FB2CEA1BED008EA7AD /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		670827FD2CEA1BF7008EA7AD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		670827FF2CEA1EF5008EA7AD /* foorball_api_fixtures_2023_39.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_fixtures_2023_39.json; sourceTree = "<group>"; };
+		670828002CEA1EF5008EA7AD /* foorball_api_topassists_2023_39.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_topassists_2023_39.json; sourceTree = "<group>"; };
+		670828012CEA1EF5008EA7AD /* foorball_api_topscorer_2023_39.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_39.json; sourceTree = "<group>"; };
+		670828022CEA1EF5008EA7AD /* football_api_standings_2023_39.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = football_api_standings_2023_39.json; sourceTree = "<group>"; };
+		670828042CEA1EF5008EA7AD /* foorball_api_fixtures_2023_135.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_fixtures_2023_135.json; sourceTree = "<group>"; };
+		670828052CEA1EF5008EA7AD /* foorball_api_topassists_2023_135.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_topassists_2023_135.json; sourceTree = "<group>"; };
+		670828062CEA1EF5008EA7AD /* foorball_api_topscorer_2023_135.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_135.json; sourceTree = "<group>"; };
+		670828072CEA1EF5008EA7AD /* football_api_standings_2023_135.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = football_api_standings_2023_135.json; sourceTree = "<group>"; };
+		670828092CEA1EF5008EA7AD /* foorball_api_fixtures_2024_98.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_fixtures_2024_98.json; sourceTree = "<group>"; };
+		6708280A2CEA1EF5008EA7AD /* foorball_api_topassists_2024_98.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_topassists_2024_98.json; sourceTree = "<group>"; };
+		6708280B2CEA1EF5008EA7AD /* foorball_api_topscorer_2024_98.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_topscorer_2024_98.json; sourceTree = "<group>"; };
+		6708280C2CEA1EF5008EA7AD /* football_api_standings_2024_98.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = football_api_standings_2024_98.json; sourceTree = "<group>"; };
+		6708280D2CEA1EF5008EA7AD /* football_api_statistics_2024_98_282.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = football_api_statistics_2024_98_282.json; sourceTree = "<group>"; };
+		6708280E2CEA1EF5008EA7AD /* football_api_statistics_2024_98_287.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = football_api_statistics_2024_98_287.json; sourceTree = "<group>"; };
+		670828102CEA1EF5008EA7AD /* foorball_api_fixtures_2023_140.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_fixtures_2023_140.json; sourceTree = "<group>"; };
+		670828112CEA1EF5008EA7AD /* foorball_api_topassists_2023_140.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_topassists_2023_140.json; sourceTree = "<group>"; };
+		670828122CEA1EF5008EA7AD /* foorball_api_topscorer_2023_140.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foorball_api_topscorer_2023_140.json; sourceTree = "<group>"; };
+		670828132CEA1EF5008EA7AD /* football_api_standings_2023_140.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = football_api_standings_2023_140.json; sourceTree = "<group>"; };
+		670828272CEA1F63008EA7AD /* FootballAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAPIKey.swift; sourceTree = "<group>"; };
+		670828292CEA2894008EA7AD /* FootballTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballTopView.swift; sourceTree = "<group>"; };
+		6708282B2CEA2DA5008EA7AD /* PickersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersView.swift; sourceTree = "<group>"; };
+		6708282D2CEA35A8008EA7AD /* StandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingView.swift; sourceTree = "<group>"; };
+		670828352CEA3605008EA7AD /* StandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingCell.swift; sourceTree = "<group>"; };
+		670828372CEA3C8E008EA7AD /* FixturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesView.swift; sourceTree = "<group>"; };
+		670828392CEA3C96008EA7AD /* FixturesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesCell.swift; sourceTree = "<group>"; };
+		6708283B2CEA3C9E008EA7AD /* FixtureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDetailView.swift; sourceTree = "<group>"; };
+		6708283D2CEA3CAE008EA7AD /* FixtureStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureStatsView.swift; sourceTree = "<group>"; };
+		6708283F2CEA4FAD008EA7AD /* PlayerStatsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsContainerView.swift; sourceTree = "<group>"; };
+		670828412CEA4FB9008EA7AD /* PlayerStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsView.swift; sourceTree = "<group>"; };
+		670828432CEA4FC1008EA7AD /* PlayerStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatCell.swift; sourceTree = "<group>"; };
 		6709921D2BA09F8D004F11F6 /* SampleLiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SampleLiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6709921F2BA09F8D004F11F6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		670992212BA09F8D004F11F6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -200,9 +284,11 @@
 			children = (
 				67037A732B9F7E55007C183D /* SwiftSamplesApp.swift */,
 				67037A752B9F7E55007C183D /* ContentView.swift */,
-				67668FA72BB3037500595591 /* Entity */,
 				67668FA42BB301D300595591 /* API */,
+				67668FA72BB3037500595591 /* Entity */,
 				678E3DDA2B9F9F2200BFE91F /* Features */,
+				670827DE2CE9F682008EA7AD /* Utilities */,
+				670827FA2CEA1BDF008EA7AD /* Extensions */,
 				67037A772B9F7E56007C183D /* Assets.xcassets */,
 				67037A792B9F7E56007C183D /* Preview Content */,
 			);
@@ -232,6 +318,188 @@
 				67037A902B9F7E56007C183D /* SwiftSamplesUITestsLaunchTests.swift */,
 			);
 			path = SwiftSamplesUITests;
+			sourceTree = "<group>";
+		};
+		670827DD2CE9F65F008EA7AD /* FootballAPI */ = {
+			isa = PBXGroup;
+			children = (
+				670827E72CEA1B03008EA7AD /* Resources */,
+				670827E62CEA18E6008EA7AD /* ViewModel */,
+				670827E52CEA18E0008EA7AD /* View */,
+				670827E42CEA18DB008EA7AD /* Entity */,
+				670827E32CEA18D6008EA7AD /* API */,
+			);
+			path = FootballAPI;
+			sourceTree = "<group>";
+		};
+		670827DE2CE9F682008EA7AD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				670827DF2CE9F749008EA7AD /* FeatureFlag.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		670827E32CEA18D6008EA7AD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				670828272CEA1F63008EA7AD /* FootballAPIKey.swift */,
+				670827E12CEA18CE008EA7AD /* FootballAPIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		670827E42CEA18DB008EA7AD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				670827F82CEA1BC1008EA7AD /* ClubTheme.swift */,
+				670827F62CEA1BB8008EA7AD /* Team.swift */,
+				670827F42CEA1BAC008EA7AD /* Standings.swift */,
+				670827F22CEA1BA2008EA7AD /* PlayerStat.swift */,
+				670827EF2CEA1B92008EA7AD /* LeagueType.swift */,
+				670827ED2CEA1B78008EA7AD /* League.swift */,
+				670827EA2CEA1B69008EA7AD /* FixtureDetail.swift */,
+				670827E82CEA1B60008EA7AD /* Fixture.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		670827E52CEA18E0008EA7AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				670828312CEA35F3008EA7AD /* PlayerStats */,
+				670828302CEA35ED008EA7AD /* Fixture */,
+				6708282F2CEA35DC008EA7AD /* Stading */,
+				670828292CEA2894008EA7AD /* FootballTopView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		670827E62CEA18E6008EA7AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				670828322CEA35F8008EA7AD /* PlayerStats */,
+				670828332CEA35F8008EA7AD /* Fixture */,
+				670828342CEA35F8008EA7AD /* Stading */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		670827E72CEA1B03008EA7AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				670828032CEA1EF5008EA7AD /* England */,
+				670828082CEA1EF5008EA7AD /* Italy */,
+				6708280F2CEA1EF5008EA7AD /* Japan */,
+				670828142CEA1EF5008EA7AD /* Spain */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		670827FA2CEA1BDF008EA7AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				670827FD2CEA1BF7008EA7AD /* String+Extension.swift */,
+				670827FB2CEA1BED008EA7AD /* Color+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		670828032CEA1EF5008EA7AD /* England */ = {
+			isa = PBXGroup;
+			children = (
+				670827FF2CEA1EF5008EA7AD /* foorball_api_fixtures_2023_39.json */,
+				670828002CEA1EF5008EA7AD /* foorball_api_topassists_2023_39.json */,
+				670828012CEA1EF5008EA7AD /* foorball_api_topscorer_2023_39.json */,
+				670828022CEA1EF5008EA7AD /* football_api_standings_2023_39.json */,
+			);
+			path = England;
+			sourceTree = "<group>";
+		};
+		670828082CEA1EF5008EA7AD /* Italy */ = {
+			isa = PBXGroup;
+			children = (
+				670828042CEA1EF5008EA7AD /* foorball_api_fixtures_2023_135.json */,
+				670828052CEA1EF5008EA7AD /* foorball_api_topassists_2023_135.json */,
+				670828062CEA1EF5008EA7AD /* foorball_api_topscorer_2023_135.json */,
+				670828072CEA1EF5008EA7AD /* football_api_standings_2023_135.json */,
+			);
+			path = Italy;
+			sourceTree = "<group>";
+		};
+		6708280F2CEA1EF5008EA7AD /* Japan */ = {
+			isa = PBXGroup;
+			children = (
+				670828092CEA1EF5008EA7AD /* foorball_api_fixtures_2024_98.json */,
+				6708280A2CEA1EF5008EA7AD /* foorball_api_topassists_2024_98.json */,
+				6708280B2CEA1EF5008EA7AD /* foorball_api_topscorer_2024_98.json */,
+				6708280C2CEA1EF5008EA7AD /* football_api_standings_2024_98.json */,
+				6708280D2CEA1EF5008EA7AD /* football_api_statistics_2024_98_282.json */,
+				6708280E2CEA1EF5008EA7AD /* football_api_statistics_2024_98_287.json */,
+			);
+			path = Japan;
+			sourceTree = "<group>";
+		};
+		670828142CEA1EF5008EA7AD /* Spain */ = {
+			isa = PBXGroup;
+			children = (
+				670828102CEA1EF5008EA7AD /* foorball_api_fixtures_2023_140.json */,
+				670828112CEA1EF5008EA7AD /* foorball_api_topassists_2023_140.json */,
+				670828122CEA1EF5008EA7AD /* foorball_api_topscorer_2023_140.json */,
+				670828132CEA1EF5008EA7AD /* football_api_standings_2023_140.json */,
+			);
+			path = Spain;
+			sourceTree = "<group>";
+		};
+		6708282F2CEA35DC008EA7AD /* Stading */ = {
+			isa = PBXGroup;
+			children = (
+				670828352CEA3605008EA7AD /* StandingCell.swift */,
+				6708282D2CEA35A8008EA7AD /* StandingView.swift */,
+			);
+			path = Stading;
+			sourceTree = "<group>";
+		};
+		670828302CEA35ED008EA7AD /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+				6708283D2CEA3CAE008EA7AD /* FixtureStatsView.swift */,
+				6708283B2CEA3C9E008EA7AD /* FixtureDetailView.swift */,
+				670828392CEA3C96008EA7AD /* FixturesCell.swift */,
+				670828372CEA3C8E008EA7AD /* FixturesView.swift */,
+			);
+			path = Fixture;
+			sourceTree = "<group>";
+		};
+		670828312CEA35F3008EA7AD /* PlayerStats */ = {
+			isa = PBXGroup;
+			children = (
+				670828432CEA4FC1008EA7AD /* PlayerStatCell.swift */,
+				670828412CEA4FB9008EA7AD /* PlayerStatsView.swift */,
+				6708283F2CEA4FAD008EA7AD /* PlayerStatsContainerView.swift */,
+			);
+			path = PlayerStats;
+			sourceTree = "<group>";
+		};
+		670828322CEA35F8008EA7AD /* PlayerStats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlayerStats;
+			sourceTree = "<group>";
+		};
+		670828332CEA35F8008EA7AD /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fixture;
+			sourceTree = "<group>";
+		};
+		670828342CEA35F8008EA7AD /* Stading */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stading;
 			sourceTree = "<group>";
 		};
 		6709921E2BA09F8D004F11F6 /* Frameworks */ = {
@@ -315,6 +583,7 @@
 		67404E322BF2C0DE004AA9EB /* SwiftUISamples */ = {
 			isa = PBXGroup;
 			children = (
+				6708282B2CEA2DA5008EA7AD /* PickersView.swift */,
 				67404E352BF3FD44004AA9EB /* ImageItem.swift */,
 				67404E332BF3FD34004AA9EB /* ImageList.swift */,
 				67404E372BF413DC004AA9EB /* ImageGrid.swift */,
@@ -354,6 +623,7 @@
 		678E3DDA2B9F9F2200BFE91F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				670827DD2CE9F65F008EA7AD /* FootballAPI */,
 				67D47A302C18D5F3000604B8 /* iOS18+ */,
 				67404E462BF88D69004AA9EB /* ComposableArchitecture */,
 				678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */,
@@ -507,6 +777,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670828152CEA1EF5008EA7AD /* foorball_api_fixtures_2023_140.json in Resources */,
+				670828162CEA1EF5008EA7AD /* foorball_api_topassists_2023_140.json in Resources */,
+				670828172CEA1EF5008EA7AD /* foorball_api_fixtures_2023_135.json in Resources */,
+				670828182CEA1EF5008EA7AD /* football_api_standings_2023_135.json in Resources */,
+				670828192CEA1EF5008EA7AD /* football_api_statistics_2024_98_282.json in Resources */,
+				6708281A2CEA1EF5008EA7AD /* football_api_standings_2023_140.json in Resources */,
+				6708281B2CEA1EF5008EA7AD /* football_api_standings_2023_39.json in Resources */,
+				6708281C2CEA1EF5008EA7AD /* foorball_api_fixtures_2024_98.json in Resources */,
+				6708281D2CEA1EF5008EA7AD /* football_api_standings_2024_98.json in Resources */,
+				6708281E2CEA1EF5008EA7AD /* foorball_api_fixtures_2023_39.json in Resources */,
+				6708281F2CEA1EF5008EA7AD /* foorball_api_topscorer_2023_135.json in Resources */,
+				670828202CEA1EF5008EA7AD /* foorball_api_topassists_2023_135.json in Resources */,
+				670828212CEA1EF5008EA7AD /* foorball_api_topassists_2023_39.json in Resources */,
+				670828222CEA1EF5008EA7AD /* foorball_api_topscorer_2024_98.json in Resources */,
+				670828232CEA1EF5008EA7AD /* foorball_api_topscorer_2023_39.json in Resources */,
+				670828242CEA1EF5008EA7AD /* foorball_api_topassists_2024_98.json in Resources */,
+				670828252CEA1EF5008EA7AD /* football_api_statistics_2024_98_287.json in Resources */,
+				670828262CEA1EF5008EA7AD /* foorball_api_topscorer_2023_140.json in Resources */,
 				67037A7B2B9F7E56007C183D /* Preview Assets.xcassets in Resources */,
 				67037A782B9F7E56007C183D /* Assets.xcassets in Resources */,
 			);
@@ -541,30 +829,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670828402CEA4FB6008EA7AD /* PlayerStatsContainerView.swift in Sources */,
+				670827F92CEA1BC5008EA7AD /* ClubTheme.swift in Sources */,
 				67404E402BF7AA95004AA9EB /* ReviewForm.swift in Sources */,
+				6708282A2CEA289D008EA7AD /* FootballTopView.swift in Sources */,
 				67404E2C2BF10C9E004AA9EB /* Book.swift in Sources */,
+				670827EB2CEA1B6A008EA7AD /* FixtureDetail.swift in Sources */,
+				6708283C2CEA3CA2008EA7AD /* FixtureDetailView.swift in Sources */,
+				670828422CEA4FBC008EA7AD /* PlayerStatsView.swift in Sources */,
+				670828442CEA4FC9008EA7AD /* PlayerStatCell.swift in Sources */,
 				67404E3A2BF41804004AA9EB /* ImagePaging.swift in Sources */,
 				67404E302BF11783004AA9EB /* SearchBookListRow.swift in Sources */,
+				6708283E2CEA3CBC008EA7AD /* FixtureStatsView.swift in Sources */,
+				670827F52CEA1BAD008EA7AD /* Standings.swift in Sources */,
+				670827E22CEA18D2008EA7AD /* FootballAPIClient.swift in Sources */,
 				67668FA62BB3036800595591 /* CatClient.swift in Sources */,
+				670828362CEA3608008EA7AD /* StandingCell.swift in Sources */,
+				670828382CEA3C92008EA7AD /* FixturesView.swift in Sources */,
+				670828282CEA1F69008EA7AD /* FootballAPIKey.swift in Sources */,
+				670827F72CEA1BB9008EA7AD /* Team.swift in Sources */,
 				678E3DDD2B9F9FCE00BFE91F /* FeatureList.swift in Sources */,
 				67668FAB2BB3055B00595591 /* APIError.swift in Sources */,
 				6709923A2BA0BC02004F11F6 /* LiveActivity.swift in Sources */,
 				67404E3E2BF6A0EC004AA9EB /* ImagePaging2.swift in Sources */,
 				6709923E2BA0CB34004F11F6 /* SampleLiveActivityAttributes.swift in Sources */,
+				670827E92CEA1B61008EA7AD /* Fixture.swift in Sources */,
+				670827E02CE9F74D008EA7AD /* FeatureFlag.swift in Sources */,
 				678E3DE12B9FA4EB00BFE91F /* ImageRenderer.swift in Sources */,
 				67D47A322C18D62C000604B8 /* NavigationTransition.swift in Sources */,
+				6708283A2CEA3C9A008EA7AD /* FixturesCell.swift in Sources */,
+				670827FC2CEA1BEE008EA7AD /* Color+Extension.swift in Sources */,
 				67668FA12BB3013600595591 /* AsyncImageRenderer.swift in Sources */,
 				67404E342BF3FD34004AA9EB /* ImageList.swift in Sources */,
+				6708282C2CEA2DA8008EA7AD /* PickersView.swift in Sources */,
 				67404E362BF3FD44004AA9EB /* ImageItem.swift in Sources */,
 				670992372BA0A013004F11F6 /* DeliveryAttributes.swift in Sources */,
+				670827F32CEA1BA2008EA7AD /* PlayerStat.swift in Sources */,
 				67404E2A2BF10AF6004AA9EB /* SearchBookList.swift in Sources */,
 				67037A762B9F7E55007C183D /* ContentView.swift in Sources */,
 				67404E482BF88DA1004AA9EB /* SwiftUI-and-StateManagement.swift in Sources */,
+				6708282E2CEA35AD008EA7AD /* StandingView.swift in Sources */,
 				67037A742B9F7E55007C183D /* SwiftSamplesApp.swift in Sources */,
 				67404E382BF413DC004AA9EB /* ImageGrid.swift in Sources */,
 				67404E282BF10A80004AA9EB /* GoogleBooksClient.swift in Sources */,
 				670992472BA0DC59004F11F6 /* SampleLiveActivity.swift in Sources */,
 				670992422BA0DA75004F11F6 /* DelivaryLiveActivity.swift in Sources */,
+				670827F02CEA1B93008EA7AD /* LeagueType.swift in Sources */,
+				670827FE2CEA1BF8008EA7AD /* String+Extension.swift in Sources */,
+				670827EE2CEA1B79008EA7AD /* League.swift in Sources */,
 				67668FA92BB3037F00595591 /* CatItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

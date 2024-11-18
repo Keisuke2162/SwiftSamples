@@ -1,0 +1,53 @@
+import Foundation
+
+public struct StandingsItem: Codable {
+  public let response: [StandingResponse]
+}
+
+public struct StandingResponse: Codable {
+  public let league: LeagueItem
+}
+
+public struct LeagueItem: Codable {
+  public let standings: [[Standing]]
+}
+
+public struct Standing: Codable, Equatable, Identifiable, Sendable {
+  public static func == (lhs: Standing, rhs: Standing) -> Bool {
+    lhs.id == rhs.id
+  }
+  
+  public var id: Int {
+    team.id
+  }
+  public let rank: Int
+  public let team: TeamInfo
+  public let points: Int
+  public let goalsDiff: Int
+  public let all: AllGameInformation
+  
+  public init(rank: Int, team: TeamInfo, points: Int, goalsDiff: Int, all: AllGameInformation) {
+    self.rank = rank
+    self.team = team
+    self.points = points
+    self.goalsDiff = goalsDiff
+    self.all = all
+  }
+}
+
+public struct TeamInfo: Codable, Equatable, Identifiable, Sendable {
+  public let id: Int
+  public let name: String
+  public let logo: String
+  
+  public var theme: ClubTheme {
+    ClubTheme(rawValue: id) ?? .other
+  }
+}
+
+public struct AllGameInformation: Codable, Sendable {
+  public let played: Int
+  public let win: Int
+  public let draw: Int
+  public let lose: Int
+}
