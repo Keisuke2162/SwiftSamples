@@ -8,11 +8,11 @@ public class PlayerStatCellViewModel {
 
   public var imageWidth: CGFloat {
     switch order {
-    case 1:
+    case 0:
       64
-    case 2:
+    case 1:
       56
-    case 3:
+    case 2:
       48
     default:
       40

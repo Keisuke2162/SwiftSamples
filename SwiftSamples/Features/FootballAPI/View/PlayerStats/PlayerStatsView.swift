@@ -51,28 +51,8 @@ public struct PlayerStatsView: View {
     .scrollContentBackground(.hidden)
     .background(viewModel.leagueType.backgroundColor)
     .listStyle(.plain)
+    .task {
+      await viewModel.fetchScorer()
+    }
   }
 }
-
-
-
-
-
-/*
- public struct PlayerStatsView: View {
-   @Bindable var store: StoreOf<PlayerStatsReducer>
-   
-   public var body: some View {
-     NavigationStack {
-       
-     }
-     .task {
-       do {
-         try await Task.sleep(for: .milliseconds(300))
-         await store.send(.fetchTopScorer).finish()
-       } catch {}
-     }
-   }
- }
-
- */
