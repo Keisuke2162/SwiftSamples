@@ -80,6 +80,7 @@ public class SNSRegisterViewModel: NSObject, ObservableObject {
   }
 }
 
+// TODO: SNSRegisterViewModelと全く同じ処理なのでまとめたい
 extension SNSRegisterViewModel: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
   public func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
     return ASPresentationAnchor()

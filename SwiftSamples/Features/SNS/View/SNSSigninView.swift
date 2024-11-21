@@ -14,11 +14,11 @@ public struct SNSSigninView: View {
         Text("Sign In")
           .font(.largeTitle)
           .padding()
-        SecureField("Email", text: $viewModel.email)
+        TextField("Email", text: $viewModel.email)
           .padding()
           .padding(.horizontal, 32)
           .textFieldStyle(.roundedBorder)
-        TextField("Password", text: $viewModel.password)
+        SecureField("Password", text: $viewModel.password)
           .padding()
           .padding(.horizontal, 32)
           .textFieldStyle(.roundedBorder)
@@ -72,6 +72,9 @@ public struct SNSSigninView: View {
         Spacer().frame(height: 32)
       }
       
+    }
+    .navigationDestination(isPresented: $viewModel.isLoggedIn) {
+      Text("Success SignIn")
     }
   }
 }
