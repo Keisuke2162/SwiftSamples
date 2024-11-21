@@ -1,24 +1,5 @@
 import SwiftUI
-
-@MainActor
-public class SNSRegisterViewModel: ObservableObject {
-  @Published var email = ""
-  @Published var password = ""
-  @Published var errorMessage = ""
-  @Published var isLoggedIn = false
-  
-  public init() {
-  }
-  
-  func signUpWithEmail() {
-  }
-  
-  func signUpWithGoogle() {
-  }
-  
-  func signUpWithApple() {
-  }
-}
+import AuthenticationServices
 
 public struct SNSRegisterView: View {
   @StateObject private var viewModel: SNSRegisterViewModel
@@ -34,11 +15,11 @@ public struct SNSRegisterView: View {
         Text("Sign Up")
           .font(.largeTitle)
           .padding()
-        SecureField("Email", text: $viewModel.email)
+        TextField("Email", text: $viewModel.email)
           .padding()
           .padding(.horizontal, 32)
           .textFieldStyle(.roundedBorder)
-        TextField("Password", text: $viewModel.password)
+        SecureField("Password", text: $viewModel.password)
           .padding()
           .padding(.horizontal, 32)
           .textFieldStyle(.roundedBorder)
@@ -64,15 +45,12 @@ public struct SNSRegisterView: View {
         .padding(.top, 8)
         
         // Appleログイン
-        Button("Sign Up with Apple") {
+        SignInWithAppleButton(.signUp) { request in
           viewModel.signUpWithApple()
-        }
-        .frame(width: 200)
-        .padding()
-        .background(Color.indigo)
-        .foregroundStyle(Color.white)
-        .clipShape(.rect(cornerRadius: 8))
-        .padding(.top, 8)
+        } onCompletion: { _ in }
+          .frame(width: 200, height: 64)
+          .clipShape(.rect(cornerRadius: 8))
+          .padding(.top, 8)
       }
       .padding()
       if !viewModel.errorMessage.isEmpty {
@@ -82,12 +60,13 @@ public struct SNSRegisterView: View {
       } else {
         Spacer().frame(height: 32)
       }
-      
+    }
+    .navigationDestination(isPresented: $viewModel.isSignedUp) {
+      Text("Success SignUp")
     }
   }
 }
 
-#Preview {
-  SNSRegisterView(viewModel: SNSRegisterViewModel())
-}
-
+//#Preview {
+//  SNSRegisterView(viewModel: SNSRegisterViewModel())
+//}
