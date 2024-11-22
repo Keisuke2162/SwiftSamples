@@ -13,8 +13,15 @@ public class SNSSigninViewModel: NSObject, ObservableObject {
   @Published var isLoggedIn = false
 
   private var currentNonce: String?
+  public let onLoggedIn: () -> Void
 
   public override init() {
+    self.onLoggedIn = {}
+  }
+  
+  public init(onLoggedIn: @escaping () -> Void) {
+    self.onLoggedIn = onLoggedIn
+    super.init()
   }
   
   func signInWithEmail() {

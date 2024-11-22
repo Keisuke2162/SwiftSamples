@@ -114,6 +114,7 @@
 		67B77D0A2CEE61E100721C8B /* SNSRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D092CEE61E000721C8B /* SNSRegisterViewModel.swift */; };
 		67B77D0E2CF0BF4400721C8B /* AccountCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D0D2CF0BF3E00721C8B /* AccountCreateViewModel.swift */; };
 		67B77D102CF0BF5000721C8B /* AccountCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D0F2CF0BF4B00721C8B /* AccountCreateView.swift */; };
+		67B77D162CF0E8B500721C8B /* SNSHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D152CF0E8B500721C8B /* SNSHomeViewModel.swift */; };
 		67D47A322C18D62C000604B8 /* NavigationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D47A312C18D62C000604B8 /* NavigationTransition.swift */; };
 /* End PBXBuildFile section */
 
@@ -249,6 +250,7 @@
 		67B77D0C2CEF848E00721C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		67B77D0D2CF0BF3E00721C8B /* AccountCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreateViewModel.swift; sourceTree = "<group>"; };
 		67B77D0F2CF0BF4B00721C8B /* AccountCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreateView.swift; sourceTree = "<group>"; };
+		67B77D152CF0E8B500721C8B /* SNSHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSHomeViewModel.swift; sourceTree = "<group>"; };
 		67D47A312C18D62C000604B8 /* NavigationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -563,10 +565,10 @@
 		670828462CED0B6E008EA7AD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				67B77D0F2CF0BF4B00721C8B /* AccountCreateView.swift */,
 				67B77CE42CEE555000721C8B /* SNSHomeView.swift */,
-				670828492CED0BD2008EA7AD /* SNSRegisterView.swift */,
 				670828472CED0B74008EA7AD /* SNSSigninView.swift */,
+				670828492CED0BD2008EA7AD /* SNSRegisterView.swift */,
+				67B77D0F2CF0BF4B00721C8B /* AccountCreateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -707,9 +709,10 @@
 		67B77D062CEE61AC00721C8B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				67B77D0D2CF0BF3E00721C8B /* AccountCreateViewModel.swift */,
-				67B77D092CEE61E000721C8B /* SNSRegisterViewModel.swift */,
+				67B77D152CF0E8B500721C8B /* SNSHomeViewModel.swift */,
 				67B77D072CEE61B700721C8B /* SNSSigninViewModel.swift */,
+				67B77D092CEE61E000721C8B /* SNSRegisterViewModel.swift */,
+				67B77D0D2CF0BF3E00721C8B /* AccountCreateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -941,6 +944,7 @@
 				6708283E2CEA3CBC008EA7AD /* FixtureStatsView.swift in Sources */,
 				670827F52CEA1BAD008EA7AD /* Standings.swift in Sources */,
 				670827E22CEA18D2008EA7AD /* FootballAPIClient.swift in Sources */,
+				67B77D162CF0E8B500721C8B /* SNSHomeViewModel.swift in Sources */,
 				67668FA62BB3036800595591 /* CatClient.swift in Sources */,
 				670828362CEA3608008EA7AD /* StandingCell.swift in Sources */,
 				670828382CEA3C92008EA7AD /* FixturesView.swift in Sources */,

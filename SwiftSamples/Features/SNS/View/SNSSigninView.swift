@@ -74,7 +74,9 @@ public struct SNSSigninView: View {
       
     }
     .navigationDestination(isPresented: $viewModel.isLoggedIn) {
-      AccountCreateView(viewModel: AccountCreateViewModel())
+      AccountCreateView(viewModel: AccountCreateViewModel(onLoggedIn: {
+        viewModel.onLoggedIn()
+      }))
     }
   }
 }

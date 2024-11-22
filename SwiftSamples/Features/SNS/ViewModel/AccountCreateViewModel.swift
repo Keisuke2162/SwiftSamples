@@ -4,6 +4,7 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseFirestore
 
+// TODO: 既存アカウントがある場合は名前とサムネイルしてこのユーザーですか？的な確認を取得したい
 @MainActor
 public class AccountCreateViewModel: ObservableObject {
   @Published var userName: String = ""
@@ -13,12 +14,13 @@ public class AccountCreateViewModel: ObservableObject {
     }
   }
   @Published var profileImage: UIImage?
-  // @Published var imageURL: String = ""
   @Published var isImagePickerPresented = false
   @Published var errorMessage: String = ""
-  @Published var isSuccessCreateAccount: Bool = false
 
-  public init() {
+  let onLoggedIn: () -> Void
+
+  public init(onLoggedIn: @escaping () -> Void) {
+    self.onLoggedIn = onLoggedIn
   }
   
   // UIImageに変換
@@ -84,7 +86,8 @@ public class AccountCreateViewModel: ObservableObject {
       if let error {
         self.errorMessage = "Error saving user data: \(error.localizedDescription)"
       } else {
-        self.isSuccessCreateAccount = true
+        // アカウント登録完了したのでSNSHomeViewに戻る
+        self.onLoggedIn()
       }
     }
     

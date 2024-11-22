@@ -62,7 +62,9 @@ public struct SNSRegisterView: View {
       }
     }
     .navigationDestination(isPresented: $viewModel.isSignedUp) {
-      Text("Success SignUp")
+      AccountCreateView(viewModel: AccountCreateViewModel(onLoggedIn: {
+        viewModel.onLoggedIn()
+      }))
     }
   }
 }

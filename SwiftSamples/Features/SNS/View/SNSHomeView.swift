@@ -1,11 +1,5 @@
 import SwiftUI
 
-@MainActor
-public class SNSHomeViewModel: ObservableObject {
-  public init() {
-  }
-}
-
 public struct SNSHomeView: View {
   @StateObject private var viewModel: SNSHomeViewModel
   
@@ -14,7 +8,34 @@ public struct SNSHomeView: View {
   }
   
   public var body: some View {
-    Text("Complete Login")
+    ZStack {
+      Color.indigo
+      VStack {
+        if viewModel.isLoggedIn {
+          Text("Complete SignIn")
+          Button {
+            // ログアウト処理
+            viewModel.logout()
+          } label: {
+            Text("Logout")
+          }
+
+        } else {
+          // 未ログイン時はスプラッシュ画面表示
+          Image(systemName: "circle")
+        }
+      }
+    }
+    .sheet(isPresented: $viewModel.isShowSignInView, content: {
+      NavigationStack {
+        SNSSigninView(viewModel: SNSSigninViewModel(onLoggedIn: {
+          viewModel.onLoggedIn()
+        }))
+      }
+    })
+    .onAppear {
+      viewModel.onAppear()
+    }
   }
 }
 
