@@ -74,7 +74,7 @@ public struct SNSSigninView: View {
       
     }
     .navigationDestination(isPresented: $viewModel.isLoggedIn) {
-      Text("Success SignIn")
+      AccountCreateView(viewModel: AccountCreateViewModel())
     }
   }
 }
