@@ -1,4 +1,5 @@
 import SwiftUI
+import _AuthenticationServices_SwiftUI
 
 public struct SNSSigninView: View {
   @StateObject private var viewModel: SNSSigninViewModel
@@ -10,22 +11,21 @@ public struct SNSSigninView: View {
   public var body: some View {
     VStack {
       VStack {
+        Spacer()
         // Emailログイン
         Text("Sign In")
           .font(.largeTitle)
           .padding()
         TextField("Email", text: $viewModel.email)
-          .padding()
-          .padding(.horizontal, 32)
+          .padding(.horizontal, 24)
           .textFieldStyle(.roundedBorder)
         SecureField("Password", text: $viewModel.password)
-          .padding()
-          .padding(.horizontal, 32)
+          .padding(.horizontal, 24)
           .textFieldStyle(.roundedBorder)
         Button("Sign In") {
           viewModel.signInWithEmail()
         }
-        .padding()
+        .frame(height: 44)
         .padding(.horizontal, 32)
         .background(Color.blue)
         .foregroundStyle(Color.white)
@@ -33,27 +33,23 @@ public struct SNSSigninView: View {
         .padding(.top, 8)
         
         // Googleログイン
-        Button("Sign In with Google") {
+        Button {
           viewModel.signInWithGoogle()
+        } label: {
+          Image("google_sign_in")
         }
         .frame(width: 200)
-        .padding()
-        .background(Color.red)
-        .foregroundStyle(Color.white)
         .clipShape(.rect(cornerRadius: 8))
-        .padding(.top, 8)
-        
+        .padding(.top, 32)
+  
         // Appleログイン
-        Button("Sign In with Apple") {
+        SignInWithAppleButton(.signIn) { request in
           viewModel.signInWithApple()
-        }
-        .frame(width: 200)
-        .padding()
-        .background(Color.indigo)
-        .foregroundStyle(Color.white)
-        .clipShape(.rect(cornerRadius: 8))
-        .padding(.top, 8)
-        
+        } onCompletion: { _ in }
+          .frame(width: 200, height: 44)
+          .clipShape(.rect(cornerRadius: 8))
+          .padding(.top, 16)
+        Spacer()
         // 新規登録
         NavigationLink {
           SNSRegisterView(viewModel: SNSRegisterViewModel())
