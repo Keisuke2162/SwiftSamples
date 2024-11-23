@@ -90,7 +90,7 @@ struct FeatureListView: View {
           NavigationLink {
             SNSHomeView(viewModel: SNSHomeViewModel())
           } label: {
-            Text("SNS")
+            Text("軽度なSNS")
           }
         }
       }

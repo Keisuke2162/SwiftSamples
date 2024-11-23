@@ -1,37 +1,56 @@
 import Foundation
 import FirebaseAuth
+import FirebaseFirestore
 
 @MainActor
 public class SNSHomeViewModel: ObservableObject {
   @Published var isLoggedIn = false
   @Published var isShowSignInView = false
+  @Published var isLoading = false
+  @Published var errorMessage = ""
+
+  // ユーザー情報
+  private let db = Firestore.firestore()
+  @Published var userName: String = ""
+  @Published var profileImageURL: URL?
 
   public init() {
   }
 
-  func onAppear() {
+  func onAppear() async {
+    await login()
+  }
+
+  func onLoggedIn() {
+    isShowSignInView = false
+
+    Task {
+      await login()
+    }
+  }
+
+  private func login() async {
     // ログイン処理
     guard let currentUser = Auth.auth().currentUser else {
       // アカウントがなければサインイン画面に遷移
       isShowSignInView = true
       return
     }
-    // ログイン完了
-    isLoggedIn = true
-  }
-  
-  func onLoggedIn() {
-    // サインイン画面を閉じる
-    isShowSignInView = false
-    
-    // 再度ログイン処理を行う
-    guard let currentUser = Auth.auth().currentUser else {
-      // アカウントがなければサインイン画面に遷移
-      isShowSignInView = true
-      return
+    // プロフィール取得
+    let docRef = db.collection("users").document(currentUser.uid)
+    do {
+      let document = try await docRef.getDocument()
+      guard let data = document.data() else {
+        errorMessage = "User data not found"
+        return
+      }
+
+      self.userName = data["name"] as? String ?? ""
+      self.profileImageURL = URL(string: data["thumbnailURL"] as? String ?? "")
+    } catch {
+      errorMessage = "Failed GET User data"
     }
 
-    // ログイン完了
     isLoggedIn = true
   }
 
@@ -41,9 +60,7 @@ public class SNSHomeViewModel: ObservableObject {
     } catch {
       // ログアウト失敗
     }
-    // ログアウト処理
     isLoggedIn = false
-    // サインイン画面表示
     isShowSignInView = true
   }
 }

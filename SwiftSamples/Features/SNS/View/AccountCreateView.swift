@@ -27,8 +27,9 @@ public struct AccountCreateView: View {
       if let profileImage = viewModel.profileImage {
         Image(uiImage: profileImage)
           .resizable()
-          .scaledToFit()
-          .frame(width: 150, height: 150)
+          .aspectRatio(contentMode: .fill)
+          .frame(width: 160, height: 160)
+          .clipShape(Circle())
       } else {
         Color.indigo
           .frame(width: 150, height: 150)
@@ -58,44 +59,3 @@ public struct AccountCreateView: View {
     .photosPicker(isPresented: $viewModel.isImagePickerPresented, selection: $viewModel.profilePhotoItem)
   }
 }
-
-
-
-/*
- 
- import SwiftUI
- import ImagePicker
-
- struct ImagePickerView: View {
-     @Binding var isPresented: Bool
-     @Binding var image: UIImage?
-
-     var body: some View {
-         ImagePicker(isPresented: $isPresented, image: $image, imageLimit: 1)
-             .edgesIgnoringSafeArea(.all)
-     }
- }
- PhotosPicker("写真を選択", selection: $selectedPhoto)
-                 .onChange(of: selectedPhoto) { selectedPhoto in
-                     Task { await loadImageFromSelectedPhoto(photo: selectedPhoto) }
-                 }
-         }
-     }
-     
-     private func loadImageFromSelectedPhoto(photo: PhotosPickerItem?) async {
-         if let data = try? await photo?.loadTransferable(type: Data.self) {
-             self.uiImage = UIImage(data: data)
-         }
-     }
- PhotosPicker(selection: image, matching: .images, photoLibrary: .shared()) {
-                 EmptyView()
-             }
-             .onChange(of: image.wrappedValue) { newImage in
-                 // 画像が選択されたときの処理
-                 if let newImage {
-                     image.wrappedValue = newImage
-                 }
-             }
-             .frame(width: 0, height: 0)
-
- */

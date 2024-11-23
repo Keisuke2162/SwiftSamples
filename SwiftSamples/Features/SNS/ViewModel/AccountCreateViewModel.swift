@@ -22,6 +22,16 @@ public class AccountCreateViewModel: ObservableObject {
   public init(onLoggedIn: @escaping () -> Void) {
     self.onLoggedIn = onLoggedIn
   }
+
+  func onAppear() async {
+    // ユーザー情報取得してみる
+    
+    // ユーザー情報があれば表示、おかえり
+    
+    // ユーザー情報がなければ設定画面表示
+    
+    // CreateAccountButtonの文言はだしわけ（「このアカウントで続ける」 or 「アカウントを作成する」）
+  }
   
   // UIImageに変換
   func setProfileUIImage() {
@@ -34,7 +44,7 @@ public class AccountCreateViewModel: ObservableObject {
     }
   }
 
-  // アカウント作成実行
+  // アカウント作成実行（すでにアカウントがある場合は上書きされる）
   func createAccount() async {
     guard let uploadImageURL = await uploadImageToStrorage() else {
       return
