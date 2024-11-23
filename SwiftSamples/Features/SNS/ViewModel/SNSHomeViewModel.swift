@@ -4,16 +4,16 @@ import FirebaseFirestore
 
 @MainActor
 public class SNSHomeViewModel: ObservableObject {
-  @Published var isLoggedIn = false
   @Published var isShowSignInView = false
   @Published var isLoading = false
   @Published var errorMessage = ""
 
   // ユーザー情報
   private let db = Firestore.firestore()
-  @Published var userID: String = ""
-  @Published var userName: String = ""
-  @Published var profileImageURL: URL?
+  @Published var snsUser: SNSUser?
+//  @Published var userID: String = ""
+//  @Published var userName: String = ""
+//  @Published var profileImageURL: URL?
 
   public init() {
   }
@@ -39,7 +39,6 @@ public class SNSHomeViewModel: ObservableObject {
       isShowSignInView = true
       return
     }
-    userID = currentUser.uid
     // プロフィール取得
     let docRef = db.collection("users").document(currentUser.uid)
     do {
@@ -49,16 +48,20 @@ public class SNSHomeViewModel: ObservableObject {
         errorMessage = "User data not found"
         return
       }
+      let userName = data["name"] as? String ?? ""
+      let profileImageURL = URL(string: data["thumbnailURL"] as? String ?? "")
 
-      self.userName = data["name"] as? String ?? ""
-      self.profileImageURL = URL(string: data["thumbnailURL"] as? String ?? "")
+      self.snsUser = .init(
+        userID: currentUser.uid,
+        userName: userName,
+        userProfileImageURL: profileImageURL
+      )
     } catch {
       isLoading = false
       errorMessage = "Failed GET User data"
     }
 
     isLoading = false
-    isLoggedIn = true
   }
 
   func logout() {
@@ -67,7 +70,7 @@ public class SNSHomeViewModel: ObservableObject {
     } catch {
       // ログアウト失敗
     }
-    isLoggedIn = false
+    snsUser = nil
     isShowSignInView = true
   }
 }

@@ -10,20 +10,20 @@ public struct SNSHomeView: View {
   
   public var body: some View {
     VStack(spacing: 32) {
-      if viewModel.isLoggedIn {
+      if let user = viewModel.snsUser {
         VStack(spacing: 16) {
-          KFImage(viewModel.profileImageURL)
+          KFImage(user.userProfileImageURL)
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: 160, height: 160)
             .clipShape(Circle())
-          Text(viewModel.userName)
+          Text(user.userName)
             .font(.title2.bold())
         }
 
         VStack(spacing: 16) {
           NavigationLink {
-            SNSPostView(viewModel: SNSPostViewModel(userID: viewModel.userID))
+            SNSPostView(viewModel: SNSPostViewModel(user: user))
           } label: {
             Text("Post")
           }

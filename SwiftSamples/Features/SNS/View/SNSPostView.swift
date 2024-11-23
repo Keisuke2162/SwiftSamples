@@ -6,7 +6,7 @@ import _PhotosUI_SwiftUI
 
 @MainActor
 public class SNSPostViewModel: ObservableObject {
-  let userID: String
+  let user: SNSUser
   @Published var text: String = ""
   @Published var postPhotoItem: PhotosPickerItem? {
     didSet {
@@ -19,8 +19,8 @@ public class SNSPostViewModel: ObservableObject {
   @Published var isLoading: Bool = false
   @Published var isSuccessPost: Bool = false
 
-  public init(userID: String) {
-    self.userID = userID
+  init(user: SNSUser) {
+    self.user = user
   }
 
   // UIImageに変換
@@ -64,7 +64,9 @@ public class SNSPostViewModel: ObservableObject {
   // 投稿データをFirestoreにアップ
   func saveUserDataToFireStore(imageURLString: String) {
     let data: [String: Any] = [
-      "userID": userID,
+      "userID": user.userID,
+      "userName": user.userName,
+      "userProfileImageURL": user.userProfileImageURL?.absoluteString ?? "",
       "postText": text,
       "postImageURL": imageURLString,
       "createdAt": Date()
@@ -93,14 +95,37 @@ public struct SNSPostView: View {
     ZStack {
       VStack {
         if let postImage = viewModel.postImage {
-          Image(uiImage: postImage)
-            .resizable()
-            .aspectRatio(1, contentMode: .fill)
-            .frame(maxWidth: .infinity)
-            .clipped()
+          ZStack {
+            Image(uiImage: postImage)
+              .resizable()
+              .frame(maxWidth: .infinity)
+              .aspectRatio(1, contentMode: .fill)
+              .clipped()
+
+            VStack {
+              Spacer()
+              HStack {
+                Spacer()
+                Button {
+                  viewModel.isImagePickerPresented = true
+                } label: {
+                  Image(systemName: "camera.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 24, height: 24)
+                    .padding(8)
+                    .foregroundStyle(Color.black)
+                    .background(Color.gray)
+                    .clipShape(Circle())
+                }
+              }
+            }
+            .padding(.trailing, 16)
+            .padding(.bottom, 16)
+          }
         } else {
           ZStack {
-            Color.gray
+            Color.gray.opacity(0.4)
               .frame(maxWidth: .infinity)
               .aspectRatio(1, contentMode: .fill)
             // Button
@@ -143,6 +168,8 @@ public struct SNSPostView: View {
       }
       
       if viewModel.isSuccessPost {
+        Color.blue.opacity(0.3)
+          .background(ignoresSafeAreaEdges: .bottom)
         Text("Success Post!")
           .font(.title)
           .padding()
@@ -151,6 +178,8 @@ public struct SNSPostView: View {
       }
 
       if !viewModel.errorMessage.isEmpty {
+        Color.red.opacity(0.3)
+          .background(ignoresSafeAreaEdges: .bottom)
         Text(viewModel.errorMessage)
           .font(.title)
           .padding()

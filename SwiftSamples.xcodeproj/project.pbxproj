@@ -118,6 +118,8 @@
 		67B77D182CF24D2F00721C8B /* SNSLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D172CF24D2500721C8B /* SNSLoadingView.swift */; };
 		67B77D1A2CF257A000721C8B /* SNSPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D192CF2579A00721C8B /* SNSPostView.swift */; };
 		67B77D1D2CF2597B00721C8B /* PhotosPickerItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D1C2CF2597700721C8B /* PhotosPickerItem+Extension.swift */; };
+		67B77D202CF2727900721C8B /* SNSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D1F2CF2727700721C8B /* SNSUser.swift */; };
+		67B77D222CF2728000721C8B /* SNSPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D212CF2727C00721C8B /* SNSPost.swift */; };
 		67D47A322C18D62C000604B8 /* NavigationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D47A312C18D62C000604B8 /* NavigationTransition.swift */; };
 /* End PBXBuildFile section */
 
@@ -257,6 +259,8 @@
 		67B77D172CF24D2500721C8B /* SNSLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSLoadingView.swift; sourceTree = "<group>"; };
 		67B77D192CF2579A00721C8B /* SNSPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSPostView.swift; sourceTree = "<group>"; };
 		67B77D1C2CF2597700721C8B /* PhotosPickerItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotosPickerItem+Extension.swift"; sourceTree = "<group>"; };
+		67B77D1F2CF2727700721C8B /* SNSUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSUser.swift; sourceTree = "<group>"; };
+		67B77D212CF2727C00721C8B /* SNSPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSPost.swift; sourceTree = "<group>"; };
 		67D47A312C18D62C000604B8 /* NavigationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -563,6 +567,7 @@
 		670828452CED0B55008EA7AD /* SNS */ = {
 			isa = PBXGroup;
 			children = (
+				67B77D1E2CF2727100721C8B /* Entity */,
 				67B77D062CEE61AC00721C8B /* ViewModel */,
 				670828462CED0B6E008EA7AD /* View */,
 			);
@@ -732,6 +737,15 @@
 				67B77D1C2CF2597700721C8B /* PhotosPickerItem+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		67B77D1E2CF2727100721C8B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				67B77D212CF2727C00721C8B /* SNSPost.swift */,
+				67B77D1F2CF2727700721C8B /* SNSUser.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		67D47A302C18D5F3000604B8 /* iOS18+ */ = {
@@ -948,6 +962,7 @@
 			files = (
 				670828402CEA4FB6008EA7AD /* PlayerStatsContainerView.swift in Sources */,
 				670827F92CEA1BC5008EA7AD /* ClubTheme.swift in Sources */,
+				67B77D222CF2728000721C8B /* SNSPost.swift in Sources */,
 				67B77D182CF24D2F00721C8B /* SNSLoadingView.swift in Sources */,
 				670828482CED0BAA008EA7AD /* SNSSigninView.swift in Sources */,
 				67404E402BF7AA95004AA9EB /* ReviewForm.swift in Sources */,
@@ -1000,6 +1015,7 @@
 				67037A742B9F7E55007C183D /* SwiftSamplesApp.swift in Sources */,
 				67404E382BF413DC004AA9EB /* ImageGrid.swift in Sources */,
 				67404E282BF10A80004AA9EB /* GoogleBooksClient.swift in Sources */,
+				67B77D202CF2727900721C8B /* SNSUser.swift in Sources */,
 				670992472BA0DC59004F11F6 /* SampleLiveActivity.swift in Sources */,
 				670992422BA0DA75004F11F6 /* DelivaryLiveActivity.swift in Sources */,
 				670827F02CEA1B93008EA7AD /* LeagueType.swift in Sources */,
