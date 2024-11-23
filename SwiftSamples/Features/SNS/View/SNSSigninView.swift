@@ -67,12 +67,6 @@ public struct SNSSigninView: View {
       } else {
         Spacer().frame(height: 32)
       }
-      
-    }
-    .navigationDestination(isPresented: $viewModel.isLoggedIn) {
-      AccountCreateView(viewModel: AccountCreateViewModel(onLoggedIn: {
-        viewModel.onLoggedIn()
-      }))
     }
   }
 }

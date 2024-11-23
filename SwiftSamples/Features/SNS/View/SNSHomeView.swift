@@ -50,6 +50,7 @@ public struct SNSHomeView: View {
       } else {
         ZStack {
           Color.blue
+            .ignoresSafeArea()
           // 未ログイン時はスプラッシュ画面表示
           Image("pixel_bird")
             .resizable()
