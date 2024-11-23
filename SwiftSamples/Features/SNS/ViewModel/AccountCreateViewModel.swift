@@ -16,6 +16,7 @@ public class AccountCreateViewModel: ObservableObject {
   @Published var profileImage: UIImage?
   @Published var isImagePickerPresented = false
   @Published var errorMessage: String = ""
+  @Published var isLoading: Bool = false
 
   let onLoggedIn: () -> Void
 
@@ -36,20 +37,19 @@ public class AccountCreateViewModel: ObservableObject {
   // UIImageに変換
   func setProfileUIImage() {
     Task {
-      if let item = profilePhotoItem {
-        if let data = try? await item.loadTransferable(type: Data.self) {
-          profileImage = UIImage(data: data)
-        }
-      }
+      profileImage = await profilePhotoItem?.toUIImage()
     }
   }
 
   // アカウント作成実行（すでにアカウントがある場合は上書きされる）
   func createAccount() async {
+    isLoading = true
     guard let uploadImageURL = await uploadImageToStrorage() else {
+      isLoading = false
       return
     }
     saveUserDataToFireStore(name: userName, profileImageURLString: uploadImageURL)
+    self.isLoading = false
   }
 
   // プロフィール画像のアップロード（アップロード後のURLを返す）

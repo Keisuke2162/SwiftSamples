@@ -22,8 +22,8 @@ public struct SNSHomeView: View {
         }
 
         VStack(spacing: 16) {
-          Button {
-
+          NavigationLink {
+            SNSPostView(viewModel: SNSPostViewModel(userID: viewModel.userID))
           } label: {
             Text("Post")
           }
@@ -51,11 +51,7 @@ public struct SNSHomeView: View {
         ZStack {
           Color.blue
             .ignoresSafeArea()
-          // 未ログイン時はスプラッシュ画面表示
-          Image("pixel_bird")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 80, height: 80)
+          SNSLoadingView()
         }
       }
     }

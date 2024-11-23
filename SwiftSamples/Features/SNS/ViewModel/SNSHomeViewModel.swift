@@ -11,6 +11,7 @@ public class SNSHomeViewModel: ObservableObject {
 
   // ユーザー情報
   private let db = Firestore.firestore()
+  @Published var userID: String = ""
   @Published var userName: String = ""
   @Published var profileImageURL: URL?
 
@@ -30,17 +31,21 @@ public class SNSHomeViewModel: ObservableObject {
   }
 
   private func login() async {
+    isLoading = true
     // ログイン処理
     guard let currentUser = Auth.auth().currentUser else {
       // アカウントがなければサインイン画面に遷移
+      isLoading = false
       isShowSignInView = true
       return
     }
+    userID = currentUser.uid
     // プロフィール取得
     let docRef = db.collection("users").document(currentUser.uid)
     do {
       let document = try await docRef.getDocument()
       guard let data = document.data() else {
+        isLoading = false
         errorMessage = "User data not found"
         return
       }
@@ -48,9 +53,11 @@ public class SNSHomeViewModel: ObservableObject {
       self.userName = data["name"] as? String ?? ""
       self.profileImageURL = URL(string: data["thumbnailURL"] as? String ?? "")
     } catch {
+      isLoading = false
       errorMessage = "Failed GET User data"
     }
 
+    isLoading = false
     isLoggedIn = true
   }
 

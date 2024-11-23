@@ -52,7 +52,7 @@ public struct SNSSigninView: View {
         Spacer()
         // 新規登録
         NavigationLink {
-          SNSRegisterView(viewModel: SNSRegisterViewModel())
+          SNSRegisterView(viewModel: SNSRegisterViewModel(onLoggedIn: viewModel.onLoggedIn))
         } label: {
           Text("Create New Account")
             .foregroundStyle(Color.blue)
