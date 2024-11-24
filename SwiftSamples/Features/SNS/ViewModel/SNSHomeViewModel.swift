@@ -45,6 +45,7 @@ public class SNSHomeViewModel: ObservableObject {
       let document = try await docRef.getDocument()
       guard let data = document.data() else {
         isLoading = false
+        isShowSignInView = true
         errorMessage = "User data not found"
         return
       }
@@ -58,6 +59,7 @@ public class SNSHomeViewModel: ObservableObject {
       )
     } catch {
       isLoading = false
+      isShowSignInView = true
       errorMessage = "Failed GET User data"
     }
 
