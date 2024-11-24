@@ -16,41 +16,38 @@ public struct SNSRegisterView: View {
           .font(.largeTitle)
           .padding()
         TextField("Email", text: $viewModel.email)
-          .padding()
-          .padding(.horizontal, 32)
+          .padding(.horizontal, 24)
           .textFieldStyle(.roundedBorder)
         SecureField("Password", text: $viewModel.password)
-          .padding()
-          .padding(.horizontal, 32)
+          .padding(.horizontal, 24)
           .textFieldStyle(.roundedBorder)
         Button("Sign Up") {
           viewModel.signUpWithEmail()
         }
-        .padding()
+        .frame(height: 44)
         .padding(.horizontal, 32)
         .background(Color.blue)
         .foregroundStyle(Color.white)
         .clipShape(.rect(cornerRadius: 8))
         .padding(.top, 8)
         
-        // Googleログイン
-        Button("Sign Up with Google") {
+        // Googleサインアップ
+        Button {
           viewModel.signUpWithGoogle()
+        } label: {
+          Image("google_sign_up")
         }
         .frame(width: 200)
-        .padding()
-        .background(Color.red)
-        .foregroundStyle(Color.white)
         .clipShape(.rect(cornerRadius: 8))
-        .padding(.top, 8)
+        .padding(.top, 32)
         
-        // Appleログイン
+        // Appleサインアップ
         SignInWithAppleButton(.signUp) { request in
           viewModel.signUpWithApple()
         } onCompletion: { _ in }
-          .frame(width: 200, height: 64)
+          .frame(width: 200, height: 44)
           .clipShape(.rect(cornerRadius: 8))
-          .padding(.top, 8)
+          .padding(.top, 16)
       }
       .padding()
       if !viewModel.errorMessage.isEmpty {
@@ -62,7 +59,9 @@ public struct SNSRegisterView: View {
       }
     }
     .navigationDestination(isPresented: $viewModel.isSignedUp) {
-      Text("Success SignUp")
+      AccountCreateView(viewModel: AccountCreateViewModel(onLoggedIn: {
+        viewModel.onLoggedIn()
+      }))
     }
   }
 }

@@ -10,11 +10,17 @@ public class SNSSigninViewModel: NSObject, ObservableObject {
   @Published var email = ""
   @Published var password = ""
   @Published var errorMessage = ""
-  @Published var isLoggedIn = false
 
   private var currentNonce: String?
+  public let onLoggedIn: () -> Void
 
   public override init() {
+    self.onLoggedIn = {}
+  }
+  
+  public init(onLoggedIn: @escaping () -> Void) {
+    self.onLoggedIn = onLoggedIn
+    super.init()
   }
   
   func signInWithEmail() {
@@ -22,7 +28,7 @@ public class SNSSigninViewModel: NSObject, ObservableObject {
       if let error = error {
         self.errorMessage = error.localizedDescription
       } else {
-        self.isLoggedIn = true
+        self.onLoggedIn()
       }
     }
   }
@@ -59,7 +65,7 @@ public class SNSSigninViewModel: NSObject, ObservableObject {
         if let error {
           self.errorMessage = "Firebase authentication failed: \(error.localizedDescription)"
         } else {
-          self.isLoggedIn = true
+          self.onLoggedIn()
         }
       }
     }
@@ -107,7 +113,7 @@ extension SNSSigninViewModel: ASAuthorizationControllerDelegate, ASAuthorization
         if let error {
           self?.errorMessage = error.localizedDescription
         } else {
-          self?.isLoggedIn = true
+          self?.onLoggedIn()
         }
       }
     }

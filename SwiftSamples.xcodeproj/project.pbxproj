@@ -90,6 +90,9 @@
 		67668FA62BB3036800595591 /* CatClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FA52BB3036800595591 /* CatClient.swift */; };
 		67668FA92BB3037F00595591 /* CatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FA82BB3037F00595591 /* CatItem.swift */; };
 		67668FAB2BB3055B00595591 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FAA2BB3055B00595591 /* APIError.swift */; };
+		677DB43D2CF2DFD700532143 /* SNSTimelineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB43C2CF2DFD200532143 /* SNSTimelineItem.swift */; };
+		677DB43F2CF2EE1600532143 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB43E2CF2EE1100532143 /* Date+Extension.swift */; };
+		677DB4412CF2EF9600532143 /* SNSTimelineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */; };
 		678E3DD62B9F872100BFE91F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD52B9F872100BFE91F /* ComposableArchitecture */; };
 		678E3DD92B9F878800BFE91F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD82B9F878800BFE91F /* Kingfisher */; };
 		678E3DDD2B9F9FCE00BFE91F /* FeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */; };
@@ -112,6 +115,16 @@
 		67B77D052CEE5A9100721C8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67B77D042CEE5A9100721C8B /* GoogleService-Info.plist */; };
 		67B77D082CEE61B800721C8B /* SNSSigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D072CEE61B700721C8B /* SNSSigninViewModel.swift */; };
 		67B77D0A2CEE61E100721C8B /* SNSRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D092CEE61E000721C8B /* SNSRegisterViewModel.swift */; };
+		67B77D0E2CF0BF4400721C8B /* AccountCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D0D2CF0BF3E00721C8B /* AccountCreateViewModel.swift */; };
+		67B77D102CF0BF5000721C8B /* AccountCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D0F2CF0BF4B00721C8B /* AccountCreateView.swift */; };
+		67B77D162CF0E8B500721C8B /* SNSHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D152CF0E8B500721C8B /* SNSHomeViewModel.swift */; };
+		67B77D182CF24D2F00721C8B /* SNSLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D172CF24D2500721C8B /* SNSLoadingView.swift */; };
+		67B77D1A2CF257A000721C8B /* SNSPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D192CF2579A00721C8B /* SNSPostView.swift */; };
+		67B77D1D2CF2597B00721C8B /* PhotosPickerItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D1C2CF2597700721C8B /* PhotosPickerItem+Extension.swift */; };
+		67B77D202CF2727900721C8B /* SNSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D1F2CF2727700721C8B /* SNSUser.swift */; };
+		67B77D222CF2728000721C8B /* SNSPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D212CF2727C00721C8B /* SNSPost.swift */; };
+		67B77D242CF2882100721C8B /* SNSPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D232CF2882100721C8B /* SNSPostViewModel.swift */; };
+		67B77D262CF28CF600721C8B /* SNSTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D252CF28CF100721C8B /* SNSTimelineView.swift */; };
 		67D47A322C18D62C000604B8 /* NavigationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D47A312C18D62C000604B8 /* NavigationTransition.swift */; };
 /* End PBXBuildFile section */
 
@@ -237,6 +250,9 @@
 		67668FA52BB3036800595591 /* CatClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatClient.swift; sourceTree = "<group>"; };
 		67668FA82BB3037F00595591 /* CatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatItem.swift; sourceTree = "<group>"; };
 		67668FAA2BB3055B00595591 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		677DB43C2CF2DFD200532143 /* SNSTimelineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineItem.swift; sourceTree = "<group>"; };
+		677DB43E2CF2EE1100532143 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineItemCell.swift; sourceTree = "<group>"; };
 		678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureList.swift; sourceTree = "<group>"; };
 		678E3DE02B9FA4EB00BFE91F /* ImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
 		67B77CE42CEE555000721C8B /* SNSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSHomeView.swift; sourceTree = "<group>"; };
@@ -245,6 +261,16 @@
 		67B77D092CEE61E000721C8B /* SNSRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSRegisterViewModel.swift; sourceTree = "<group>"; };
 		67B77D0B2CEF77A500721C8B /* SwiftSamples.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftSamples.entitlements; sourceTree = "<group>"; };
 		67B77D0C2CEF848E00721C8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		67B77D0D2CF0BF3E00721C8B /* AccountCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreateViewModel.swift; sourceTree = "<group>"; };
+		67B77D0F2CF0BF4B00721C8B /* AccountCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreateView.swift; sourceTree = "<group>"; };
+		67B77D152CF0E8B500721C8B /* SNSHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSHomeViewModel.swift; sourceTree = "<group>"; };
+		67B77D172CF24D2500721C8B /* SNSLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSLoadingView.swift; sourceTree = "<group>"; };
+		67B77D192CF2579A00721C8B /* SNSPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSPostView.swift; sourceTree = "<group>"; };
+		67B77D1C2CF2597700721C8B /* PhotosPickerItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotosPickerItem+Extension.swift"; sourceTree = "<group>"; };
+		67B77D1F2CF2727700721C8B /* SNSUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSUser.swift; sourceTree = "<group>"; };
+		67B77D212CF2727C00721C8B /* SNSPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSPost.swift; sourceTree = "<group>"; };
+		67B77D232CF2882100721C8B /* SNSPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSPostViewModel.swift; sourceTree = "<group>"; };
+		67B77D252CF28CF100721C8B /* SNSTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineView.swift; sourceTree = "<group>"; };
 		67D47A312C18D62C000604B8 /* NavigationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -329,6 +355,7 @@
 				67037A732B9F7E55007C183D /* SwiftSamplesApp.swift */,
 				67037A752B9F7E55007C183D /* ContentView.swift */,
 				67668FA42BB301D300595591 /* API */,
+				67B77D1B2CF2596900721C8B /* Extension */,
 				67668FA72BB3037500595591 /* Entity */,
 				678E3DDA2B9F9F2200BFE91F /* Features */,
 				670827DE2CE9F682008EA7AD /* Utilities */,
@@ -550,6 +577,7 @@
 		670828452CED0B55008EA7AD /* SNS */ = {
 			isa = PBXGroup;
 			children = (
+				67B77D1E2CF2727100721C8B /* Entity */,
 				67B77D062CEE61AC00721C8B /* ViewModel */,
 				670828462CED0B6E008EA7AD /* View */,
 			);
@@ -559,9 +587,14 @@
 		670828462CED0B6E008EA7AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */,
+				67B77D252CF28CF100721C8B /* SNSTimelineView.swift */,
 				67B77CE42CEE555000721C8B /* SNSHomeView.swift */,
-				670828492CED0BD2008EA7AD /* SNSRegisterView.swift */,
+				67B77D192CF2579A00721C8B /* SNSPostView.swift */,
 				670828472CED0B74008EA7AD /* SNSSigninView.swift */,
+				670828492CED0BD2008EA7AD /* SNSRegisterView.swift */,
+				67B77D0F2CF0BF4B00721C8B /* AccountCreateView.swift */,
+				67B77D172CF24D2500721C8B /* SNSLoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -702,10 +735,32 @@
 		67B77D062CEE61AC00721C8B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				67B77D092CEE61E000721C8B /* SNSRegisterViewModel.swift */,
+				67B77D152CF0E8B500721C8B /* SNSHomeViewModel.swift */,
+				67B77D232CF2882100721C8B /* SNSPostViewModel.swift */,
 				67B77D072CEE61B700721C8B /* SNSSigninViewModel.swift */,
+				67B77D092CEE61E000721C8B /* SNSRegisterViewModel.swift */,
+				67B77D0D2CF0BF3E00721C8B /* AccountCreateViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		67B77D1B2CF2596900721C8B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				677DB43E2CF2EE1100532143 /* Date+Extension.swift */,
+				67B77D1C2CF2597700721C8B /* PhotosPickerItem+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		67B77D1E2CF2727100721C8B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				677DB43C2CF2DFD200532143 /* SNSTimelineItem.swift */,
+				67B77D212CF2727C00721C8B /* SNSPost.swift */,
+				67B77D1F2CF2727700721C8B /* SNSUser.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		67D47A302C18D5F3000604B8 /* iOS18+ */ = {
@@ -922,12 +977,17 @@
 			files = (
 				670828402CEA4FB6008EA7AD /* PlayerStatsContainerView.swift in Sources */,
 				670827F92CEA1BC5008EA7AD /* ClubTheme.swift in Sources */,
+				67B77D222CF2728000721C8B /* SNSPost.swift in Sources */,
+				67B77D182CF24D2F00721C8B /* SNSLoadingView.swift in Sources */,
 				670828482CED0BAA008EA7AD /* SNSSigninView.swift in Sources */,
+				67B77D242CF2882100721C8B /* SNSPostViewModel.swift in Sources */,
 				67404E402BF7AA95004AA9EB /* ReviewForm.swift in Sources */,
 				6708282A2CEA289D008EA7AD /* FootballTopView.swift in Sources */,
+				67B77D1D2CF2597B00721C8B /* PhotosPickerItem+Extension.swift in Sources */,
 				67404E2C2BF10C9E004AA9EB /* Book.swift in Sources */,
 				670827EB2CEA1B6A008EA7AD /* FixtureDetail.swift in Sources */,
 				6708283C2CEA3CA2008EA7AD /* FixtureDetailView.swift in Sources */,
+				67B77D1A2CF257A000721C8B /* SNSPostView.swift in Sources */,
 				670828422CEA4FBC008EA7AD /* PlayerStatsView.swift in Sources */,
 				670828442CEA4FC9008EA7AD /* PlayerStatCell.swift in Sources */,
 				67404E3A2BF41804004AA9EB /* ImagePaging.swift in Sources */,
@@ -935,8 +995,10 @@
 				6708283E2CEA3CBC008EA7AD /* FixtureStatsView.swift in Sources */,
 				670827F52CEA1BAD008EA7AD /* Standings.swift in Sources */,
 				670827E22CEA18D2008EA7AD /* FootballAPIClient.swift in Sources */,
+				67B77D162CF0E8B500721C8B /* SNSHomeViewModel.swift in Sources */,
 				67668FA62BB3036800595591 /* CatClient.swift in Sources */,
 				670828362CEA3608008EA7AD /* StandingCell.swift in Sources */,
+				677DB43F2CF2EE1600532143 /* Date+Extension.swift in Sources */,
 				670828382CEA3C92008EA7AD /* FixturesView.swift in Sources */,
 				670828282CEA1F69008EA7AD /* FootballAPIKey.swift in Sources */,
 				670827F72CEA1BB9008EA7AD /* Team.swift in Sources */,
@@ -950,6 +1012,7 @@
 				678E3DE12B9FA4EB00BFE91F /* ImageRenderer.swift in Sources */,
 				67D47A322C18D62C000604B8 /* NavigationTransition.swift in Sources */,
 				6708283A2CEA3C9A008EA7AD /* FixturesCell.swift in Sources */,
+				67B77D0E2CF0BF4400721C8B /* AccountCreateViewModel.swift in Sources */,
 				670827FC2CEA1BEE008EA7AD /* Color+Extension.swift in Sources */,
 				67668FA12BB3013600595591 /* AsyncImageRenderer.swift in Sources */,
 				67404E342BF3FD34004AA9EB /* ImageList.swift in Sources */,
@@ -957,17 +1020,22 @@
 				6708282C2CEA2DA8008EA7AD /* PickersView.swift in Sources */,
 				67404E362BF3FD44004AA9EB /* ImageItem.swift in Sources */,
 				67B77D0A2CEE61E100721C8B /* SNSRegisterViewModel.swift in Sources */,
+				67B77D102CF0BF5000721C8B /* AccountCreateView.swift in Sources */,
 				67B77D082CEE61B800721C8B /* SNSSigninViewModel.swift in Sources */,
 				670992372BA0A013004F11F6 /* DeliveryAttributes.swift in Sources */,
 				670827F32CEA1BA2008EA7AD /* PlayerStat.swift in Sources */,
 				67404E2A2BF10AF6004AA9EB /* SearchBookList.swift in Sources */,
 				67037A762B9F7E55007C183D /* ContentView.swift in Sources */,
 				67B77CE52CEE555900721C8B /* SNSHomeView.swift in Sources */,
+				677DB43D2CF2DFD700532143 /* SNSTimelineItem.swift in Sources */,
 				67404E482BF88DA1004AA9EB /* SwiftUI-and-StateManagement.swift in Sources */,
 				6708282E2CEA35AD008EA7AD /* StandingView.swift in Sources */,
 				67037A742B9F7E55007C183D /* SwiftSamplesApp.swift in Sources */,
+				67B77D262CF28CF600721C8B /* SNSTimelineView.swift in Sources */,
+				677DB4412CF2EF9600532143 /* SNSTimelineItemCell.swift in Sources */,
 				67404E382BF413DC004AA9EB /* ImageGrid.swift in Sources */,
 				67404E282BF10A80004AA9EB /* GoogleBooksClient.swift in Sources */,
+				67B77D202CF2727900721C8B /* SNSUser.swift in Sources */,
 				670992472BA0DC59004F11F6 /* SampleLiveActivity.swift in Sources */,
 				670992422BA0DA75004F11F6 /* DelivaryLiveActivity.swift in Sources */,
 				670827F02CEA1B93008EA7AD /* LeagueType.swift in Sources */,

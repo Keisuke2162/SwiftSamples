@@ -88,9 +88,9 @@ struct FeatureListView: View {
           NavigationLink { PickersView() } label: { Text("PickerView") }
           NavigationLink { FootballTopView() } label: { Text("Football API") }
           NavigationLink {
-            SNSSigninView(viewModel: SNSSigninViewModel())
+            SNSHomeView(viewModel: SNSHomeViewModel())
           } label: {
-            Text("SNS")
+            Text("軽度なSNS")
           }
         }
       }

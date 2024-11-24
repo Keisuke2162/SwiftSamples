@@ -13,8 +13,15 @@ public class SNSRegisterViewModel: NSObject, ObservableObject {
   @Published var isSignedUp = false
 
   private var currentNonce: String?
-  
+  let onLoggedIn: () -> Void
+
   public override init() {
+    self.onLoggedIn = {}
+  }
+  
+  public init(onLoggedIn: @escaping () -> Void) {
+    self.onLoggedIn = onLoggedIn
+    super.init()
   }
   
   func signUpWithEmail() {
