@@ -64,9 +64,7 @@ public class SNSPostViewModel: ObservableObject {
   // 投稿データをFirestoreにアップ
   func saveUserDataToFireStore(imageURLString: String) {
     let data: [String: Any] = [
-      "userID": user.userID,
-      "userName": user.userName,
-      "userProfileImageURL": user.userProfileImageURL?.absoluteString ?? "",
+      "userID": user.userID ?? "unknown_user_id",
       "postText": text,
       "postImageURL": imageURLString,
       "createdAt": Date()

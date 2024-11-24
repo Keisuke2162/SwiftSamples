@@ -91,6 +91,8 @@
 		67668FA92BB3037F00595591 /* CatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FA82BB3037F00595591 /* CatItem.swift */; };
 		67668FAB2BB3055B00595591 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FAA2BB3055B00595591 /* APIError.swift */; };
 		677DB43D2CF2DFD700532143 /* SNSTimelineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB43C2CF2DFD200532143 /* SNSTimelineItem.swift */; };
+		677DB43F2CF2EE1600532143 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB43E2CF2EE1100532143 /* Date+Extension.swift */; };
+		677DB4412CF2EF9600532143 /* SNSTimelineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */; };
 		678E3DD62B9F872100BFE91F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD52B9F872100BFE91F /* ComposableArchitecture */; };
 		678E3DD92B9F878800BFE91F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD82B9F878800BFE91F /* Kingfisher */; };
 		678E3DDD2B9F9FCE00BFE91F /* FeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */; };
@@ -249,6 +251,8 @@
 		67668FA82BB3037F00595591 /* CatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatItem.swift; sourceTree = "<group>"; };
 		67668FAA2BB3055B00595591 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		677DB43C2CF2DFD200532143 /* SNSTimelineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineItem.swift; sourceTree = "<group>"; };
+		677DB43E2CF2EE1100532143 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineItemCell.swift; sourceTree = "<group>"; };
 		678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureList.swift; sourceTree = "<group>"; };
 		678E3DE02B9FA4EB00BFE91F /* ImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
 		67B77CE42CEE555000721C8B /* SNSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSHomeView.swift; sourceTree = "<group>"; };
@@ -583,6 +587,7 @@
 		670828462CED0B6E008EA7AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */,
 				67B77D252CF28CF100721C8B /* SNSTimelineView.swift */,
 				67B77CE42CEE555000721C8B /* SNSHomeView.swift */,
 				67B77D192CF2579A00721C8B /* SNSPostView.swift */,
@@ -742,6 +747,7 @@
 		67B77D1B2CF2596900721C8B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				677DB43E2CF2EE1100532143 /* Date+Extension.swift */,
 				67B77D1C2CF2597700721C8B /* PhotosPickerItem+Extension.swift */,
 			);
 			path = Extension;
@@ -992,6 +998,7 @@
 				67B77D162CF0E8B500721C8B /* SNSHomeViewModel.swift in Sources */,
 				67668FA62BB3036800595591 /* CatClient.swift in Sources */,
 				670828362CEA3608008EA7AD /* StandingCell.swift in Sources */,
+				677DB43F2CF2EE1600532143 /* Date+Extension.swift in Sources */,
 				670828382CEA3C92008EA7AD /* FixturesView.swift in Sources */,
 				670828282CEA1F69008EA7AD /* FootballAPIKey.swift in Sources */,
 				670827F72CEA1BB9008EA7AD /* Team.swift in Sources */,
@@ -1025,6 +1032,7 @@
 				6708282E2CEA35AD008EA7AD /* StandingView.swift in Sources */,
 				67037A742B9F7E55007C183D /* SwiftSamplesApp.swift in Sources */,
 				67B77D262CF28CF600721C8B /* SNSTimelineView.swift in Sources */,
+				677DB4412CF2EF9600532143 /* SNSTimelineItemCell.swift in Sources */,
 				67404E382BF413DC004AA9EB /* ImageGrid.swift in Sources */,
 				67404E282BF10A80004AA9EB /* GoogleBooksClient.swift in Sources */,
 				67B77D202CF2727900721C8B /* SNSUser.swift in Sources */,
