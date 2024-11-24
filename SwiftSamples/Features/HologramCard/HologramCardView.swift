@@ -14,14 +14,6 @@ public struct HologramCardView: View {
   // カードの厚み係数
   private let cardThickness: CGFloat = 10
   
-  // テスト出力用
-//  @State private var locationX: CGFloat = .zero
-//  @State private var locationY: CGFloat = .zero
-//  @State private var deltaX: CGFloat = .zero
-//  @State private var deltaY: CGFloat = .zero
-//  @State private var newWidth: CGFloat = .zero
-//  @State private var newHeight: CGFloat = .zero
-  
   // maxRotationを超えないように噛ませる関数
   private func limitRotation(_ value: CGFloat) -> CGFloat {
     return min(maxRotation, max(-maxRotation, value))
@@ -29,11 +21,7 @@ public struct HologramCardView: View {
   
   // 回転角度から光沢エフェクトを算出する
   private func updateShimmerPosition(xRotation: CGFloat, yRotation: CGFloat) -> CGPoint {
-//    // 回転の角度 -45°~45° → 0~1 に変換する(45はmaxRitationの数値)
-//    let normalizedX = (limitRotation(yRotation) + maxRotation) / (maxRotation * 2)
-//    let normalizedY = (limitRotation(xRotation) + maxRotation) / (maxRotation * 2)
-    
-    // 回転の角度を -1 ~ 1 に正規化
+    // 回転の角度を -1 ~ 1 に正規化(-45°~45°のような値でくるがそれを均すイメージ)
     let normalizedX = limitRotation(yRotation) / maxRotation
     let normalizedY = limitRotation(xRotation) / maxRotation
     
@@ -90,16 +78,6 @@ public struct HologramCardView: View {
         .mask(
           RoundedRectangle(cornerRadius: 20)
         )
-//      VStack(alignment: .leading, spacing: 8) {
-//        Spacer()
-//        Text("location.x:    \(locationX)")
-//        Text("location.y:    \(locationY)")
-//        Text("deltaX:        \(deltaX)")
-//        Text("deltaY:        \(deltaY)")
-//        Text("newWidth:      \(newWidth)")
-//        Text("newHeight:     \(newHeight)")
-//      }
-//      .padding(.bottom, 16)
     }
     .frame(width: 300, height: 426)
     .shadow(radius: 10)
@@ -135,12 +113,6 @@ public struct HologramCardView: View {
           shimmerOffset = updateShimmerPosition(xRotation: newWidth, yRotation: newHeight)
         }
         .onEnded { _ in
-//          locationX = value.location.x
-//          locationY = value.location.y
-//          deltaX = (value.location.x - value.startLocation.x) * sensitivity
-//          deltaY = (value.location.y - value.startLocation.y) * sensitivity
-//          newWidth = limitRotation(lastRotation.width + deltaY)
-//          newHeight = limitRotation(lastRotation.height + deltaX)
           // ドラッグ終了時の角度を保存
           lastRotation = rotation
         }
