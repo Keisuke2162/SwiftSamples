@@ -28,8 +28,8 @@ public struct SNSHomeView: View {
             Text("Post")
           }
 
-          Button {
-
+          NavigationLink {
+            SNSTimelineView(viewModel: SNSTimelineViewModel())
           } label: {
             Text("Timeline")
           }
