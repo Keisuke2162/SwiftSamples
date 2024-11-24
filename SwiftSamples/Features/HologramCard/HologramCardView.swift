@@ -6,8 +6,8 @@ public struct HologramCardView: View {
   @State private var shimmerOffset: CGPoint = .zero
   // 現在の回転角度
   @State private var rotation: CGSize = .zero
-  // ドラッグ終了時点の角度を保持（次の回転の基準になる）
-  @State private var lastRotation: CGSize = .zero
+  // ドラッグ終了時点の角度を保持（次の回転の基準になる）→ 指を離したら元の位置に戻るようにしたので使わなくなった
+   @State private var lastRotation: CGSize = .zero
   // 回転角度の上限値
   private let maxRotation: CGFloat = 15
   
@@ -49,74 +49,96 @@ public struct HologramCardView: View {
   }
  
   public var body: some View {
-    ZStack {
-      // カードの側面（右）
-      GeometryReader { geometry in
-        Rectangle()
-          .fill(Color.gray)
-          .frame(width: cardThickness)
-          .offset(x: geometry.size.width / 2)
-          .opacity(edgeOpacity(rotation.height))
-          .brightness(-0.3)
+    VStack {
+      Spacer()
+      ZStack {
+        // カードの側面（右）
+        GeometryReader { geometry in
+          Rectangle()
+            .fill(Color.gray)
+            .frame(width: cardThickness)
+            .offset(x: geometry.size.width / 2)
+            .opacity(edgeOpacity(rotation.height))
+            .brightness(-0.3)
+        }
+        // カードの側面（下）
+        GeometryReader { geometry in
+          Rectangle()
+            .fill(Color.gray)
+            .frame(width: cardThickness)
+            .offset(x: geometry.size.height / 2)
+            .opacity(edgeOpacity(rotation.width))
+            .brightness(-0.3)
+        }
+        
+        Image("robin")
+          .resizable()
+          .aspectRatio(contentMode: .fill)
+          .frame(width: 300, height: 426)
+          .clipShape(.rect(cornerRadius: 16))
+        DynamicShimmerEffect(offset: shimmerOffset)
+          .mask(
+            RoundedRectangle(cornerRadius: 20)
+          )
       }
-      // カードの側面（下）
-      GeometryReader { geometry in
-        Rectangle()
-          .fill(Color.gray)
-          .frame(width: cardThickness)
-          .offset(x: geometry.size.height / 2)
-          .opacity(edgeOpacity(rotation.width))
-          .brightness(-0.3)
+      .frame(width: 300, height: 426)
+      .shadow(radius: 10)
+      // X軸の回転を制御（上下のドラッグ）
+      .rotation3DEffect(
+        .degrees(rotation.width),
+        axis: (x: 1.0, y: 0.0, z: 0.0),
+        perspective: 0.3  // 遠近感のパラメータ
+      )
+      // Y軸の回転を制御（左右のドラッグ）
+      .rotation3DEffect(
+        .degrees(rotation.height),
+        axis: (x: 0.0, y: 1.0, z: 0.0),
+        perspective: 0.3
+      )
+      // ドラッグジェスチェーの追加
+      .gesture(
+        DragGesture()
+          .onChanged { value in
+            // ジェスチャーの感度
+            let sensitivity: CGFloat = 0.5
+            
+            // ドラッグした量から回転させる角度を算出
+            let deltaX = (value.location.x - value.startLocation.x) * sensitivity
+            let deltaY = (value.location.y - value.startLocation.y) * sensitivity
+            
+            // 回転の角度を更新（前回のドラッグ終了時点の角度からの差分更新）
+            let newWidth = limitRotation(lastRotation.width + deltaY)
+            let newHeight = limitRotation(lastRotation.height + deltaX)
+            // 回転の角度を更新（指を離したら元の位置に戻すのでlastRotationは使わない）
+  //          let newWidth = limitRotation(deltaY)
+  //          let newHeight = limitRotation(deltaX)
+            rotation = CGSize(width: newWidth, height: newHeight)
+            
+            // 回転の角度に応じて光沢の位置を更新する
+            shimmerOffset = updateShimmerPosition(xRotation: newWidth, yRotation: newHeight)
+          }
+          .onEnded { _ in
+            // ドラッグ終了時の角度を保存
+            lastRotation = rotation
+            
+            // ドラッグ終了時に元の位置に戻す
+            // response: アニメーションの時間, dampingFraction: バネの減衰率（小さいほど跳ねる）, blendDuration: アニメのブレンド時間
+  //          withAnimation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0)) {
+  //            rotation = .zero
+  //            shimmerOffset = .zero
+  //          }
+          }
+      )
+      Spacer()
+      Button {
+        withAnimation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0)) {
+          rotation = .zero
+          shimmerOffset = .zero
+        }
+      } label: {
+        Text("Reset Rotation")
       }
-      
-      Image("robin")
-        .resizable()
-        .aspectRatio(contentMode: .fill)
-        .frame(width: 300, height: 426)
-        .clipShape(.rect(cornerRadius: 16))
-      DynamicShimmerEffect(offset: shimmerOffset)
-        .mask(
-          RoundedRectangle(cornerRadius: 20)
-        )
     }
-    .frame(width: 300, height: 426)
-    .shadow(radius: 10)
-    // X軸の回転を制御（上下のドラッグ）
-    .rotation3DEffect(
-      .degrees(rotation.width),
-      axis: (x: 1.0, y: 0.0, z: 0.0),
-      perspective: 0.3  // 遠近感のパラメータ
-    )
-    // Y軸の回転を制御（左右のドラッグ）
-    .rotation3DEffect(
-      .degrees(rotation.height),
-      axis: (x: 0.0, y: 1.0, z: 0.0),
-      perspective: 0.3
-    )
-    // ドラッグジェスチェーの追加
-    .gesture(
-      DragGesture()
-        .onChanged { value in
-          // ジェスチャーの感度
-          let sensitivity: CGFloat = 0.5
-          
-          // ドラッグした量から回転させる角度を算出
-          let deltaX = (value.location.x - value.startLocation.x) * sensitivity
-          let deltaY = (value.location.y - value.startLocation.y) * sensitivity
-          
-          // 回転の角度を更新（前回のドラッグ終了時点の角度からの差分更新）
-          let newWidth = limitRotation(lastRotation.width + deltaY)
-          let newHeight = limitRotation(lastRotation.height + deltaX)
-          rotation = CGSize(width: newWidth, height: newHeight)
-          
-          // 回転の角度に応じて光沢の位置を更新する
-          shimmerOffset = updateShimmerPosition(xRotation: newWidth, yRotation: newHeight)
-        }
-        .onEnded { _ in
-          // ドラッグ終了時の角度を保存
-          lastRotation = rotation
-        }
-    )
   }
 }
 
@@ -128,15 +150,18 @@ public struct DynamicShimmerEffect: View {
       gradient: Gradient(
         colors: [
           Color.white.opacity(0.0),
+          Color.white.opacity(0.2),
           Color.white.opacity(0.4),
           Color.white.opacity(0.8),
           Color.white.opacity(0.4),
+          Color.white.opacity(0.2),
           Color.white.opacity(0.0),
         ]
       ),
       startPoint: UnitPoint(x: 0.0 + offset.x, y: 0.0 + offset.y),
       endPoint: UnitPoint(x: 1.0 + offset.x, y: 1.0 + offset.y)
     )
+    .padding(-16)
     .opacity(0.5)
     // 光沢のoffset移動に対してアニメーションをつける
     .animation(.easeOut(duration: 0.2), value: offset)
@@ -146,25 +171,3 @@ public struct DynamicShimmerEffect: View {
 #Preview {
   HologramCardView()
 }
-
-/*
- // 必要に応じて、URLから画像を読み込むバージョン
- struct URLImageHologramCard: View {
-     let imageURL: URL
-     
-     var body: some View {
-         AsyncImage(url: imageURL) { phase in
-             switch phase {
-             case .success(let image):
-                 ImageHologramCard(imageName: "") // AsyncImageの場合は別途実装が必要
-             case .failure(_):
-                 Text("Failed to load image")
-             case .empty:
-                 ProgressView()
-             @unknown default:
-                 EmptyView()
-             }
-         }
-     }
- }
- */
