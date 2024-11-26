@@ -74,6 +74,7 @@
 		670992442BA0DAFE004F11F6 /* DelivaryLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992412BA0DA75004F11F6 /* DelivaryLiveActivity.swift */; };
 		670992452BA0DB07004F11F6 /* SampleLiveActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709923D2BA0CB34004F11F6 /* SampleLiveActivityAttributes.swift */; };
 		670992472BA0DC59004F11F6 /* SampleLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992462BA0DC59004F11F6 /* SampleLiveActivity.swift */; };
+		672645B72CF324F4001C0E51 /* HologramCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672645B62CF324F0001C0E51 /* HologramCardView.swift */; };
 		67404E282BF10A80004AA9EB /* GoogleBooksClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67404E272BF10A80004AA9EB /* GoogleBooksClient.swift */; };
 		67404E2A2BF10AF6004AA9EB /* SearchBookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67404E292BF10AF6004AA9EB /* SearchBookList.swift */; };
 		67404E2C2BF10C9E004AA9EB /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67404E2B2BF10C9E004AA9EB /* Book.swift */; };
@@ -235,6 +236,7 @@
 		6709923D2BA0CB34004F11F6 /* SampleLiveActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLiveActivityAttributes.swift; sourceTree = "<group>"; };
 		670992412BA0DA75004F11F6 /* DelivaryLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelivaryLiveActivity.swift; sourceTree = "<group>"; };
 		670992462BA0DC59004F11F6 /* SampleLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLiveActivity.swift; sourceTree = "<group>"; };
+		672645B62CF324F0001C0E51 /* HologramCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HologramCardView.swift; sourceTree = "<group>"; };
 		67404E272BF10A80004AA9EB /* GoogleBooksClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksClient.swift; sourceTree = "<group>"; };
 		67404E292BF10AF6004AA9EB /* SearchBookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookList.swift; sourceTree = "<group>"; };
 		67404E2B2BF10C9E004AA9EB /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -668,6 +670,14 @@
 			path = Samples;
 			sourceTree = "<group>";
 		};
+		672645B52CF324EA001C0E51 /* HologramCard */ = {
+			isa = PBXGroup;
+			children = (
+				672645B62CF324F0001C0E51 /* HologramCardView.swift */,
+			);
+			path = HologramCard;
+			sourceTree = "<group>";
+		};
 		67404E312BF1179D004AA9EB /* Books */ = {
 			isa = PBXGroup;
 			children = (
@@ -720,6 +730,7 @@
 		678E3DDA2B9F9F2200BFE91F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				672645B52CF324EA001C0E51 /* HologramCard */,
 				678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */,
 				670828452CED0B55008EA7AD /* SNS */,
 				670827DD2CE9F65F008EA7AD /* FootballAPI */,
@@ -1041,6 +1052,7 @@
 				670827F02CEA1B93008EA7AD /* LeagueType.swift in Sources */,
 				670827FE2CEA1BF8008EA7AD /* String+Extension.swift in Sources */,
 				670827EE2CEA1B79008EA7AD /* League.swift in Sources */,
+				672645B72CF324F4001C0E51 /* HologramCardView.swift in Sources */,
 				67668FA92BB3037F00595591 /* CatItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

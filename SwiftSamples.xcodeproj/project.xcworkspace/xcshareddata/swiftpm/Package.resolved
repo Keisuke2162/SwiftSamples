@@ -1,5 +1,5 @@
 {
-  "originHash" : "6944328e51e082b3364af5e364454e5fc1ef2ba5f2e721624403bac004da5a3e",
+  "originHash" : "d83927a05b8b8ef996ccc09807f7262eff9dcceaa6fd29fcdaefb2b8b496f90b",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -249,8 +249,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-syntax",
       "state" : {
-        "revision" : "fa8f95c2d536d6620cc2f504ebe8a6167c9fc2dd",
-        "version" : "510.0.1"
+        "revision" : "2bc86522d115234d1f588efe2bcb4ce4be8f8b82",
+        "version" : "510.0.3"
       }
     },
     {

@@ -92,6 +92,11 @@ struct FeatureListView: View {
           } label: {
             Text("軽度なSNS")
           }
+          NavigationLink {
+            HologramCardView()
+          } label: {
+            Text("HologramCard")
+          }
         }
       }
       .navigationTitle("Samples")
