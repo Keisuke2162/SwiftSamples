@@ -2,6 +2,11 @@ import Foundation
 import SwiftUI
 
 public struct HologramCardView: View {
+  struct RotationAngle {
+    var x: CGFloat
+    var y: CGFloat
+  }
+  
   // 画像のname一覧
   private let imageNameList: [String] = ["hotaru", "kafuka", "keiryu", "nanoka", "ranha", "reisa", "robin", "swan"]
   // 表示する画像のindex
@@ -9,14 +14,13 @@ public struct HologramCardView: View {
   // 光沢エフェクト用の変数
   @State private var shimmerOffset: CGPoint = .zero
   // 現在の回転角度
-  @State private var rotation: CGSize = .zero
+  @State private var rotation: RotationAngle = .init(x: .zero, y: .zero)
   // ドラッグ終了時点の角度を保持（次の回転の基準になる）→ 指を離したら元の位置に戻るようにしたので使わなくなった
-   @State private var lastRotation: CGSize = .zero
-  // 回転角度の上限値
-  private let maxRotation: CGFloat = 15
-  
-  // 横の回転の上限値を変えてみる
-  private let maxRotationWidth: CGFloat = 50
+  @State private var lastRotation: RotationAngle = .init(x: .zero, y: .zero)
+  // X方向の回転角度の上限値（上下ドラッグ）
+  private let maxRotationX: CGFloat = 15
+  // Y方向の回転角度の上限値（左右ドラッグ）
+  private let maxRotationY: CGFloat = 50
   
   // カードの厚み係数
   private let cardThickness: CGFloat = 10
@@ -29,8 +33,8 @@ public struct HologramCardView: View {
   // 回転角度から光沢エフェクトを算出する
   private func updateShimmerPosition(xRotation: CGFloat, yRotation: CGFloat) -> CGPoint {
     // 回転の角度を -1 ~ 1 に正規化(-45°~45°のような値でくるがそれを均すイメージ)
-    let normalizedX = limitRotation(maxRotation, yRotation) / maxRotation
-    let normalizedY = limitRotation(maxRotation, xRotation) / maxRotation
+    let normalizedX = limitRotation(maxRotationY, yRotation) / maxRotationY
+    let normalizedY = limitRotation(maxRotationX, xRotation) / maxRotationX
     
     // イージング関数を適用
     let easedX = easeOutCubic(normalizedX)
@@ -41,7 +45,7 @@ public struct HologramCardView: View {
   }
   
   // エッジの色を回転の角度に応じて計算
-  private func edgeOpacity(_ rotation: CGFloat) -> Double {
+  private func edgeOpacity(_ maxRotation: CGFloat, _ rotation: CGFloat) -> Double {
     return abs(rotation) / maxRotation * 0.5
   }
   
@@ -54,7 +58,7 @@ public struct HologramCardView: View {
     // 結果を-1~1の範囲に戻す
     return (eased * 2) - 1
   }
- 
+  
   public var body: some View {
     VStack {
       Spacer()
@@ -65,7 +69,7 @@ public struct HologramCardView: View {
             .fill(Color.gray)
             .frame(width: cardThickness)
             .offset(x: geometry.size.width / 2)
-            .opacity(edgeOpacity(rotation.height))
+            .opacity(edgeOpacity(maxRotationY, rotation.y))
             .brightness(-0.3)
         }
         // カードの側面（下）
@@ -74,7 +78,7 @@ public struct HologramCardView: View {
             .fill(Color.gray)
             .frame(width: cardThickness)
             .offset(x: geometry.size.height / 2)
-            .opacity(edgeOpacity(rotation.width))
+            .opacity(edgeOpacity(maxRotationX, rotation.x))
             .brightness(-0.3)
         }
         
@@ -94,13 +98,13 @@ public struct HologramCardView: View {
       .shadow(radius: 10)
       // X軸の回転を制御（上下のドラッグ）
       .rotation3DEffect(
-        .degrees(rotation.width),
+        .degrees(rotation.x),
         axis: (x: 1.0, y: 0.0, z: 0.0),
         perspective: 0.3  // 遠近感のパラメータ
       )
       // Y軸の回転を制御（左右のドラッグ）
       .rotation3DEffect(
-        .degrees(rotation.height),
+        .degrees(rotation.y),
         axis: (x: 0.0, y: 1.0, z: 0.0),
         perspective: 0.3
       )
@@ -116,54 +120,53 @@ public struct HologramCardView: View {
             let deltaY = (value.location.y - value.startLocation.y) * sensitivity
             
             // 回転の角度を更新（前回のドラッグ終了時点の角度からの差分更新）
-            let newWidth = limitRotation(maxRotation, lastRotation.width + deltaY)
-            let newHeight = limitRotation(maxRotationWidth, lastRotation.height + deltaX)
+            let newXValue = limitRotation(maxRotationX, lastRotation.x + deltaY)
+            let newYValue = limitRotation(maxRotationY, lastRotation.y + deltaX)
             
-            print("テスト \(newHeight)")
             // 回転の角度を更新（指を離したら元の位置に戻すのでlastRotationは使わない）
-  //          let newWidth = limitRotation(deltaY)
-  //          let newHeight = limitRotation(deltaX)
+            //          let newWidth = limitRotation(deltaY)
+            //          let newHeight = limitRotation(deltaX)
             
-            rotation = CGSize(width: newWidth, height: newHeight)
+            rotation = .init(x: newXValue, y: newYValue)
             // 回転の角度に応じて光沢の位置を更新する
-            shimmerOffset = updateShimmerPosition(xRotation: newWidth, yRotation: newHeight)
+            shimmerOffset = updateShimmerPosition(xRotation: newXValue, yRotation: newYValue)
           }
           .onEnded { _ in
             // ドラッグ終了時の角度を保存
             lastRotation = rotation
             
             // 左スワイプで前の画像
-            if rotation.height < -49 {
+            if rotation.y < -49 {
               imagesIndex = imagesIndex == imageNameList.count - 1 ? 0 : imagesIndex + 1
               withAnimation(.spring(response: 0.5, dampingFraction: 0.5)) {
-                rotation.height = .zero
+                rotation.y = .zero
                 shimmerOffset.y = .zero
-                lastRotation.height = .zero
+                lastRotation.y = .zero
               }
             }
             
             // 右スワイプで次の画像
-            if rotation.height > 49 {
+            if rotation.y > 49 {
               imagesIndex = imagesIndex == 0 ? imageNameList.count - 1 : imagesIndex - 1
               withAnimation(.spring(response: 0.5, dampingFraction: 0.5)) {
-                rotation.height = .zero
+                rotation.y = .zero
                 shimmerOffset.y = .zero
-                lastRotation.height = .zero
+                lastRotation.y = .zero
               }
             }
             
             // ドラッグ終了時に元の位置に戻す
             // response: アニメーションの時間, dampingFraction: バネの減衰率（小さいほど跳ねる）, blendDuration: アニメのブレンド時間
-  //          withAnimation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0)) {
-  //            rotation = .zero
-  //            shimmerOffset = .zero
-  //          }
+            //          withAnimation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0)) {
+            //            rotation = .zero
+            //            shimmerOffset = .zero
+            //          }
           }
       )
       Spacer()
       Button {
         withAnimation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0)) {
-          rotation = .zero
+          rotation = .init(x: .zero, y: .zero)
           shimmerOffset = .zero
         }
       } label: {
