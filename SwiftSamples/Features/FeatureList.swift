@@ -51,6 +51,9 @@ struct FeatureListView: View {
   var body: some View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
       Form {
+        Section("TechBlog") {
+          NavigationLink{ TechBlogList() } label: { Text("TechBlog") }
+        }
         Section("iOS16+") {
           NavigationLink(
             "ImageRenderer",

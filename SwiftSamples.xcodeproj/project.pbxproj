@@ -98,6 +98,9 @@
 		678E3DD92B9F878800BFE91F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 678E3DD82B9F878800BFE91F /* Kingfisher */; };
 		678E3DDD2B9F9FCE00BFE91F /* FeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */; };
 		678E3DE12B9FA4EB00BFE91F /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678E3DE02B9FA4EB00BFE91F /* ImageRenderer.swift */; };
+		67A9111B2CF6389D0040686E /* HoloCard1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A9111A2CF638990040686E /* HoloCard1.swift */; };
+		67A9111D2CF638FC0040686E /* TechBlogList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A9111C2CF638F90040686E /* TechBlogList.swift */; };
+		67A9111F2CF63F6A0040686E /* HoloCard2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A9111E2CF63F650040686E /* HoloCard2.swift */; };
 		67B77CE52CEE555900721C8B /* SNSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77CE42CEE555000721C8B /* SNSHomeView.swift */; };
 		67B77CE82CEE591300721C8B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 67B77CE72CEE591300721C8B /* FirebaseAnalytics */; };
 		67B77CEA2CEE591300721C8B /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 67B77CE92CEE591300721C8B /* FirebaseAppCheck */; };
@@ -257,6 +260,9 @@
 		677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineItemCell.swift; sourceTree = "<group>"; };
 		678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureList.swift; sourceTree = "<group>"; };
 		678E3DE02B9FA4EB00BFE91F /* ImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
+		67A9111A2CF638990040686E /* HoloCard1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloCard1.swift; sourceTree = "<group>"; };
+		67A9111C2CF638F90040686E /* TechBlogList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechBlogList.swift; sourceTree = "<group>"; };
+		67A9111E2CF63F650040686E /* HoloCard2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloCard2.swift; sourceTree = "<group>"; };
 		67B77CE42CEE555000721C8B /* SNSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSHomeView.swift; sourceTree = "<group>"; };
 		67B77D042CEE5A9100721C8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		67B77D072CEE61B700721C8B /* SNSSigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSSigninViewModel.swift; sourceTree = "<group>"; };
@@ -730,6 +736,7 @@
 		678E3DDA2B9F9F2200BFE91F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				67A911182CF638820040686E /* TechBlog */,
 				672645B52CF324EA001C0E51 /* HologramCard */,
 				678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */,
 				670828452CED0B55008EA7AD /* SNS */,
@@ -741,6 +748,24 @@
 				67404E322BF2C0DE004AA9EB /* SwiftUISamples */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		67A911182CF638820040686E /* TechBlog */ = {
+			isa = PBXGroup;
+			children = (
+				67A9111C2CF638F90040686E /* TechBlogList.swift */,
+				67A911192CF6388A0040686E /* HoloCard */,
+			);
+			path = TechBlog;
+			sourceTree = "<group>";
+		};
+		67A911192CF6388A0040686E /* HoloCard */ = {
+			isa = PBXGroup;
+			children = (
+				67A9111E2CF63F650040686E /* HoloCard2.swift */,
+				67A9111A2CF638990040686E /* HoloCard1.swift */,
+			);
+			path = HoloCard;
 			sourceTree = "<group>";
 		};
 		67B77D062CEE61AC00721C8B /* ViewModel */ = {
@@ -1003,11 +1028,13 @@
 				670828442CEA4FC9008EA7AD /* PlayerStatCell.swift in Sources */,
 				67404E3A2BF41804004AA9EB /* ImagePaging.swift in Sources */,
 				67404E302BF11783004AA9EB /* SearchBookListRow.swift in Sources */,
+				67A9111B2CF6389D0040686E /* HoloCard1.swift in Sources */,
 				6708283E2CEA3CBC008EA7AD /* FixtureStatsView.swift in Sources */,
 				670827F52CEA1BAD008EA7AD /* Standings.swift in Sources */,
 				670827E22CEA18D2008EA7AD /* FootballAPIClient.swift in Sources */,
 				67B77D162CF0E8B500721C8B /* SNSHomeViewModel.swift in Sources */,
 				67668FA62BB3036800595591 /* CatClient.swift in Sources */,
+				67A9111F2CF63F6A0040686E /* HoloCard2.swift in Sources */,
 				670828362CEA3608008EA7AD /* StandingCell.swift in Sources */,
 				677DB43F2CF2EE1600532143 /* Date+Extension.swift in Sources */,
 				670828382CEA3C92008EA7AD /* FixturesView.swift in Sources */,
@@ -1038,6 +1065,7 @@
 				67404E2A2BF10AF6004AA9EB /* SearchBookList.swift in Sources */,
 				67037A762B9F7E55007C183D /* ContentView.swift in Sources */,
 				67B77CE52CEE555900721C8B /* SNSHomeView.swift in Sources */,
+				67A9111D2CF638FC0040686E /* TechBlogList.swift in Sources */,
 				677DB43D2CF2DFD700532143 /* SNSTimelineItem.swift in Sources */,
 				67404E482BF88DA1004AA9EB /* SwiftUI-and-StateManagement.swift in Sources */,
 				6708282E2CEA35AD008EA7AD /* StandingView.swift in Sources */,
