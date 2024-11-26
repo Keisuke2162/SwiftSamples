@@ -2,6 +2,10 @@ import Foundation
 import SwiftUI
 
 public struct HologramCardView: View {
+  // 画像のname一覧
+  private let imageNameList: [String] = ["hotaru", "kafuka", "keiryu", "nanoka", "ranha", "reisa", "robin", "swan"]
+  // 表示する画像のindex
+  @State private var imagesIndex: Int = 0
   // 光沢エフェクト用の変数
   @State private var shimmerOffset: CGPoint = .zero
   // 現在の回転角度
@@ -11,19 +15,22 @@ public struct HologramCardView: View {
   // 回転角度の上限値
   private let maxRotation: CGFloat = 15
   
+  // 横の回転の上限値を変えてみる
+  private let maxRotationWidth: CGFloat = 50
+  
   // カードの厚み係数
   private let cardThickness: CGFloat = 10
   
   // maxRotationを超えないように噛ませる関数
-  private func limitRotation(_ value: CGFloat) -> CGFloat {
-    return min(maxRotation, max(-maxRotation, value))
+  private func limitRotation(_ maxRotationValue: CGFloat, _ value: CGFloat) -> CGFloat {
+    return min(maxRotationValue, max(-maxRotationValue, value))
   }
   
   // 回転角度から光沢エフェクトを算出する
   private func updateShimmerPosition(xRotation: CGFloat, yRotation: CGFloat) -> CGPoint {
     // 回転の角度を -1 ~ 1 に正規化(-45°~45°のような値でくるがそれを均すイメージ)
-    let normalizedX = limitRotation(yRotation) / maxRotation
-    let normalizedY = limitRotation(xRotation) / maxRotation
+    let normalizedX = limitRotation(maxRotation, yRotation) / maxRotation
+    let normalizedY = limitRotation(maxRotation, xRotation) / maxRotation
     
     // イージング関数を適用
     let easedX = easeOutCubic(normalizedX)
@@ -71,11 +78,13 @@ public struct HologramCardView: View {
             .brightness(-0.3)
         }
         
-        Image("robin")
+        Image(imageNameList[imagesIndex])
           .resizable()
           .aspectRatio(contentMode: .fill)
           .frame(width: 300, height: 426)
           .clipShape(.rect(cornerRadius: 16))
+        
+        
         DynamicShimmerEffect(offset: shimmerOffset)
           .mask(
             RoundedRectangle(cornerRadius: 20)
@@ -107,19 +116,41 @@ public struct HologramCardView: View {
             let deltaY = (value.location.y - value.startLocation.y) * sensitivity
             
             // 回転の角度を更新（前回のドラッグ終了時点の角度からの差分更新）
-            let newWidth = limitRotation(lastRotation.width + deltaY)
-            let newHeight = limitRotation(lastRotation.height + deltaX)
+            let newWidth = limitRotation(maxRotation, lastRotation.width + deltaY)
+            let newHeight = limitRotation(maxRotationWidth, lastRotation.height + deltaX)
+            
+            print("テスト \(newHeight)")
             // 回転の角度を更新（指を離したら元の位置に戻すのでlastRotationは使わない）
   //          let newWidth = limitRotation(deltaY)
   //          let newHeight = limitRotation(deltaX)
-            rotation = CGSize(width: newWidth, height: newHeight)
             
+            rotation = CGSize(width: newWidth, height: newHeight)
             // 回転の角度に応じて光沢の位置を更新する
             shimmerOffset = updateShimmerPosition(xRotation: newWidth, yRotation: newHeight)
           }
           .onEnded { _ in
             // ドラッグ終了時の角度を保存
             lastRotation = rotation
+            
+            // 左スワイプで前の画像
+            if rotation.height < -49 {
+              imagesIndex = imagesIndex == imageNameList.count - 1 ? 0 : imagesIndex + 1
+              withAnimation(.spring(response: 0.5, dampingFraction: 0.5)) {
+                rotation.height = .zero
+                shimmerOffset.y = .zero
+                lastRotation.height = .zero
+              }
+            }
+            
+            // 右スワイプで次の画像
+            if rotation.height > 49 {
+              imagesIndex = imagesIndex == 0 ? imageNameList.count - 1 : imagesIndex - 1
+              withAnimation(.spring(response: 0.5, dampingFraction: 0.5)) {
+                rotation.height = .zero
+                shimmerOffset.y = .zero
+                lastRotation.height = .zero
+              }
+            }
             
             // ドラッグ終了時に元の位置に戻す
             // response: アニメーションの時間, dampingFraction: バネの減衰率（小さいほど跳ねる）, blendDuration: アニメのブレンド時間
