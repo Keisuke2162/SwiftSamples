@@ -47,6 +47,7 @@ extension FeatureListReducer {
 
 struct FeatureListView: View {
   @Bindable var store: StoreOf<FeatureListReducer>
+  let videoURL: URL? = URL(string: "https://videos.pexels.com/video-files/1526909/1526909-sd_960_540_24fps.mp4")
   
   var body: some View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
@@ -76,6 +77,9 @@ struct FeatureListView: View {
           NavigationLink(
             "書籍検索機能",
             state: FeatureListReducer.Path.State.searchBooks(SearchBookList.State()))
+        }
+        Section("Video View") {
+          NavigationLink { VideoGridView(viewModel: VideoGridViewModel()) } label: { Text("Video Grid View") }
         }
         Section("SwiftUI Samples") {
           NavigationLink { ImageList() } label: { Text("List") }
