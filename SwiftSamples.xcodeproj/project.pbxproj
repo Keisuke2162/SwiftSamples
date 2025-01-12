@@ -91,6 +91,7 @@
 		67668FA62BB3036800595591 /* CatClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FA52BB3036800595591 /* CatClient.swift */; };
 		67668FA92BB3037F00595591 /* CatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FA82BB3037F00595591 /* CatItem.swift */; };
 		67668FAB2BB3055B00595591 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FAA2BB3055B00595591 /* APIError.swift */; };
+		677AAD012D34149E0067DFF0 /* MapContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677AAD002D34149A0067DFF0 /* MapContentView.swift */; };
 		677DB43D2CF2DFD700532143 /* SNSTimelineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB43C2CF2DFD200532143 /* SNSTimelineItem.swift */; };
 		677DB43F2CF2EE1600532143 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB43E2CF2EE1100532143 /* Date+Extension.swift */; };
 		677DB4412CF2EF9600532143 /* SNSTimelineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */; };
@@ -126,6 +127,11 @@
 		67B77D222CF2728000721C8B /* SNSPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D212CF2727C00721C8B /* SNSPost.swift */; };
 		67B77D242CF2882100721C8B /* SNSPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D232CF2882100721C8B /* SNSPostViewModel.swift */; };
 		67B77D262CF28CF600721C8B /* SNSTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B77D252CF28CF100721C8B /* SNSTimelineView.swift */; };
+		67B8EDB52CF8AF5F000ABE77 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B8EDB42CF8AF5A000ABE77 /* VideoPlayerView.swift */; };
+		67B8EDB72CF8B1A7000ABE77 /* ViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B8EDB62CF8B1A3000ABE77 /* ViewItem.swift */; };
+		67B8EDB92CF8B80F000ABE77 /* VideoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B8EDB82CF8B802000ABE77 /* VideoGridView.swift */; };
+		67B8EDBB2CF8BB3E000ABE77 /* popular_videos.json in Resources */ = {isa = PBXBuildFile; fileRef = 67B8EDBA2CF8BB3E000ABE77 /* popular_videos.json */; };
+		67B8EDBD2CF8BC31000ABE77 /* VideoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B8EDBC2CF8BC2B000ABE77 /* VideoAPIClient.swift */; };
 		67D47A322C18D62C000604B8 /* NavigationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D47A312C18D62C000604B8 /* NavigationTransition.swift */; };
 /* End PBXBuildFile section */
 
@@ -252,6 +258,7 @@
 		67668FA52BB3036800595591 /* CatClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatClient.swift; sourceTree = "<group>"; };
 		67668FA82BB3037F00595591 /* CatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatItem.swift; sourceTree = "<group>"; };
 		67668FAA2BB3055B00595591 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		677AAD002D34149A0067DFF0 /* MapContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContentView.swift; sourceTree = "<group>"; };
 		677DB43C2CF2DFD200532143 /* SNSTimelineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineItem.swift; sourceTree = "<group>"; };
 		677DB43E2CF2EE1100532143 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineItemCell.swift; sourceTree = "<group>"; };
@@ -273,6 +280,11 @@
 		67B77D212CF2727C00721C8B /* SNSPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSPost.swift; sourceTree = "<group>"; };
 		67B77D232CF2882100721C8B /* SNSPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSPostViewModel.swift; sourceTree = "<group>"; };
 		67B77D252CF28CF100721C8B /* SNSTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineView.swift; sourceTree = "<group>"; };
+		67B8EDB42CF8AF5A000ABE77 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		67B8EDB62CF8B1A3000ABE77 /* ViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewItem.swift; sourceTree = "<group>"; };
+		67B8EDB82CF8B802000ABE77 /* VideoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGridView.swift; sourceTree = "<group>"; };
+		67B8EDBA2CF8BB3E000ABE77 /* popular_videos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = popular_videos.json; sourceTree = "<group>"; };
+		67B8EDBC2CF8BC2B000ABE77 /* VideoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAPIClient.swift; sourceTree = "<group>"; };
 		67D47A312C18D62C000604B8 /* NavigationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -727,9 +739,19 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		677AACFF2D3414870067DFF0 /* SwiftUIMap */ = {
+			isa = PBXGroup;
+			children = (
+				677AAD002D34149A0067DFF0 /* MapContentView.swift */,
+			);
+			path = SwiftUIMap;
+			sourceTree = "<group>";
+		};
 		678E3DDA2B9F9F2200BFE91F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				677AACFF2D3414870067DFF0 /* SwiftUIMap */,
+				67B8EDB32CF8AF4D000ABE77 /* VideoPlayer */,
 				672645B52CF324EA001C0E51 /* HologramCard */,
 				678E3DDC2B9F9FCE00BFE91F /* FeatureList.swift */,
 				670828452CED0B55008EA7AD /* SNS */,
@@ -772,6 +794,18 @@
 				67B77D1F2CF2727700721C8B /* SNSUser.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		67B8EDB32CF8AF4D000ABE77 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				67B8EDBC2CF8BC2B000ABE77 /* VideoAPIClient.swift */,
+				67B8EDBA2CF8BB3E000ABE77 /* popular_videos.json */,
+				67B8EDB82CF8B802000ABE77 /* VideoGridView.swift */,
+				67B8EDB62CF8B1A3000ABE77 /* ViewItem.swift */,
+				67B8EDB42CF8AF5A000ABE77 /* VideoPlayerView.swift */,
+			);
+			path = VideoPlayer;
 			sourceTree = "<group>";
 		};
 		67D47A302C18D5F3000604B8 /* iOS18+ */ = {
@@ -942,6 +976,7 @@
 				6708281B2CEA1EF5008EA7AD /* football_api_standings_2023_39.json in Resources */,
 				6708281C2CEA1EF5008EA7AD /* foorball_api_fixtures_2024_98.json in Resources */,
 				6708281D2CEA1EF5008EA7AD /* football_api_standings_2024_98.json in Resources */,
+				67B8EDBB2CF8BB3E000ABE77 /* popular_videos.json in Resources */,
 				6708281E2CEA1EF5008EA7AD /* foorball_api_fixtures_2023_39.json in Resources */,
 				6708281F2CEA1EF5008EA7AD /* foorball_api_topscorer_2023_135.json in Resources */,
 				670828202CEA1EF5008EA7AD /* foorball_api_topassists_2023_135.json in Resources */,
@@ -1012,6 +1047,7 @@
 				677DB43F2CF2EE1600532143 /* Date+Extension.swift in Sources */,
 				670828382CEA3C92008EA7AD /* FixturesView.swift in Sources */,
 				670828282CEA1F69008EA7AD /* FootballAPIKey.swift in Sources */,
+				67B8EDB92CF8B80F000ABE77 /* VideoGridView.swift in Sources */,
 				670827F72CEA1BB9008EA7AD /* Team.swift in Sources */,
 				678E3DDD2B9F9FCE00BFE91F /* FeatureList.swift in Sources */,
 				67668FAB2BB3055B00595591 /* APIError.swift in Sources */,
@@ -1032,11 +1068,14 @@
 				67404E362BF3FD44004AA9EB /* ImageItem.swift in Sources */,
 				67B77D0A2CEE61E100721C8B /* SNSRegisterViewModel.swift in Sources */,
 				67B77D102CF0BF5000721C8B /* AccountCreateView.swift in Sources */,
+				67B8EDBD2CF8BC31000ABE77 /* VideoAPIClient.swift in Sources */,
 				67B77D082CEE61B800721C8B /* SNSSigninViewModel.swift in Sources */,
+				677AAD012D34149E0067DFF0 /* MapContentView.swift in Sources */,
 				670992372BA0A013004F11F6 /* DeliveryAttributes.swift in Sources */,
 				670827F32CEA1BA2008EA7AD /* PlayerStat.swift in Sources */,
 				67404E2A2BF10AF6004AA9EB /* SearchBookList.swift in Sources */,
 				67037A762B9F7E55007C183D /* ContentView.swift in Sources */,
+				67B8EDB72CF8B1A7000ABE77 /* ViewItem.swift in Sources */,
 				67B77CE52CEE555900721C8B /* SNSHomeView.swift in Sources */,
 				677DB43D2CF2DFD700532143 /* SNSTimelineItem.swift in Sources */,
 				67404E482BF88DA1004AA9EB /* SwiftUI-and-StateManagement.swift in Sources */,
@@ -1054,6 +1093,7 @@
 				670827EE2CEA1B79008EA7AD /* League.swift in Sources */,
 				672645B72CF324F4001C0E51 /* HologramCardView.swift in Sources */,
 				67668FA92BB3037F00595591 /* CatItem.swift in Sources */,
+				67B8EDB52CF8AF5F000ABE77 /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
