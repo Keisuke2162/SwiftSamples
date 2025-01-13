@@ -92,6 +92,7 @@
 		67668FA92BB3037F00595591 /* CatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FA82BB3037F00595591 /* CatItem.swift */; };
 		67668FAB2BB3055B00595591 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67668FAA2BB3055B00595591 /* APIError.swift */; };
 		677AAD012D34149E0067DFF0 /* MapContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677AAD002D34149A0067DFF0 /* MapContentView.swift */; };
+		677AAD032D3431F70067DFF0 /* BeantownButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677AAD022D3431F10067DFF0 /* BeantownButtons.swift */; };
 		677DB43D2CF2DFD700532143 /* SNSTimelineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB43C2CF2DFD200532143 /* SNSTimelineItem.swift */; };
 		677DB43F2CF2EE1600532143 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB43E2CF2EE1100532143 /* Date+Extension.swift */; };
 		677DB4412CF2EF9600532143 /* SNSTimelineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */; };
@@ -259,6 +260,7 @@
 		67668FA82BB3037F00595591 /* CatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatItem.swift; sourceTree = "<group>"; };
 		67668FAA2BB3055B00595591 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		677AAD002D34149A0067DFF0 /* MapContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContentView.swift; sourceTree = "<group>"; };
+		677AAD022D3431F10067DFF0 /* BeantownButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeantownButtons.swift; sourceTree = "<group>"; };
 		677DB43C2CF2DFD200532143 /* SNSTimelineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineItem.swift; sourceTree = "<group>"; };
 		677DB43E2CF2EE1100532143 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineItemCell.swift; sourceTree = "<group>"; };
@@ -742,6 +744,7 @@
 		677AACFF2D3414870067DFF0 /* SwiftUIMap */ = {
 			isa = PBXGroup;
 			children = (
+				677AAD022D3431F10067DFF0 /* BeantownButtons.swift */,
 				677AAD002D34149A0067DFF0 /* MapContentView.swift */,
 			);
 			path = SwiftUIMap;
@@ -1070,6 +1073,7 @@
 				67B77D102CF0BF5000721C8B /* AccountCreateView.swift in Sources */,
 				67B8EDBD2CF8BC31000ABE77 /* VideoAPIClient.swift in Sources */,
 				67B77D082CEE61B800721C8B /* SNSSigninViewModel.swift in Sources */,
+				677AAD032D3431F70067DFF0 /* BeantownButtons.swift in Sources */,
 				677AAD012D34149E0067DFF0 /* MapContentView.swift in Sources */,
 				670992372BA0A013004F11F6 /* DeliveryAttributes.swift in Sources */,
 				670827F32CEA1BA2008EA7AD /* PlayerStat.swift in Sources */,
