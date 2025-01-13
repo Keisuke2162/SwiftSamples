@@ -6,6 +6,10 @@ extension CLLocationCoordinate2D {
     latitude: 35.6586,
     longitude: 139.7454
   )
+  static let tokyoSkyTree = CLLocationCoordinate2D(
+    latitude: 35.7100152,
+    longitude: 139.8107594
+  )
 }
 
 extension MKCoordinateRegion {

@@ -35,15 +35,47 @@ struct BeantownButtons: View {
         // カメラを皇居周辺に移動
         position = .region(.imperialPalace)
       } label: {
-        Label("SkyTree", systemImage: "house.lodge.fill")
+        Label("ImperialPalace", systemImage: "house.lodge.fill")
+      }
+      .buttonStyle(.bordered)
+
+      
+      /*
+       Cameraについていろいろ
+       */
+      // MKMapItemで特定の場所を表示、カメラが勝手にズームインしてくれる
+      Button {
+        position = .item(MKMapItem(placemark: MKPlacemark(coordinate: .tokyoSkyTree)))
+      } label: {
+        Label("TokyoSkyTree1", systemImage: "1.lane")
       }
       .buttonStyle(.bordered)
       
-//      Button {
-//        search(for: "cafe")
-//      } label: {
-//        Label("Cafe", systemImage: "cup.and.saucer.fill")
-//      }
+      // pitch angleを使えば3Dで表現できる
+      Button {
+        position = .camera(
+          MapCamera(
+            centerCoordinate: .tokyoSkyTree,
+            distance: 980,
+            heading: 242,
+            pitch: 60
+          )
+        )
+      } label: {
+        Label("TokyoSkyTree2", systemImage: "2.lane")
+      }
+      .buttonStyle(.bordered)
+      
+      // 現在位置の表示
+      Button {
+        // followsHeading: 端末の回転に合わせてマップを回転する？ fallback: 位置情報が取得できない場合に表示する位置
+        // 現在位置を表示している場合はカメラ位置がuserLocationになる、ユーザーがマップを操作するとカメラ位置がユーザーを追跡しなくなる(positionByUser)仕様
+        // アプリがカメラの位置を指定する場合はpositionedByUser状態ではない（ユーザーが操作していないので）
+        position = .userLocation(followsHeading: false, fallback: .automatic)
+      } label: {
+        Label("CurrentLocation", systemImage: "location.circle.fill")
+      }
+      .buttonStyle(.bordered)
     }
     .labelStyle(.iconOnly)
   }
