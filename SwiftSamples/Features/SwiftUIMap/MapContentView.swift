@@ -49,6 +49,16 @@ struct MapContentView: View {
   @State private var selectedResult: MKMapItem?
   // 選択したMapItemへの移動情報
   @State private var route: MKRoute?
+  
+  // 経路表示のカスタムデザイン
+  var walkCoordinates: [CLLocationCoordinate2D] = [.tokyoTower, .tokyoSkyTree]
+  let gradient = LinearGradient(
+    colors: [.red, .green, .blue], startPoint: .leading, endPoint: .trailing
+  )
+  let stroke = StrokeStyle(
+    lineWidth: 5,
+    lineCap: .round, lineJoin: .round, dash: [10, 10]
+  )
 
   var body: some View {
     // 検索結果のうち、アイコンをタップしたら$selectedResultに入る
@@ -86,6 +96,22 @@ struct MapContentView: View {
         Marker(item: result)
       }
       .annotationTitles(.hidden)
+      
+      // 経路案内をマップ上に表示
+      if let route {
+        // 選択した位置とスカイツリーのルート
+        MapPolyline(route)
+          .stroke(.blue, lineWidth: 5)
+        
+        // 東京タワー→スカイツリーのルート（位置情報の配列だと直線距離になるっぽい）
+//        MapPolyline(coordinates: walkCoordinates)
+//          .stroke(gradient, style: stroke)
+      }
+      
+      // MapCircle, MapPolygonはエリアを強調する
+      MapCircle(
+        center: .tokyoSkyTree, radius: .ini
+      )
     }
     // .realistic → 立体的なマップスタイル
      .mapStyle(.standard)

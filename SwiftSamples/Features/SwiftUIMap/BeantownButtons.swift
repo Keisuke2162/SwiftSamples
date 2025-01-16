@@ -19,9 +19,9 @@ struct BeantownButtons: View {
       .buttonStyle(.borderedProminent)
       
       Button {
-        search(for: "beaches")
+        search(for: "tower")
       } label: {
-        Label("Beaches", systemImage: "beach.umbrella")
+        Label("Tower", systemImage: "beach.umbrella")
       }
       .buttonStyle(.borderedProminent)
       
