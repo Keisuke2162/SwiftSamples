@@ -4,6 +4,8 @@ import MapKit
 struct BeantownButtons: View {
   // マップ上に表示するカメラの位置
   @Binding var position: MapCameraPosition
+  // カメラで表示しているMap範囲の追跡
+  @State var visibleRegion: MKCoordinateRegion?
   // マップ上に表示する検索結果
   @Binding var searchResults: [MKMapItem]
 
@@ -84,8 +86,9 @@ struct BeantownButtons: View {
     let request = MKLocalSearch.Request()
     request.naturalLanguageQuery = query
     request.resultTypes = .pointOfInterest
-    request.region = MKCoordinateRegion(
-      center: .tokyoTower,
+    // Map上に表示している範囲の中で検索
+    request.region = visibleRegion ?? MKCoordinateRegion(
+      center: .tokyoSkyTree,
       span: MKCoordinateSpan(latitudeDelta: 0.0125, longitudeDelta: 0.0125)
     )
 
