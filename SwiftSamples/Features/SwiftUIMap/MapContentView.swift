@@ -109,9 +109,9 @@ struct MapContentView: View {
       }
       
       // MapCircle, MapPolygonはエリアを強調する
-      MapCircle(
-        center: .tokyoSkyTree, radius: .ini
-      )
+//      MapCircle(
+//        center: .tokyoSkyTree, radius: .ini
+//      )
     }
     // .realistic → 立体的なマップスタイル
      .mapStyle(.standard)
