@@ -95,6 +95,7 @@
 		677AAD032D3431F70067DFF0 /* BeantownButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677AAD022D3431F10067DFF0 /* BeantownButtons.swift */; };
 		677AAD052D3531BF0067DFF0 /* ItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677AAD042D3531BB0067DFF0 /* ItemInfoView.swift */; };
 		677AAD072D3975630067DFF0 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677AAD062D39755A0067DFF0 /* BottomView.swift */; };
+		677AAD222D42C6330067DFF0 /* UIKitMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677AAD212D42C62E0067DFF0 /* UIKitMapViewController.swift */; };
 		677DB43D2CF2DFD700532143 /* SNSTimelineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB43C2CF2DFD200532143 /* SNSTimelineItem.swift */; };
 		677DB43F2CF2EE1600532143 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB43E2CF2EE1100532143 /* Date+Extension.swift */; };
 		677DB4412CF2EF9600532143 /* SNSTimelineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */; };
@@ -265,6 +266,7 @@
 		677AAD022D3431F10067DFF0 /* BeantownButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeantownButtons.swift; sourceTree = "<group>"; };
 		677AAD042D3531BB0067DFF0 /* ItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoView.swift; sourceTree = "<group>"; };
 		677AAD062D39755A0067DFF0 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		677AAD212D42C62E0067DFF0 /* UIKitMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitMapViewController.swift; sourceTree = "<group>"; };
 		677DB43C2CF2DFD200532143 /* SNSTimelineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineItem.swift; sourceTree = "<group>"; };
 		677DB43E2CF2EE1100532143 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		677DB4402CF2EF9100532143 /* SNSTimelineItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSTimelineItemCell.swift; sourceTree = "<group>"; };
@@ -756,9 +758,34 @@
 			path = SwiftUIMap;
 			sourceTree = "<group>";
 		};
+		677AAD1E2D42C6150067DFF0 /* MapPerformance */ = {
+			isa = PBXGroup;
+			children = (
+				677AAD202D42C6260067DFF0 /* SwiftUIMap */,
+				677AAD1F2D42C61E0067DFF0 /* UIKitMap */,
+			);
+			path = MapPerformance;
+			sourceTree = "<group>";
+		};
+		677AAD1F2D42C61E0067DFF0 /* UIKitMap */ = {
+			isa = PBXGroup;
+			children = (
+				677AAD212D42C62E0067DFF0 /* UIKitMapViewController.swift */,
+			);
+			path = UIKitMap;
+			sourceTree = "<group>";
+		};
+		677AAD202D42C6260067DFF0 /* SwiftUIMap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftUIMap;
+			sourceTree = "<group>";
+		};
 		678E3DDA2B9F9F2200BFE91F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				677AAD1E2D42C6150067DFF0 /* MapPerformance */,
 				677AACFF2D3414870067DFF0 /* SwiftUIMap */,
 				67B8EDB32CF8AF4D000ABE77 /* VideoPlayer */,
 				672645B52CF324EA001C0E51 /* HologramCard */,
@@ -1081,6 +1108,7 @@
 				67B77D102CF0BF5000721C8B /* AccountCreateView.swift in Sources */,
 				67B8EDBD2CF8BC31000ABE77 /* VideoAPIClient.swift in Sources */,
 				67B77D082CEE61B800721C8B /* SNSSigninViewModel.swift in Sources */,
+				677AAD222D42C6330067DFF0 /* UIKitMapViewController.swift in Sources */,
 				677AAD032D3431F70067DFF0 /* BeantownButtons.swift in Sources */,
 				677AAD012D34149E0067DFF0 /* MapContentView.swift in Sources */,
 				670992372BA0A013004F11F6 /* DeliveryAttributes.swift in Sources */,
