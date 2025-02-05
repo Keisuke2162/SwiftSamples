@@ -74,6 +74,8 @@
 		670992442BA0DAFE004F11F6 /* DelivaryLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992412BA0DA75004F11F6 /* DelivaryLiveActivity.swift */; };
 		670992452BA0DB07004F11F6 /* SampleLiveActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709923D2BA0CB34004F11F6 /* SampleLiveActivityAttributes.swift */; };
 		670992472BA0DC59004F11F6 /* SampleLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992462BA0DC59004F11F6 /* SampleLiveActivity.swift */; };
+		670E072A2D53805700F5AFA6 /* ZStackMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E07292D53805100F5AFA6 /* ZStackMenu.swift */; };
+		670E072D2D5390F100F5AFA6 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E072C2D5390EC00F5AFA6 /* ColorPickerView.swift */; };
 		672645B72CF324F4001C0E51 /* HologramCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672645B62CF324F0001C0E51 /* HologramCardView.swift */; };
 		67404E282BF10A80004AA9EB /* GoogleBooksClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67404E272BF10A80004AA9EB /* GoogleBooksClient.swift */; };
 		67404E2A2BF10AF6004AA9EB /* SearchBookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67404E292BF10AF6004AA9EB /* SearchBookList.swift */; };
@@ -245,6 +247,8 @@
 		6709923D2BA0CB34004F11F6 /* SampleLiveActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLiveActivityAttributes.swift; sourceTree = "<group>"; };
 		670992412BA0DA75004F11F6 /* DelivaryLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelivaryLiveActivity.swift; sourceTree = "<group>"; };
 		670992462BA0DC59004F11F6 /* SampleLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLiveActivity.swift; sourceTree = "<group>"; };
+		670E07292D53805100F5AFA6 /* ZStackMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackMenu.swift; sourceTree = "<group>"; };
+		670E072C2D5390EC00F5AFA6 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		672645B62CF324F0001C0E51 /* HologramCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HologramCardView.swift; sourceTree = "<group>"; };
 		67404E272BF10A80004AA9EB /* GoogleBooksClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksClient.swift; sourceTree = "<group>"; };
 		67404E292BF10AF6004AA9EB /* SearchBookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookList.swift; sourceTree = "<group>"; };
@@ -688,6 +692,22 @@
 			path = Samples;
 			sourceTree = "<group>";
 		};
+		670E07282D53804A00F5AFA6 /* UIRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				670E07292D53805100F5AFA6 /* ZStackMenu.swift */,
+			);
+			path = UIRecipe;
+			sourceTree = "<group>";
+		};
+		670E072B2D5390E400F5AFA6 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				670E072C2D5390EC00F5AFA6 /* ColorPickerView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		672645B52CF324EA001C0E51 /* HologramCard */ = {
 			isa = PBXGroup;
 			children = (
@@ -759,6 +779,7 @@
 		678E3DDA2B9F9F2200BFE91F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				670E07282D53804A00F5AFA6 /* UIRecipe */,
 				677AACFF2D3414870067DFF0 /* SwiftUIMap */,
 				67B8EDB32CF8AF4D000ABE77 /* VideoPlayer */,
 				672645B52CF324EA001C0E51 /* HologramCard */,
@@ -770,6 +791,7 @@
 				670C24422BE5653B00833377 /* iOS16+ */,
 				670C24442BE565B900833377 /* Samples */,
 				67404E322BF2C0DE004AA9EB /* SwiftUISamples */,
+				670E072B2D5390E400F5AFA6 /* CustomView */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -1032,6 +1054,7 @@
 			files = (
 				670828402CEA4FB6008EA7AD /* PlayerStatsContainerView.swift in Sources */,
 				670827F92CEA1BC5008EA7AD /* ClubTheme.swift in Sources */,
+				670E072A2D53805700F5AFA6 /* ZStackMenu.swift in Sources */,
 				67B77D222CF2728000721C8B /* SNSPost.swift in Sources */,
 				67B77D182CF24D2F00721C8B /* SNSLoadingView.swift in Sources */,
 				670828482CED0BAA008EA7AD /* SNSSigninView.swift in Sources */,
@@ -1079,6 +1102,7 @@
 				67B77D0A2CEE61E100721C8B /* SNSRegisterViewModel.swift in Sources */,
 				677AAD072D3975630067DFF0 /* BottomView.swift in Sources */,
 				67B77D102CF0BF5000721C8B /* AccountCreateView.swift in Sources */,
+				670E072D2D5390F100F5AFA6 /* ColorPickerView.swift in Sources */,
 				67B8EDBD2CF8BC31000ABE77 /* VideoAPIClient.swift in Sources */,
 				67B77D082CEE61B800721C8B /* SNSSigninViewModel.swift in Sources */,
 				677AAD032D3431F70067DFF0 /* BeantownButtons.swift in Sources */,
