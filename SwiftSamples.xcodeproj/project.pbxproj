@@ -76,6 +76,7 @@
 		670992472BA0DC59004F11F6 /* SampleLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670992462BA0DC59004F11F6 /* SampleLiveActivity.swift */; };
 		670E072A2D53805700F5AFA6 /* ZStackMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E07292D53805100F5AFA6 /* ZStackMenu.swift */; };
 		670E072D2D5390F100F5AFA6 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E072C2D5390EC00F5AFA6 /* ColorPickerView.swift */; };
+		670E072F2D53960400F5AFA6 /* PokemonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670E072E2D5395FF00F5AFA6 /* PokemonCard.swift */; };
 		672645B72CF324F4001C0E51 /* HologramCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672645B62CF324F0001C0E51 /* HologramCardView.swift */; };
 		67404E282BF10A80004AA9EB /* GoogleBooksClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67404E272BF10A80004AA9EB /* GoogleBooksClient.swift */; };
 		67404E2A2BF10AF6004AA9EB /* SearchBookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67404E292BF10AF6004AA9EB /* SearchBookList.swift */; };
@@ -249,6 +250,7 @@
 		670992462BA0DC59004F11F6 /* SampleLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLiveActivity.swift; sourceTree = "<group>"; };
 		670E07292D53805100F5AFA6 /* ZStackMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackMenu.swift; sourceTree = "<group>"; };
 		670E072C2D5390EC00F5AFA6 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		670E072E2D5395FF00F5AFA6 /* PokemonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCard.swift; sourceTree = "<group>"; };
 		672645B62CF324F0001C0E51 /* HologramCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HologramCardView.swift; sourceTree = "<group>"; };
 		67404E272BF10A80004AA9EB /* GoogleBooksClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksClient.swift; sourceTree = "<group>"; };
 		67404E292BF10AF6004AA9EB /* SearchBookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookList.swift; sourceTree = "<group>"; };
@@ -695,6 +697,7 @@
 		670E07282D53804A00F5AFA6 /* UIRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				670E072E2D5395FF00F5AFA6 /* PokemonCard.swift */,
 				670E07292D53805100F5AFA6 /* ZStackMenu.swift */,
 			);
 			path = UIRecipe;
@@ -1127,6 +1130,7 @@
 				670827F02CEA1B93008EA7AD /* LeagueType.swift in Sources */,
 				670827FE2CEA1BF8008EA7AD /* String+Extension.swift in Sources */,
 				670827EE2CEA1B79008EA7AD /* League.swift in Sources */,
+				670E072F2D53960400F5AFA6 /* PokemonCard.swift in Sources */,
 				672645B72CF324F4001C0E51 /* HologramCardView.swift in Sources */,
 				67668FA92BB3037F00595591 /* CatItem.swift in Sources */,
 				67B8EDB52CF8AF5F000ABE77 /* VideoPlayerView.swift in Sources */,

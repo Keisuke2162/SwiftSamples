@@ -54,6 +54,7 @@ struct FeatureListView: View {
       Form {
         Section("UI Recipe") {
           NavigationLink { ZStackMenu() } label: { Text("ZStack Menu") }
+          NavigationLink { PokemonCard() } label: { Text("Card View") }
         }
         Section("WWDC") {
           NavigationLink { MapContentView() } label: { Text("WWDC2023 Map") }
