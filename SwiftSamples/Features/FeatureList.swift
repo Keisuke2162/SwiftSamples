@@ -53,8 +53,9 @@ struct FeatureListView: View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
       Form {
         Section("UI Recipe") {
-          NavigationLink { ZStackMenu() } label: { Text("ZStack Menu") }
+          NavigationLink { ZStackMenu() } label: { Text("Upper Swipe Menu") }
           NavigationLink { PokemonCard() } label: { Text("Card View") }
+          NavigationLink { TinderCard() } label: { Text("Tinder Card View") }
         }
         Section("WWDC") {
           NavigationLink { MapContentView() } label: { Text("WWDC2023 Map") }
