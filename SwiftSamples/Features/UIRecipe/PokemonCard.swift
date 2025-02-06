@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardEntity {
+struct CardEntity: Equatable {
   let id: UUID = UUID()
   let color: Color
 }
@@ -22,26 +22,52 @@ struct PokemonCard: View {
     CardEntity(color: .brown),
   ]
 
-  var body: some View {
-    ZStack {
-      ForEach(cardList.indices, id: \.self) { index in
-        CardView(color: cardList[index])
-          .offset(y: -(CGFloat(cardList.count - 1 - index) * 16))
-          .gesture(
-            DragGesture()
-              .onEnded({ value in
-                let amount = value.translation.width
-                if amount > 50 {
-                  cardList.removeLast()
+  @State private var dragOffset: CGSize = .zero
+  @State private var isDragging: Bool = false
 
-                } else if amount < -50 {
-                  cardList.removeLast()
+  var body: some View {
+    // let reservedCardList = Array(cardList.enumerated().reversed())
+    let offsetY = 8 * (cardList.count - 1)
+
+    ZStack {
+      ForEach(Array(cardList.enumerated()), id: \.element.id) { index, card in
+        CardView(color: card.color)
+          .offset(y: CGFloat(offsetY - (index * 8)))
+          .scaleEffect(1 - (CGFloat((cardList.count - 1) - index) * 0.01)) // 奥のViewを少し小さくする
+          .offset(x: index == cardList.count - 1 ? dragOffset.width : 0)
+          .gesture(
+            index == cardList.count - 1 ? DragGesture()
+              .onChanged { gesture in
+                dragOffset = gesture.translation
+              }
+              .onEnded { gesture in
+                let threshold: CGFloat = 100
+                if abs(gesture.translation.width) > threshold {
+                  withAnimation(.easeInOut(duration: 0.2)) {
+                    dragOffset.width = gesture.translation.width > 0 ? 500 : -500
+                  }
+                  DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    removeTopCard()
+                  }
+                } else {
+                  withAnimation {
+                    dragOffset = .zero
+                  }
                 }
-              })
+              }
+            : nil
           )
       }
     }
+    .padding()
     .animation(.easeInOut, value: cardList)
+  }
+
+  private func removeTopCard() {
+    if !cardList.isEmpty {
+      cardList.removeLast()
+      dragOffset = .zero
+    }
   }
 }
 
@@ -51,6 +77,6 @@ struct CardView: View {
   var body: some View {
     Rectangle()
       .foregroundStyle(color)
-      .frame(width: 160, height: 320)
+      .frame(width: 300, height: 426)
   }
 }
