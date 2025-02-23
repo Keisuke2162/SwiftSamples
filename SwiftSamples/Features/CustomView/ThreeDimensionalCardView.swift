@@ -46,6 +46,7 @@ public struct ThreeDimensionalCardView<Content: View>: View {
         axis: (x: 0.0, y: 1.0, z: 0.0),
         perspective: 0.3
       )
+  
       .gesture(
         DragGesture()
           .onChanged { value in
