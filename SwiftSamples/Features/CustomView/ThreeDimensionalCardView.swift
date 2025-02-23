@@ -9,56 +9,58 @@ import SwiftUI
 
 public struct ThreeDimensionalCardView<Content: View>: View {
   // 操作できる回転軸
-  enum RotateDirection {
+  enum RotationAxis {
     case x
     case y
     case xy
   }
+
   struct RotationAngle {
     var x: CGFloat
     var y: CGFloat
   }
 
-  let direction: RotateDirection
+  let rotationAxis: RotationAxis
   let content: () -> Content
 
   // 現在の回転角度
   @State private var rotation: RotationAngle = .init(x: .zero, y: .zero)
-  // ドラッグ終了時点の角度を保持（次の回転の基準になる）→ 指を離したら元の位置に戻るようにしたので使わなくなった
+  // 回転角度を保持する場合に使うプロパティ
   @State private var lastRotation: RotationAngle = .init(x: .zero, y: .zero)
-  // X方向の回転角度の上限値（上下ドラッグ）
+  // X軸回転の角度上限
   private let maxRotationX: CGFloat = 30
-  // Y方向の回転角度の上限値（左右ドラッグ）
+  // Y軸回転の角度上限
   private let maxRotationY: CGFloat = 30
 
   public var body: some View {
     content()
-      // X軸の回転を制御（上下のドラッグ）
+      // X軸（上下ドラッグ）
       .rotation3DEffect(
         .degrees(rotation.x),
         axis: (x: 1.0, y: 0.0, z: 0.0),
         perspective: 0.3  // 遠近感のパラメータ
       )
-      // Y軸の回転を制御（左右のドラッグ）
+      // Y軸（左右ドラッグ）
       .rotation3DEffect(
         .degrees(rotation.y),
         axis: (x: 0.0, y: 1.0, z: 0.0),
         perspective: 0.3
       )
-      // ドラッグジェスチェーの追加
       .gesture(
         DragGesture()
           .onChanged { value in
             // ジェスチャーの感度
             let sensitivity: CGFloat = 0.2
-            // ドラッグした量から回転させる角度を算出
+            // ドラッグした量から回転角度を更新
             let deltaX = (value.location.x - value.startLocation.x) * sensitivity
             let deltaY = (value.location.y - value.startLocation.y) * sensitivity
-            // 回転の角度を更新（前回のドラッグ終了時点の角度からの差分更新）
-            let newXValue = limitRotation(maxRotationX, lastRotation.x + deltaY)
-            let newYValue = limitRotation(maxRotationY, lastRotation.y + deltaX)
+            let newXValue = limitRotation(maxRotationX, deltaY)
+            let newYValue = limitRotation(maxRotationY, deltaX)
+            // 前回のドラッグ位置からの差分更新を行う場合
+//            let newXValue = limitRotation(maxRotationX, lastRotation.x + deltaY)
+//            let newYValue = limitRotation(maxRotationY, lastRotation.y + deltaX)
 
-            rotation = switch direction {
+            rotation = switch rotationAxis {
             case .x:
                 .init(x: -newXValue, y: .zero)
             case .y:
@@ -68,6 +70,9 @@ public struct ThreeDimensionalCardView<Content: View>: View {
             }
           }
           .onEnded { _ in
+            // ドラッグ終了時も回転した状態を保持
+//            lastRotation = rotation
+
             // ドラッグ終了時に元の位置に戻す
             withAnimation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0)) {
               rotation = .init(x: .zero, y: .zero)
@@ -76,7 +81,7 @@ public struct ThreeDimensionalCardView<Content: View>: View {
       )
   }
 
-  // maxRotationを超えないように噛ませる関数
+  // maxRotationを超えない対応
   private func limitRotation(_ maxRotationValue: CGFloat, _ value: CGFloat) -> CGFloat {
     return min(maxRotationValue, max(-maxRotationValue, value))
   }
@@ -84,7 +89,7 @@ public struct ThreeDimensionalCardView<Content: View>: View {
 
 public struct ThreeDimensionalCardSampleView: View {
   public var body: some View {
-    ThreeDimensionalCardView(direction: .xy) {
+    ThreeDimensionalCardView(rotationAxis: .y) {
       Image("pexels3")
         .resizable()
         .scaledToFit()
