@@ -28,9 +28,9 @@ public struct ThreeDimensionalCardView<Content: View>: View {
   // 回転角度を保持する場合に使うプロパティ
   @State private var lastRotation: RotationAngle = .init(x: .zero, y: .zero)
   // X軸回転の角度上限
-  private let maxRotationX: CGFloat = 30
+  private let maxRotationX: CGFloat = 45
   // Y軸回転の角度上限
-  private let maxRotationY: CGFloat = 30
+  private let maxRotationY: CGFloat = 45
 
   public var body: some View {
     content()
@@ -91,7 +91,7 @@ public struct ThreeDimensionalCardView<Content: View>: View {
 public struct ThreeDimensionalCardSampleView: View {
   public var body: some View {
     ThreeDimensionalCardView(rotationAxis: .y) {
-      Image("pexels3")
+      Image("screen-1")
         .resizable()
         .scaledToFit()
         .frame(width: 320)
