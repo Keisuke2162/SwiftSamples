@@ -93,22 +93,12 @@ struct FeatureListView: View {
           NavigationLink { ImageList() } label: { Text("List") }
           NavigationLink { ImageGrid() } label: { Text("Grid") }
           NavigationLink { ImagePaging() } label: { Text("Paging") }
-          NavigationLink(
-            "Review Form",
-            state: FeatureListReducer.Path.State.reviewForm(ReviewForm.State())
-          )
+          NavigationLink ("Review Form", state: FeatureListReducer.Path.State.reviewForm(ReviewForm.State()))
           NavigationLink { PickersView() } label: { Text("PickerView") }
           NavigationLink { FootballTopView() } label: { Text("Football API") }
-          NavigationLink {
-            SNSHomeView(viewModel: SNSHomeViewModel())
-          } label: {
-            Text("軽度なSNS")
-          }
-          NavigationLink {
-            HologramCardView()
-          } label: {
-            Text("HologramCard")
-          }
+          NavigationLink { SNSHomeView(viewModel: SNSHomeViewModel()) } label: { Text("SNS Feature") }
+          NavigationLink { HologramCardView() } label: { Text("HologramCard") }
+          NavigationLink { ThreeDimensionalCardSampleView() } label: { Text("ThreeDimensionalCardView") }
         }
       }
       .navigationTitle("Samples")
