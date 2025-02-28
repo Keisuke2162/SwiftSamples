@@ -53,6 +53,7 @@ struct FeatureListView: View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
       Form {
         Section("UI Recipe") {
+          NavigationLink { MoveCardList() } label: { Text("3D Card List") }
           NavigationLink { ZStackMenu() } label: { Text("Upper Swipe Menu") }
           NavigationLink { PokemonCard() } label: { Text("Card View") }
           NavigationLink { TinderCard() } label: { Text("Tinder Card View") }
